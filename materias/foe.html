@@ -18,56 +18,987 @@
     </nav>
   </header>
 
-  <main>
+  <main class="study-page">
     <section class="page-title">
-      <a class="nav-button" href="../index.html">← Voltar</a>
+      <a class="nav-button" href="../index.html">&larr; Voltar</a>
       <p class="eyebrow">Matéria</p>
       <h1>FOE - Fenômenos Ondulatórios e Eletromagnéticos</h1>
       <p>
-        Página dedicada ao estudo de ondas, oscilações, campos elétricos,
-        campos magnéticos e fenômenos eletromagnéticos.
+        Material de estudo sobre indução eletromagnética, indutores, corrente alternada,
+        circuitos RLC, transformadores e equações de Maxwell.
       </p>
     </section>
 
-    <section class="content-layout">
-      <article class="study-section">
-        <h2>Visão geral</h2>
-        <p>Use este espaço para registrar os conceitos centrais da matéria e suas aplicações.</p>
+    <nav class="jump-nav" aria-label="Navegação da página">
+      <a href="#visao-geral">Visão geral</a>
+      <a href="#trilha">Trilha</a>
+      <a href="#assuntos">Assuntos</a>
+      <a href="#resumo-prova">Resumo rápido</a>
+      <a href="#quiz">Questões</a>
+    </nav>
+
+    <section class="study-block" id="visao-geral">
+      <div class="section-heading">
+        <p class="eyebrow">Visão geral</p>
+        <h2>O que esta parte de FOE estuda</h2>
+      </div>
+
+      <div class="lead-panel">
+        <p>
+          Nesta etapa, FOE estuda como campos elétricos e magnéticos interagem com circuitos.
+          O foco não é apenas saber fórmulas: é entender por que uma variação de campo pode
+          gerar tensão, como uma corrente variável cria efeitos magnéticos e como resistores,
+          indutores e capacitores se comportam quando a fonte é alternada.
+        </p>
+        <p>
+          Para engenharia, esse conteúdo aparece em transmissão de energia, transformadores,
+          sensores, detectores de metais, frenagem magnética, aquecimento por indução,
+          filtros, circuitos de sintonia e análise de potência em corrente alternada.
+        </p>
+      </div>
+
+      <div class="concept-grid">
+        <article class="info-card">
+          <span class="card-code">Indução</span>
+          <h3>Fluxo variável gera fem</h3>
+          <p>A fem induzida surge quando o fluxo magnético através de uma superfície muda.</p>
+        </article>
+
+        <article class="info-card">
+          <span class="card-code">Circuitos</span>
+          <h3>Energia pode ser armazenada ou dissipada</h3>
+          <p>Indutores armazenam energia magnética, capacitores armazenam energia elétrica e resistores dissipam energia.</p>
+        </article>
+
+        <article class="info-card">
+          <span class="card-code">Campos</span>
+          <h3>Maxwell conecta eletricidade e magnetismo</h3>
+          <p>Campo elétrico variável também pode gerar campo magnético, mesmo sem corrente de condução.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="study-block" id="trilha">
+      <div class="section-heading">
+        <p class="eyebrow">Trilha de estudo</p>
+        <h2>Ordem recomendada</h2>
+      </div>
+
+      <div class="learning-path">
+        <a href="#fluxo">1. Fluxo magnético</a>
+        <a href="#faraday">2. Faraday-Lenz</a>
+        <a href="#movimento">3. Fem de movimento e Foucault</a>
+        <a href="#indutor">4. Indutor</a>
+        <a href="#rl">5. Circuito RL</a>
+        <a href="#ca">6. Corrente alternada</a>
+        <a href="#reatancias">7. R, L e C em CA</a>
+        <a href="#rlc">8. Circuito RLC</a>
+        <a href="#transformadores">9. Transformadores</a>
+        <a href="#maxwell">10. Ampère-Maxwell</a>
+      </div>
+    </section>
+
+    <section class="study-block" id="assuntos">
+      <div class="section-heading">
+        <p class="eyebrow">Conteúdo completo</p>
+        <h2>Assuntos explicados por tópico</h2>
+      </div>
+
+      <article class="lesson-topic" id="fluxo">
+        <header class="topic-header">
+          <span class="topic-number">01</span>
+          <div>
+            <p class="eyebrow">Indução eletromagnética</p>
+            <h3>Fluxo magnético</h3>
+          </div>
+        </header>
+
+        <div class="topic-content">
+          <div class="topic-explanation">
+            <p>
+              Fluxo magnético é uma forma de medir quanto campo magnético atravessa uma superfície.
+              Se muitas linhas de campo atravessam a área, o fluxo é grande. Se o campo está
+              paralelo à superfície, quase nenhuma linha atravessa a área e o fluxo tende a zero.
+            </p>
+            <p>
+              Em problemas de indução, o ponto mais importante é perceber o que está mudando:
+              a intensidade do campo, a área da espira ou o ângulo entre o campo e a superfície.
+              A indução aparece quando o fluxo magnético varia no tempo.
+            </p>
+          </div>
+
+          <aside class="formula-panel">
+            <h4>Fórmulas do tópico</h4>
+            <p class="formula">&Phi;<sub>B</sub> = &int; B &middot; dA</p>
+            <p class="formula">&Phi;<sub>B</sub> = BA cos(&theta;)</p>
+            <ul>
+              <li><span class="math">&Phi;<sub>B</sub></span>: fluxo magnético, em weber (Wb).</li>
+              <li><span class="math">B</span>: campo magnético, em tesla (T).</li>
+              <li><span class="math">A</span>: área da superfície, em m².</li>
+              <li><span class="math">&theta;</span>: ângulo entre o campo e o vetor área.</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="topic-example">
+          <h4>Exemplo resolvido</h4>
+          <p>
+            Uma espira plana de área <span class="math">0,050 m²</span> está em um campo uniforme
+            de <span class="math">0,20 T</span>. O ângulo entre o campo e o vetor área é
+            <span class="math">60°</span>. Calcule o fluxo.
+          </p>
+          <ol>
+            <li>Use <span class="math">&Phi;<sub>B</sub> = BA cos(&theta;)</span>.</li>
+            <li>Substitua: <span class="math">&Phi;<sub>B</sub> = 0,20 &middot; 0,050 &middot; cos(60°)</span>.</li>
+            <li>Como <span class="math">cos(60°) = 0,5</span>, então <span class="math">&Phi;<sub>B</sub> = 0,005 Wb</span>.</li>
+          </ol>
+        </div>
       </article>
 
-      <article class="study-section">
-        <h2>Conteúdos principais</h2>
-        <ul>
-          <li>Ondas mecânicas e eletromagnéticas.</li>
-          <li>Interferência, difração e polarização.</li>
-          <li>Campos elétricos e magnéticos.</li>
-          <li>Equações e aplicações do eletromagnetismo.</li>
-        </ul>
+      <article class="lesson-topic" id="faraday">
+        <header class="topic-header">
+          <span class="topic-number">02</span>
+          <div>
+            <p class="eyebrow">Indução eletromagnética</p>
+            <h3>Lei de Faraday-Lenz</h3>
+          </div>
+        </header>
+
+        <div class="topic-content">
+          <div class="topic-explanation">
+            <p>
+              A Lei de Faraday-Lenz diz que uma variação do fluxo magnético induz uma força
+              eletromotriz. Se o circuito estiver fechado, essa fem induz uma corrente.
+              A corrente induzida cria seu próprio campo magnético, e esse campo se opõe à
+              variação que causou a indução.
+            </p>
+            <p>
+              A palavra importante é variação. Um campo magnético constante atravessando uma
+              espira parada não basta para gerar fem contínua. É necessário que o fluxo mude.
+              O sinal negativo é a parte de Lenz: ele indica oposição à mudança do fluxo.
+            </p>
+          </div>
+
+          <aside class="formula-panel">
+            <h4>Fórmulas do tópico</h4>
+            <p class="formula">&epsilon; = - d&Phi;<sub>B</sub>/dt</p>
+            <p class="formula">&epsilon; = -N d&Phi;<sub>B</sub>/dt</p>
+            <p class="formula">|&epsilon;| = N|&Delta;&Phi;<sub>B</sub>|/&Delta;t</p>
+            <ul>
+              <li><span class="math">&epsilon;</span>: força eletromotriz induzida, em volts.</li>
+              <li><span class="math">N</span>: número de espiras.</li>
+              <li><span class="math">&Delta;&Phi;<sub>B</sub></span>: variação do fluxo magnético.</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="concept-strip">
+          <span>Fluxo aumenta</span>
+          <span class="flow-arrow">&rarr;</span>
+          <span>Corrente induzida tenta reduzir esse aumento</span>
+          <span class="flow-arrow">&rarr;</span>
+          <span>Oposição à causa da indução</span>
+        </div>
+
+        <div class="topic-example">
+          <h4>Exemplo resolvido</h4>
+          <p>
+            Uma bobina de <span class="math">120</span> espiras tem fluxo variando de
+            <span class="math">0,015 Wb</span> para <span class="math">0,045 Wb</span> em
+            <span class="math">0,10 s</span>. Qual é o módulo da fem induzida?
+          </p>
+          <ol>
+            <li>Variação do fluxo: <span class="math">&Delta;&Phi; = 0,045 - 0,015 = 0,030 Wb</span>.</li>
+            <li>Módulo da fem: <span class="math">|&epsilon;| = N|&Delta;&Phi;|/&Delta;t</span>.</li>
+            <li>Resultado: <span class="math">|&epsilon;| = 120 &middot; 0,030/0,10 = 36 V</span>.</li>
+          </ol>
+        </div>
       </article>
 
-      <article class="study-section">
-        <h2>Fórmulas essenciais</h2>
-        <p>Adicione aqui equações importantes, definições de variáveis e condições de uso.</p>
+      <article class="lesson-topic" id="movimento">
+        <header class="topic-header">
+          <span class="topic-number">03</span>
+          <div>
+            <p class="eyebrow">Condutores em campo magnético</p>
+            <h3>Fem de movimento e correntes de Foucault</h3>
+          </div>
+        </header>
+
+        <div class="topic-content">
+          <div class="topic-explanation">
+            <p>
+              Quando uma barra condutora se move em uma região com campo magnético, as cargas
+              dentro dela sofrem força magnética. Essa força separa cargas nas extremidades da
+              barra, criando uma diferença de potencial. Essa é a fem de movimento.
+            </p>
+            <p>
+              Em condutores maciços, um campo magnético variável pode induzir correntes em
+              caminhos fechados internos, chamadas correntes de Foucault. Elas podem ser
+              perdas indesejadas, pois aquecem o material, mas também são úteis em frenagem
+              magnética, detectores de metais e aquecimento por indução.
+            </p>
+          </div>
+
+          <aside class="formula-panel">
+            <h4>Fórmulas do tópico</h4>
+            <p class="formula">F<sub>m</sub> = |q|vB</p>
+            <p class="formula">&epsilon; = vBL</p>
+            <ul>
+              <li><span class="math">v</span>: velocidade do condutor.</li>
+              <li><span class="math">B</span>: campo magnético.</li>
+              <li><span class="math">L</span>: comprimento da barra dentro do campo.</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="compare-block">
+          <div>
+            <h4>Quando atrapalha</h4>
+            <p>Em núcleos metálicos, as correntes parasitas dissipam energia em forma de calor.</p>
+          </div>
+          <div>
+            <h4>Como reduzir</h4>
+            <p>Usam-se lâminas finas isoladas ou fendas para dificultar trajetórias fechadas de corrente.</p>
+          </div>
+          <div>
+            <h4>Quando ajuda</h4>
+            <p>Frenagem sem contato, sensores de metais e aquecimento por indução dependem desse efeito.</p>
+          </div>
+        </div>
+
+        <div class="topic-example">
+          <h4>Exemplo resolvido</h4>
+          <p>
+            Uma barra de <span class="math">0,40 m</span> move-se a <span class="math">3,0 m/s</span>
+            perpendicularmente a um campo de <span class="math">0,25 T</span>. Determine a fem.
+          </p>
+          <ol>
+            <li>Use <span class="math">&epsilon; = vBL</span>.</li>
+            <li>Substitua: <span class="math">&epsilon; = 3,0 &middot; 0,25 &middot; 0,40</span>.</li>
+            <li>Resultado: <span class="math">&epsilon; = 0,30 V</span>.</li>
+          </ol>
+        </div>
       </article>
 
-      <article class="study-section">
-        <h2>Exemplos práticos</h2>
-        <p>Reserve este bloco para problemas resolvidos e interpretações físicas.</p>
+      <article class="lesson-topic" id="indutor">
+        <header class="topic-header">
+          <span class="topic-number">04</span>
+          <div>
+            <p class="eyebrow">Componentes magnéticos</p>
+            <h3>Indutor e energia magnética</h3>
+          </div>
+        </header>
+
+        <div class="topic-content">
+          <div class="topic-explanation">
+            <p>
+              Um indutor é formado por espiras de fio condutor, geralmente em forma de solenoide.
+              Quando uma corrente passa pelo indutor, surge um campo magnético. A principal
+              grandeza do componente é a indutância, medida em henry (H).
+            </p>
+            <p>
+              O indutor se opõe a variações bruscas de corrente. Se a corrente aumenta, ele
+              induz uma fem que dificulta esse aumento. Se a corrente diminui, ele devolve
+              energia ao circuito tentando manter a corrente.
+            </p>
+          </div>
+
+          <aside class="formula-panel">
+            <h4>Fórmulas do tópico</h4>
+            <p class="formula">L = N&Phi;<sub>B</sub>/i</p>
+            <p class="formula">L = &mu;<sub>0</sub>N<sup>2</sup>A/l</p>
+            <p class="formula">&epsilon; = -L di/dt</p>
+            <p class="formula">U = (1/2)LI<sup>2</sup></p>
+            <ul>
+              <li><span class="math">L</span>: indutância.</li>
+              <li><span class="math">N</span>: número de espiras.</li>
+              <li><span class="math">A</span>: área da seção transversal.</li>
+              <li><span class="math">l</span>: comprimento do solenoide.</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="topic-example">
+          <h4>Exemplo resolvido</h4>
+          <p>
+            Um solenoide de ar tem <span class="math">500</span> espiras,
+            <span class="math">A = 0,010 m²</span> e <span class="math">l = 0,20 m</span>.
+            Estime a indutância.
+          </p>
+          <ol>
+            <li>Use <span class="math">L = &mu;<sub>0</sub>N²A/l</span>.</li>
+            <li>Substitua: <span class="math">L = (4&pi; &times; 10<sup>-7</sup>)(500²)(0,010)/0,20</span>.</li>
+            <li>Resultado aproximado: <span class="math">L &asymp; 1,57 &times; 10<sup>-2</sup> H</span>, ou <span class="math">15,7 mH</span>.</li>
+          </ol>
+        </div>
       </article>
 
-      <article class="study-section">
-        <h2>Exercícios</h2>
-        <p>Liste exercícios propostos, desafios e questões de revisão.</p>
+      <article class="lesson-topic" id="rl">
+        <header class="topic-header">
+          <span class="topic-number">05</span>
+          <div>
+            <p class="eyebrow">Regime transitório</p>
+            <h3>Circuito RL</h3>
+          </div>
+        </header>
+
+        <div class="topic-content">
+          <div class="topic-explanation">
+            <p>
+              Um circuito RL em série combina resistor e indutor. Quando uma fonte é conectada,
+              a corrente não atinge o valor final instantaneamente, porque o indutor se opõe
+              à variação. A corrente cresce de forma exponencial até se aproximar de
+              <span class="math">V/R</span>.
+            </p>
+            <p>
+              Quando a fonte é retirada e o circuito ainda permite circulação de corrente,
+              o indutor descarrega a energia armazenada e a corrente decai exponencialmente.
+              A constante de tempo <span class="math">&tau;</span> mede a rapidez desse processo.
+            </p>
+          </div>
+
+          <aside class="formula-panel">
+            <h4>Fórmulas do tópico</h4>
+            <p class="formula">V = Ri + L di/dt</p>
+            <p class="formula">&tau; = L/R</p>
+            <p class="formula">i(t) = (V/R)(1 - e<sup>-t/&tau;</sup>)</p>
+            <p class="formula">i(t) = (V/R)e<sup>-t/&tau;</sup></p>
+            <ul>
+              <li>Carga: corrente cresce até <span class="math">V/R</span>.</li>
+              <li>Descarga: corrente decai a partir do valor inicial.</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="topic-example">
+          <h4>Exemplo resolvido</h4>
+          <p>
+            Um circuito RL tem <span class="math">V = 12 V</span>,
+            <span class="math">R = 4 &Omega;</span> e <span class="math">L = 2 H</span>.
+            Calcule <span class="math">&tau;</span> e a corrente após um tempo igual a
+            <span class="math">&tau;</span>.
+          </p>
+          <ol>
+            <li><span class="math">&tau; = L/R = 2/4 = 0,5 s</span>.</li>
+            <li>Corrente final: <span class="math">V/R = 12/4 = 3 A</span>.</li>
+            <li><span class="math">i(&tau;) = 3(1 - e<sup>-1</sup>) &asymp; 1,90 A</span>.</li>
+          </ol>
+        </div>
       </article>
 
-      <article class="study-section">
-        <h2>Resumos</h2>
-        <p>Inclua resumos rápidos para revisão antes de provas e listas.</p>
+      <article class="lesson-topic" id="ca">
+        <header class="topic-header">
+          <span class="topic-number">06</span>
+          <div>
+            <p class="eyebrow">Sinais alternados</p>
+            <h3>Corrente alternada e valor eficaz</h3>
+          </div>
+        </header>
+
+        <div class="topic-content">
+          <div class="topic-explanation">
+            <p>
+              Em corrente alternada, tensão e corrente variam periodicamente, geralmente em
+              forma senoidal. Para descrever esses sinais, usamos amplitude, frequência angular
+              e fase. A amplitude é o valor máximo, também chamado valor de pico.
+            </p>
+            <p>
+              Como a média de uma senoide simétrica pode ser zero, usa-se o valor eficaz
+              para medir o efeito energético da corrente alternada. O valor eficaz permite
+              comparar uma corrente CA com uma corrente CC que dissiparia a mesma potência
+              em um resistor.
+            </p>
+          </div>
+
+          <aside class="formula-panel">
+            <h4>Fórmulas do tópico</h4>
+            <p class="formula">v(t) = V cos(&omega;t + &phi;<sub>0</sub>)</p>
+            <p class="formula">i(t) = I cos(&omega;t + &phi;<sub>0</sub>)</p>
+            <p class="formula">V<sub>pp</sub> = 2V<sub>p</sub></p>
+            <p class="formula">I<sub>rms</sub> = I/&radic;2</p>
+            <ul>
+              <li><span class="math">V</span> e <span class="math">I</span>: valores de pico.</li>
+              <li><span class="math">&omega;</span>: frequência angular.</li>
+              <li><span class="math">&phi;<sub>0</sub></span>: fase inicial.</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="topic-example">
+          <h4>Exemplo resolvido</h4>
+          <p>
+            Uma corrente alternada tem valor eficaz de <span class="math">300 mA</span>.
+            Qual é sua amplitude?
+          </p>
+          <ol>
+            <li>Use <span class="math">I<sub>rms</sub> = I/&radic;2</span>.</li>
+            <li>Isolando: <span class="math">I = I<sub>rms</sub>&radic;2</span>.</li>
+            <li><span class="math">I = 0,300 &middot; 1,414 &asymp; 0,424 A</span>.</li>
+          </ol>
+        </div>
       </article>
+
+      <article class="lesson-topic" id="reatancias">
+        <header class="topic-header">
+          <span class="topic-number">07</span>
+          <div>
+            <p class="eyebrow">Componentes em CA</p>
+            <h3>Resistor, indutor e capacitor em corrente alternada</h3>
+          </div>
+        </header>
+
+        <div class="topic-content">
+          <div class="topic-explanation">
+            <p>
+              Em um resistor, tensão e corrente estão em fase: quando a corrente é máxima, a
+              tensão também é máxima. Em um indutor, a tensão é proporcional à taxa de variação
+              da corrente, por isso fica adiantada de 90 graus. Em um capacitor, a corrente
+              depende da variação da carga, e a tensão fica atrasada de 90 graus em relação
+              à corrente.
+            </p>
+            <p>
+              As reatâncias fazem o papel de uma resistência para sinais alternados. A diferença
+              é que elas dependem da frequência. O indutor oferece mais oposição quando a
+              frequência aumenta; o capacitor oferece menos oposição quando a frequência aumenta.
+            </p>
+          </div>
+
+          <aside class="formula-panel">
+            <h4>Fórmulas do tópico</h4>
+            <p class="formula">v<sub>R</sub>(t) = V<sub>R</sub>cos(&omega;t)</p>
+            <p class="formula">X<sub>L</sub> = &omega;L</p>
+            <p class="formula">V<sub>L</sub> = IX<sub>L</sub></p>
+            <p class="formula">X<sub>C</sub> = 1/(&omega;C)</p>
+            <p class="formula">V<sub>C</sub> = IX<sub>C</sub></p>
+            <ul>
+              <li><span class="math">v<sub>R</sub>(t)</span>: tensão instantânea no resistor.</li>
+              <li><span class="math">V<sub>R</sub>, V<sub>L</sub>, V<sub>C</sub></span>: amplitudes de tensão no resistor, indutor e capacitor.</li>
+              <li><span class="math">I</span>: amplitude da corrente alternada.</li>
+              <li><span class="math">X<sub>L</sub></span>: reatância indutiva; <span class="math">X<sub>C</sub></span>: reatância capacitiva.</li>
+              <li><span class="math">&omega;</span>: frequência angular; <span class="math">L</span>: indutância; <span class="math">C</span>: capacitância.</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="phase-board expanded">
+          <div><strong>R</strong><span>Tensão e corrente em fase. Não há defasagem.</span></div>
+          <div><strong>L</strong><span>Tensão adiantada de 90°. A oposição cresce com a frequência.</span></div>
+          <div><strong>C</strong><span>Tensão atrasada de 90°. A oposição diminui com a frequência.</span></div>
+        </div>
+
+        <div class="topic-example">
+          <h4>Exemplo resolvido</h4>
+          <p>
+            Um indutor de <span class="math">0,20 H</span> opera com
+            <span class="math">&omega; = 100 rad/s</span> e corrente de pico
+            <span class="math">0,50 A</span>. Calcule a reatância e a tensão de pico.
+          </p>
+          <ol>
+            <li><span class="math">X<sub>L</sub> = &omega;L = 100 &middot; 0,20 = 20 &Omega;</span>.</li>
+            <li><span class="math">V<sub>L</sub> = IX<sub>L</sub> = 0,50 &middot; 20 = 10 V</span>.</li>
+            <li>A tensão no indutor está adiantada de 90° em relação à corrente.</li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="lesson-topic" id="rlc">
+        <header class="topic-header">
+          <span class="topic-number">08</span>
+          <div>
+            <p class="eyebrow">Circuitos em CA</p>
+            <h3>Circuito RLC em série, impedância e ressonância</h3>
+          </div>
+        </header>
+
+        <div class="topic-content">
+          <div class="topic-explanation">
+            <p>
+              Em um circuito RLC série, a corrente é a mesma em todos os componentes, mas as
+              tensões não ficam necessariamente em fase. A tensão no resistor fica em fase
+              com a corrente, a tensão no indutor fica adiantada e a tensão no capacitor fica
+              atrasada. Por isso, a soma das tensões precisa ser feita considerando fase.
+            </p>
+            <p>
+              A impedância mede a oposição total do circuito à corrente alternada. Quando
+              <span class="math">X<sub>L</sub> = X<sub>C</sub></span>, ocorre ressonância:
+              o efeito reativo se cancela, a impedância fica mínima e igual a
+              <span class="math">R</span>.
+            </p>
+          </div>
+
+          <aside class="formula-panel">
+            <h4>Fórmulas do tópico</h4>
+            <p class="formula">v(t) = v<sub>R</sub>(t) + v<sub>L</sub>(t) + v<sub>C</sub>(t)</p>
+            <p class="formula">Z = &radic;[R² + (X<sub>L</sub> - X<sub>C</sub>)²]</p>
+            <p class="formula">I = V/Z</p>
+            <p class="formula">tan(&phi;) = (X<sub>L</sub> - X<sub>C</sub>)/R</p>
+            <p class="formula">&omega;<sub>0</sub> = 1/&radic;(LC)</p>
+            <p class="formula">f<sub>0</sub> = 1/[2&pi;&radic;(LC)]</p>
+            <ul>
+              <li><span class="math">v(t)</span>: tensão total instantânea da fonte.</li>
+              <li><span class="math">v<sub>R</sub>, v<sub>L</sub>, v<sub>C</sub></span>: tensões instantâneas nos componentes.</li>
+              <li><span class="math">Z</span>: impedância total do RLC série.</li>
+              <li><span class="math">R</span>: resistência; <span class="math">X<sub>L</sub></span>: reatância indutiva; <span class="math">X<sub>C</sub></span>: reatância capacitiva.</li>
+              <li><span class="math">&phi;</span>: defasagem entre tensão total e corrente.</li>
+              <li><span class="math">&omega;<sub>0</sub></span>: frequência angular de ressonância; <span class="math">f<sub>0</sub></span>: frequência de ressonância em hertz.</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="visual-panel inline-visual">
+          <h4>Esquema da ressonância</h4>
+          <div class="resonance-sketch" aria-label="Esboço conceitual de ressonância">
+            <span class="axis y-axis">I</span>
+            <span class="axis x-axis">f</span>
+            <span class="curve"></span>
+            <span class="peak-label">f<sub>0</sub></span>
+          </div>
+          <p>
+            O pico indica que a corrente é maior perto da frequência de ressonância.
+            Quanto menor a resistência, mais intenso tende a ser o pico.
+          </p>
+        </div>
+
+        <div class="topic-example">
+          <h4>Exemplo resolvido</h4>
+          <p>
+            Um RLC série tem <span class="math">R = 30 &Omega;</span>,
+            <span class="math">X<sub>L</sub> = 80 &Omega;</span> e
+            <span class="math">X<sub>C</sub> = 40 &Omega;</span>. A fonte tem tensão de pico
+            <span class="math">120 V</span>. Calcule <span class="math">Z</span> e
+            <span class="math">I</span>.
+          </p>
+          <ol>
+            <li>Diferença reativa: <span class="math">X<sub>L</sub> - X<sub>C</sub> = 40 &Omega;</span>.</li>
+            <li><span class="math">Z = &radic;(30² + 40²) = &radic;2500 = 50 &Omega;</span>.</li>
+            <li><span class="math">I = V/Z = 120/50 = 2,4 A</span>.</li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="lesson-topic" id="transformadores">
+        <header class="topic-header">
+          <span class="topic-number">09</span>
+          <div>
+            <p class="eyebrow">Aplicação de indução</p>
+            <h3>Transformadores</h3>
+          </div>
+        </header>
+
+        <div class="topic-content">
+          <div class="topic-explanation">
+            <p>
+              Transformadores funcionam por indução eletromagnética. Uma corrente alternada
+              no enrolamento primário produz fluxo magnético variável no núcleo. Esse fluxo
+              atravessa o enrolamento secundário e induz uma tensão.
+            </p>
+            <p>
+              Em um transformador ideal, a potência no primário e no secundário é considerada
+              a mesma. Assim, elevar tensão reduz corrente, e reduzir tensão aumenta corrente.
+              Isso é fundamental para transmissão eficiente de energia elétrica.
+            </p>
+          </div>
+
+          <aside class="formula-panel">
+            <h4>Fórmulas do tópico</h4>
+            <p class="formula">V<sub>S</sub>/V<sub>P</sub> = N<sub>S</sub>/N<sub>P</sub></p>
+            <p class="formula">I<sub>P</sub>V<sub>P</sub> = I<sub>S</sub>V<sub>S</sub></p>
+            <p class="formula">I<sub>S</sub> = (N<sub>P</sub>/N<sub>S</sub>)I<sub>P</sub></p>
+            <ul>
+              <li><span class="math">V<sub>P</sub></span>: tensão no primário; <span class="math">V<sub>S</sub></span>: tensão no secundário.</li>
+              <li><span class="math">N<sub>P</sub></span>: número de espiras no primário; <span class="math">N<sub>S</sub></span>: número de espiras no secundário.</li>
+              <li><span class="math">I<sub>P</sub></span>: corrente no primário; <span class="math">I<sub>S</sub></span>: corrente no secundário.</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="topic-example">
+          <h4>Exemplo resolvido</h4>
+          <p>
+            Um transformador tem <span class="math">N<sub>P</sub> = 500</span> espiras,
+            <span class="math">N<sub>S</sub> = 100</span> espiras e recebe
+            <span class="math">V<sub>P</sub> = 220 V</span>. Qual é a tensão no secundário?
+          </p>
+          <ol>
+            <li>Use <span class="math">V<sub>S</sub>/V<sub>P</sub> = N<sub>S</sub>/N<sub>P</sub></span>.</li>
+            <li><span class="math">V<sub>S</sub> = 220 &middot; 100/500</span>.</li>
+            <li><span class="math">V<sub>S</sub> = 44 V</span>. É um transformador abaixador.</li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="lesson-topic" id="maxwell">
+        <header class="topic-header">
+          <span class="topic-number">10</span>
+          <div>
+            <p class="eyebrow">Campos eletromagnéticos</p>
+            <h3>Lei de Ampère-Maxwell, equações de Maxwell e força de Lorentz</h3>
+          </div>
+        </header>
+
+        <div class="topic-content">
+          <div class="topic-explanation">
+            <p>
+              A Lei de Ampère clássica relaciona campo magnético a corrente elétrica real.
+              O problema aparece no capacitor em carga: entre as placas não há corrente de
+              condução, mas existe campo magnético associado ao campo elétrico variável.
+            </p>
+            <p>
+              Maxwell resolveu a inconsistência introduzindo a corrente de deslocamento,
+              associada à variação do fluxo elétrico. Com isso, campos elétricos variáveis
+              também podem gerar campos magnéticos. A força de Lorentz resume como uma carga
+              reage à presença de campos elétricos e magnéticos.
+            </p>
+          </div>
+
+          <aside class="formula-panel">
+            <h4>Fórmulas do tópico</h4>
+            <p class="formula">I<sub>d</sub> = &epsilon;<sub>0</sub>d&Phi;<sub>E</sub>/dt</p>
+            <p class="formula">&oint; B &middot; ds = &mu;<sub>0</sub>I + &mu;<sub>0</sub>&epsilon;<sub>0</sub>d&Phi;<sub>E</sub>/dt</p>
+            <p class="formula">&oint; E &middot; ds = -d&Phi;<sub>B</sub>/dt</p>
+            <p class="formula">&oint; E &middot; dA = Q<sub>int</sub>/&epsilon;<sub>0</sub></p>
+            <p class="formula">&oint; B &middot; dA = 0</p>
+            <p class="formula">F = qE + q(v &times; B)</p>
+            <ul>
+              <li><span class="math">I<sub>d</sub></span>: corrente de deslocamento.</li>
+              <li><span class="math">&epsilon;<sub>0</sub></span>: permissividade elétrica do vácuo; <span class="math">&mu;<sub>0</sub></span>: permeabilidade magnética do vácuo.</li>
+              <li><span class="math">&Phi;<sub>E</sub></span>: fluxo elétrico; <span class="math">&Phi;<sub>B</sub></span>: fluxo magnético.</li>
+              <li><span class="math">E</span>: campo elétrico; <span class="math">B</span>: campo magnético.</li>
+              <li><span class="math">Q<sub>int</sub></span>: carga interna à superfície; <span class="math">q</span>: carga da partícula; <span class="math">v</span>: velocidade.</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="topic-example">
+          <h4>Exemplo conceitual</h4>
+          <p>
+            Durante a carga de um capacitor, há corrente nos fios, mas não há cargas livres
+            atravessando o espaço entre as placas. Mesmo assim, o campo elétrico entre as
+            placas varia com o tempo.
+          </p>
+          <ol>
+            <li>Campo elétrico variável implica fluxo elétrico variável.</li>
+            <li>Fluxo elétrico variável cria corrente de deslocamento.</li>
+            <li>A corrente de deslocamento entra na Lei de Ampère-Maxwell e explica o campo magnético na região.</li>
+          </ol>
+        </div>
+      </article>
+    </section>
+
+    <section class="study-block" id="resumo-prova">
+      <div class="section-heading">
+        <p class="eyebrow">Resumo rápido</p>
+        <h2>Essencial para prova</h2>
+      </div>
+
+      <div class="exam-grid">
+        <article class="exam-card">
+          <h3>Teoria que precisa estar na cabeça</h3>
+          <ul>
+            <li>Indução exige variação de fluxo magnético.</li>
+            <li>A Lei de Lenz dá o sentido da corrente induzida: sempre oposição à variação.</li>
+            <li>Indutor armazena energia no campo magnético e resiste a variações de corrente.</li>
+            <li>Em CA, fase importa tanto quanto amplitude.</li>
+            <li>Ressonância em RLC série ocorre quando <span class="math">X<sub>L</sub> = X<sub>C</sub></span>.</li>
+            <li>Maxwell adiciona a corrente de deslocamento para campos elétricos variáveis.</li>
+          </ul>
+        </article>
+
+        <article class="exam-card">
+          <h3>Esquema de decisão</h3>
+          <div class="decision-flow">
+            <span>Tem fluxo variando?</span>
+            <span>Use Faraday-Lenz</span>
+            <span>Tem barra se movendo em B?</span>
+            <span>Use fem de movimento</span>
+            <span>Tem CA com R, L, C?</span>
+            <span>Use reatâncias e impedância</span>
+            <span>Tem capacitor carregando?</span>
+            <span>Lembre da corrente de deslocamento</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="formula-cheatsheet">
+        <article>
+          <h3>Indução</h3>
+          <p><span class="math">&Phi;<sub>B</sub> = BAcos(&theta;)</span></p>
+          <p><span class="math">&epsilon; = -N d&Phi;<sub>B</sub>/dt</span></p>
+          <p><span class="math">&epsilon; = vBL</span></p>
+        </article>
+
+        <article>
+          <h3>Indutor e RL</h3>
+          <p><span class="math">L = &mu;<sub>0</sub>N²A/l</span></p>
+          <p><span class="math">&epsilon; = -L di/dt</span></p>
+          <p><span class="math">U = (1/2)LI²</span></p>
+          <p><span class="math">&tau; = L/R</span></p>
+        </article>
+
+        <article>
+          <h3>Corrente alternada</h3>
+          <p><span class="math">v(t) = Vcos(&omega;t + &phi;)</span></p>
+          <p><span class="math">I<sub>rms</sub> = I/&radic;2</span></p>
+          <p><span class="math">X<sub>L</sub> = &omega;L</span></p>
+          <p><span class="math">X<sub>C</sub> = 1/(&omega;C)</span></p>
+        </article>
+
+        <article>
+          <h3>RLC e Maxwell</h3>
+          <p><span class="math">Z = &radic;[R² + (X<sub>L</sub> - X<sub>C</sub>)²]</span></p>
+          <p><span class="math">f<sub>0</sub> = 1/[2&pi;&radic;(LC)]</span></p>
+          <p><span class="math">I<sub>d</sub> = &epsilon;<sub>0</sub>d&Phi;<sub>E</sub>/dt</span></p>
+          <p><span class="math">F = qE + q(v &times; B)</span></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="study-block" id="quiz">
+      <div class="section-heading">
+        <p class="eyebrow">Questões abertas</p>
+        <h2>Resolva e confira a resolução</h2>
+      </div>
+
+      <div class="open-question-list">
+        <article class="open-question-card">
+          <div class="question-meta">Questão 1</div>
+          <h3>Explique, com suas palavras, por que a variação do fluxo magnético é a causa da fem induzida.</h3>
+          <p class="question-hint">Na resposta, diferencie campo magnético constante de fluxo magnético variável.</p>
+          <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
+          <div class="solution-panel" hidden>
+            <h4>Resolução comentada</h4>
+            <p>A fem induzida aparece quando o fluxo magnético que atravessa a espira muda no tempo. O fluxo pode mudar por alteração de <span class="math">B</span>, da área <span class="math">A</span> ou do ângulo <span class="math">&theta;</span>. Um campo constante em uma espira parada não gera fem contínua, pois não há variação de <span class="math">&Phi;<sub>B</sub></span>.</p>
+          </div>
+        </article>
+
+        <article class="open-question-card">
+          <div class="question-meta">Questão 2</div>
+          <h3>Uma bobina com 150 espiras sofre uma variação de fluxo de 0,012 Wb em 0,040 s. Calcule o módulo da fem induzida.</h3>
+          <p class="question-hint">Use a forma em módulo da Lei de Faraday-Lenz.</p>
+          <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
+          <div class="solution-panel" hidden>
+            <h4>Resolução comentada</h4>
+            <p>A fórmula é <span class="math">|&epsilon;| = N|&Delta;&Phi;<sub>B</sub>|/&Delta;t</span>. Substituindo: <span class="math">|&epsilon;| = 150 &middot; 0,012/0,040 = 45 V</span>. O sinal da lei indica o sentido de oposição, mas o módulo pedido é <span class="math">45 V</span>.</p>
+          </div>
+        </article>
+
+        <article class="open-question-card">
+          <div class="question-meta">Questão 3</div>
+          <h3>Por que as correntes de Foucault podem ser indesejadas em alguns equipamentos e úteis em outros?</h3>
+          <p class="question-hint">Relacione perdas por aquecimento com aplicações como frenagem magnética.</p>
+          <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
+          <div class="solution-panel" hidden>
+            <h4>Resolução comentada</h4>
+            <p>Elas são indesejadas quando circulam em condutores maciços e dissipam energia em calor, reduzindo a eficiência. Por isso, núcleos podem ser laminados ou recortados. Ao mesmo tempo, esse efeito é útil quando o objetivo é frear sem contato, detectar metais ou aquecer por indução.</p>
+          </div>
+        </article>
+
+        <article class="open-question-card">
+          <div class="question-meta">Questão 4</div>
+          <h3>Um circuito RL tem <span class="math">R = 8 &Omega;</span> e <span class="math">L = 4 H</span>. Determine a constante de tempo e interprete o resultado.</h3>
+          <p class="question-hint">A constante de tempo mede a rapidez da variação da corrente.</p>
+          <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
+          <div class="solution-panel" hidden>
+            <h4>Resolução comentada</h4>
+            <p><span class="math">&tau; = L/R = 4/8 = 0,5 s</span>. Isso significa que a corrente não atinge seu valor final instantaneamente; ela cresce ou decai de forma exponencial, com rapidez caracterizada por <span class="math">0,5 s</span>.</p>
+          </div>
+        </article>
+
+        <article class="open-question-card">
+          <div class="question-meta">Questão 5</div>
+          <h3>Compare o comportamento de resistor, indutor e capacitor em corrente alternada em relação à fase.</h3>
+          <p class="question-hint">Use como referência a corrente do circuito.</p>
+          <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
+          <div class="solution-panel" hidden>
+            <h4>Resolução comentada</h4>
+            <p>No resistor, tensão e corrente ficam em fase. No indutor, a tensão fica adiantada de 90 graus em relação à corrente, pois depende de <span class="math">di/dt</span>. No capacitor, a tensão fica atrasada de 90 graus em relação à corrente, pois a corrente está associada à variação da carga.</p>
+          </div>
+        </article>
+
+        <article class="open-question-card">
+          <div class="question-meta">Questão 6</div>
+          <h3>Em um RLC série, <span class="math">R = 20 &Omega;</span>, <span class="math">X<sub>L</sub> = 50 &Omega;</span> e <span class="math">X<sub>C</sub> = 35 &Omega;</span>. Calcule a impedância.</h3>
+          <p class="question-hint">A diferença reativa é <span class="math">X<sub>L</sub> - X<sub>C</sub></span>.</p>
+          <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
+          <div class="solution-panel" hidden>
+            <h4>Resolução comentada</h4>
+            <p><span class="math">X<sub>L</sub> - X<sub>C</sub> = 15 &Omega;</span>. Logo, <span class="math">Z = &radic;[R² + (X<sub>L</sub> - X<sub>C</sub>)²] = &radic;(20² + 15²) = &radic;625 = 25 &Omega;</span>.</p>
+          </div>
+        </article>
+
+        <article class="open-question-card">
+          <div class="question-meta">Questão 7</div>
+          <h3>Explique o que acontece na ressonância de um circuito RLC série.</h3>
+          <p class="question-hint">Comente o papel de <span class="math">X<sub>L</sub></span>, <span class="math">X<sub>C</sub></span> e <span class="math">Z</span>.</p>
+          <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
+          <div class="solution-panel" hidden>
+            <h4>Resolução comentada</h4>
+            <p>Na ressonância, <span class="math">X<sub>L</sub> = X<sub>C</sub></span>. O termo reativo se cancela na impedância, então <span class="math">Z = R</span>. Como a impedância fica mínima, a corrente tende a ser máxima para uma mesma tensão aplicada.</p>
+          </div>
+        </article>
+
+        <article class="open-question-card">
+          <div class="question-meta">Questão 8</div>
+          <h3>Por que a corrente de deslocamento foi necessária na Lei de Ampère-Maxwell?</h3>
+          <p class="question-hint">Use o exemplo do capacitor em processo de carga.</p>
+          <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
+          <div class="solution-panel" hidden>
+            <h4>Resolução comentada</h4>
+            <p>Entre as placas de um capacitor em carga não há corrente de condução, mas há campo elétrico variável. Maxwell associou essa variação do fluxo elétrico a uma corrente de deslocamento, permitindo explicar o campo magnético também nessa região.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="quiz-panel" data-quiz hidden aria-hidden="true">
+        <div class="quiz-toolbar">
+          <p data-quiz-score>Responda às questões para ver seu desempenho.</p>
+          <button class="nav-button" type="button" data-quiz-reset>Recomeçar</button>
+        </div>
+
+        <article class="quiz-card" data-correct="b">
+          <h3>1. O que precisa acontecer para surgir fem induzida em uma espira?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="a">Apenas existir campo magnético constante.</button>
+            <button type="button" data-option="b">O fluxo magnético através da espira variar.</button>
+            <button type="button" data-option="c">A espira estar sempre em repouso.</button>
+            <button type="button" data-option="d">A resistência elétrica ser nula.</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p class="feedback-title" data-feedback-title></p>
+            <p><strong>Resolução:</strong> a Lei de Faraday-Lenz relaciona fem induzida à variação do fluxo magnético. Campo constante, sem mudança de área ou ângulo, não produz fem contínua.</p>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-correct="c">
+          <h3>2. Uma bobina com 100 espiras sofre variação de fluxo de 0,020 Wb em 0,10 s. Qual é o módulo da fem induzida?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="a">0,20 V</button>
+            <button type="button" data-option="b">2,0 V</button>
+            <button type="button" data-option="c">20 V</button>
+            <button type="button" data-option="d">200 V</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p class="feedback-title" data-feedback-title></p>
+            <p><strong>Resolução:</strong> use <span class="math">|&epsilon;| = N|&Delta;&Phi;|/&Delta;t</span>. Assim, <span class="math">|&epsilon;| = 100 &middot; 0,020/0,10 = 20 V</span>.</p>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-correct="a">
+          <h3>3. O sinal negativo na Lei de Faraday-Lenz indica que a corrente induzida:</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="a">opõe-se à variação do fluxo que a produziu.</button>
+            <button type="button" data-option="b">sempre circula no sentido horário.</button>
+            <button type="button" data-option="c">sempre aumenta o fluxo original.</button>
+            <button type="button" data-option="d">existe apenas se o circuito for resistivo.</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p class="feedback-title" data-feedback-title></p>
+            <p><strong>Resolução:</strong> a Lei de Lenz expressa conservação de energia: a corrente induzida cria efeito magnético que se opõe à mudança que causou a indução.</p>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-correct="d">
+          <h3>4. Uma barra de 0,50 m move-se a 4,0 m/s em campo de 0,30 T. Qual é a fem de movimento?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="a">0,15 V</button>
+            <button type="button" data-option="b">0,30 V</button>
+            <button type="button" data-option="c">0,45 V</button>
+            <button type="button" data-option="d">0,60 V</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p class="feedback-title" data-feedback-title></p>
+            <p><strong>Resolução:</strong> <span class="math">&epsilon; = vBL = 4,0 &middot; 0,30 &middot; 0,50 = 0,60 V</span>.</p>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-correct="c">
+          <h3>5. Em um circuito RL, o papel da constante de tempo <span class="math">&tau; = L/R</span> é indicar:</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="a">a frequência de ressonância do circuito.</button>
+            <button type="button" data-option="b">a energia total dissipada no resistor.</button>
+            <button type="button" data-option="c">a rapidez com que a corrente cresce ou decai.</button>
+            <button type="button" data-option="d">o valor máximo do campo elétrico.</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p class="feedback-title" data-feedback-title></p>
+            <p><strong>Resolução:</strong> em circuitos RL, a corrente varia exponencialmente. Quanto maior <span class="math">&tau;</span>, mais lenta é a aproximação ao regime final.</p>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-correct="b">
+          <h3>6. Se uma corrente alternada tem valor de pico de 4,0 A, seu valor eficaz é aproximadamente:</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="a">1,41 A</button>
+            <button type="button" data-option="b">2,83 A</button>
+            <button type="button" data-option="c">4,00 A</button>
+            <button type="button" data-option="d">5,66 A</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p class="feedback-title" data-feedback-title></p>
+            <p><strong>Resolução:</strong> para sinal senoidal, <span class="math">I<sub>rms</sub> = I/&radic;2</span>. Logo, <span class="math">4,0/1,414 &asymp; 2,83 A</span>.</p>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-correct="a">
+          <h3>7. Em um indutor alimentado por CA, a tensão em relação à corrente fica:</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="a">adiantada de 90 graus.</button>
+            <button type="button" data-option="b">atrasada de 90 graus.</button>
+            <button type="button" data-option="c">sempre em fase.</button>
+            <button type="button" data-option="d">com fase aleatória.</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p class="feedback-title" data-feedback-title></p>
+            <p><strong>Resolução:</strong> no indutor, <span class="math">v<sub>L</sub> = L di/dt</span>. A derivada do cosseno desloca a fase, fazendo a tensão adiantar a corrente em 90 graus.</p>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-correct="d">
+          <h3>8. Em um RLC série com <span class="math">R = 30 &Omega;</span>, <span class="math">X<sub>L</sub> = 70 &Omega;</span> e <span class="math">X<sub>C</sub> = 30 &Omega;</span>, qual é a impedância?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="a">30 &Omega;</button>
+            <button type="button" data-option="b">40 &Omega;</button>
+            <button type="button" data-option="c">45 &Omega;</button>
+            <button type="button" data-option="d">50 &Omega;</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p class="feedback-title" data-feedback-title></p>
+            <p><strong>Resolução:</strong> <span class="math">X<sub>L</sub> - X<sub>C</sub> = 40 &Omega;</span>. Então <span class="math">Z = &radic;(30² + 40²) = 50 &Omega;</span>.</p>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-correct="b">
+          <h3>9. Na ressonância de um circuito RLC série:</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="a">a impedância tende ao infinito.</button>
+            <button type="button" data-option="b">as reatâncias indutiva e capacitiva se igualam.</button>
+            <button type="button" data-option="c">a resistência deixa de dissipar potência.</button>
+            <button type="button" data-option="d">a corrente obrigatoriamente é zero.</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p class="feedback-title" data-feedback-title></p>
+            <p><strong>Resolução:</strong> na ressonância, <span class="math">X<sub>L</sub> = X<sub>C</sub></span>. O termo reativo se cancela, a impedância fica igual a <span class="math">R</span> e a corrente tende a ser maior.</p>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-correct="c">
+          <h3>10. Por que Maxwell introduziu a corrente de deslocamento?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="a">Para eliminar a Lei de Faraday.</button>
+            <button type="button" data-option="b">Para explicar perdas por efeito Joule em resistores.</button>
+            <button type="button" data-option="c">Para incluir o efeito de campos elétricos variáveis gerando campo magnético.</button>
+            <button type="button" data-option="d">Para substituir a força de Lorentz.</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p class="feedback-title" data-feedback-title></p>
+            <p><strong>Resolução:</strong> entre as placas de um capacitor em carga não há corrente de condução, mas o fluxo elétrico varia. A corrente de deslocamento permite que a Lei de Ampère-Maxwell explique o campo magnético nessa região.</p>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
 
-  <button class="back-to-top" type="button" aria-label="Voltar ao topo">↑</button>
+  <button class="back-to-top" type="button" aria-label="Voltar ao topo">&uarr;</button>
 
   <footer class="site-footer">
     <p>Site de Estudos - FOE.</p>

@@ -18,56 +18,974 @@
     </nav>
   </header>
 
-  <main>
+  <main class="study-page">
     <section class="page-title">
-      <a class="nav-button" href="../index.html">← Voltar</a>
+      <a class="nav-button" href="../index.html">&larr; Voltar</a>
       <p class="eyebrow">Matéria</p>
       <h1>FT - Fenômenos de Transporte</h1>
       <p>
-        Página para organizar estudos sobre transporte de quantidade de movimento,
-        calor e massa em sistemas físicos e de engenharia.
+        Material de estudo sobre perda de carga em escoamentos internos e transferência de
+        calor por condução, convecção, radiação e redes de resistência térmica.
       </p>
     </section>
 
-    <section class="content-layout">
-      <article class="study-section">
-        <h2>Visão geral</h2>
-        <p>Use este espaço para resumir princípios de conservação e hipóteses de modelagem.</p>
+    <nav class="jump-nav" aria-label="Navegação da página">
+      <a href="#visao-geral">Visão geral</a>
+      <a href="#trilha">Trilha</a>
+      <a href="#assuntos">Assuntos</a>
+      <a href="#resumo-prova">Resumo rápido</a>
+      <a href="#quiz">Questões</a>
+    </nav>
+
+    <section class="study-block" id="visao-geral">
+      <div class="section-heading">
+        <p class="eyebrow">Visão geral</p>
+        <h2>O que esta parte de FT estuda</h2>
+      </div>
+
+      <div class="lead-panel">
+        <p>
+          Fenômenos de Transporte estuda como energia, quantidade de movimento e calor se
+          deslocam em sistemas físicos. Nesta parte, o foco está em dois blocos muito usados
+          em engenharia: escoamento em tubulações com perda de energia e transferência de
+          calor entre superfícies, fluidos e materiais.
+        </p>
+        <p>
+          Em aplicações reais, esse conteúdo aparece no dimensionamento de tubulações,
+          escolha de bombas, análise de perdas em acessórios, isolamento térmico, paredes
+          multicamadas, sistemas de refrigeração, fornos, trocadores de calor e controle de
+          temperatura em equipamentos.
+        </p>
+      </div>
+
+      <div class="concept-grid">
+        <article class="info-card">
+          <span class="card-code">Fluidos</span>
+          <h3>Perda de carga é perda de energia mecânica</h3>
+          <p>Parte da energia do escoamento vira calor por atrito com a tubulação e acessórios.</p>
+        </article>
+
+        <article class="info-card">
+          <span class="card-code">Regime</span>
+          <h3>Reynolds orienta o tipo de escoamento</h3>
+          <p>O regime laminar, transição ou turbulento muda a forma de estimar o fator de atrito.</p>
+        </article>
+
+        <article class="info-card">
+          <span class="card-code">Calor</span>
+          <h3>Temperatura diferente gera transferência</h3>
+          <p>Condução, convecção e radiação são mecanismos diferentes de transporte de energia térmica.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="study-block" id="trilha">
+      <div class="section-heading">
+        <p class="eyebrow">Trilha de estudo</p>
+        <h2>Ordem recomendada</h2>
+      </div>
+
+      <div class="learning-path">
+        <a href="#bernoulli">1. Bernoulli e energia</a>
+        <a href="#perda-carga">2. Perda de carga</a>
+        <a href="#reynolds">3. Reynolds</a>
+        <a href="#escoamento-interno">4. Escoamento interno</a>
+        <a href="#darcy">5. Darcy-Weisbach</a>
+        <a href="#perdas-localizadas">6. Perdas localizadas</a>
+        <a href="#calor">7. Calor e mecanismos</a>
+        <a href="#conducao">8. Condução</a>
+        <a href="#conveccao-radiacao">9. Convecção e radiação</a>
+        <a href="#resistencia-termica">10. Resistência térmica</a>
+      </div>
+    </section>
+
+    <section class="study-block" id="assuntos">
+      <div class="section-heading">
+        <p class="eyebrow">Conteúdo completo</p>
+        <h2>Assuntos explicados por tópico</h2>
+      </div>
+
+      <article class="lesson-topic" id="bernoulli">
+        <header class="topic-header">
+          <span class="topic-number">01</span>
+          <div>
+            <p class="eyebrow">Energia em escoamentos</p>
+            <h3>Equação de Bernoulli e suas hipóteses</h3>
+          </div>
+        </header>
+
+        <div class="topic-content">
+          <div class="topic-explanation">
+            <p>
+              A Equação de Bernoulli é uma forma de conservação de energia mecânica para um
+              fluido. Ela compara energia de pressão, energia cinética e energia potencial
+              entre pontos de uma linha de corrente.
+            </p>
+            <p>
+              A forma ideal vale sob hipóteses restritivas: escoamento permanente,
+              incompressível, sem atrito, sem trabalho de eixo, ao longo de uma linha de
+              corrente e, em muitos casos, irrotacional. Quando há atrito em tubulações reais,
+              precisamos acrescentar perda de carga.
+            </p>
+          </div>
+
+          <aside class="formula-panel">
+            <h4>Fórmulas do tópico</h4>
+            <p class="formula">p/&gamma; + V²/(2g) + z = constante</p>
+            <p class="formula">p<sub>1</sub>/&gamma; + V<sub>1</sub>²/(2g) + z<sub>1</sub> = p<sub>2</sub>/&gamma; + V<sub>2</sub>²/(2g) + z<sub>2</sub></p>
+            <ul>
+              <li><span class="math">p/&gamma;</span>: carga de pressão.</li>
+              <li><span class="math">V²/(2g)</span>: carga de velocidade.</li>
+              <li><span class="math">z</span>: carga de elevação.</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="topic-example">
+          <h4>Exemplo resolvido</h4>
+          <p>
+            Em uma tubulação horizontal ideal com mesmo diâmetro nas duas seções, a velocidade
+            é a mesma em 1 e 2. O que acontece com a pressão se não houver perda de carga?
+          </p>
+          <ol>
+            <li>Como a tubulação é horizontal, <span class="math">z<sub>1</sub> = z<sub>2</sub></span>.</li>
+            <li>Como o diâmetro é igual, <span class="math">V<sub>1</sub> = V<sub>2</sub></span>.</li>
+            <li>Sobra <span class="math">p<sub>1</sub>/&gamma; = p<sub>2</sub>/&gamma;</span>, então <span class="math">p<sub>1</sub> = p<sub>2</sub></span>.</li>
+          </ol>
+        </div>
       </article>
 
-      <article class="study-section">
-        <h2>Conteúdos principais</h2>
-        <ul>
-          <li>Propriedades dos fluidos.</li>
-          <li>Balanços de massa, energia e quantidade de movimento.</li>
-          <li>Transferência de calor por condução, convecção e radiação.</li>
-          <li>Transferência de massa e difusão.</li>
-        </ul>
+      <article class="lesson-topic" id="perda-carga">
+        <header class="topic-header">
+          <span class="topic-number">02</span>
+          <div>
+            <p class="eyebrow">Tubulações reais</p>
+            <h3>Perda de carga</h3>
+          </div>
+        </header>
+
+        <div class="topic-content">
+          <div class="topic-explanation">
+            <p>
+              Perda de carga é a energia mecânica que o fluido perde durante o escoamento.
+              Na prática, essa energia é convertida em energia térmica por causa do atrito
+              entre o fluido e a parede da tubulação e também por perturbações em conexões,
+              curvas, registros, entradas e saídas.
+            </p>
+            <p>
+              Em muitas situações, a perda de carga aparece como queda de pressão. Se duas
+              seções têm mesmo diâmetro, mesma cota e não há trabalho de eixo entre elas,
+              a diferença de pressão pode ser usada para medir a perda de energia.
+            </p>
+          </div>
+
+          <aside class="formula-panel">
+            <h4>Fórmulas do tópico</h4>
+            <p class="formula">h<sub>T</sub> = h<sub>D</sub> + h<sub>L</sub></p>
+            <p class="formula">[V<sub>1</sub>²/(2g) + p<sub>1</sub>/&gamma; + z<sub>1</sub>] - [V<sub>2</sub>²/(2g) + p<sub>2</sub>/&gamma; + z<sub>2</sub>] = h<sub>T</sub></p>
+            <ul>
+              <li><span class="math">h<sub>T</sub></span>: perda de carga total.</li>
+              <li><span class="math">h<sub>D</sub></span>: perda distribuída em trechos retos.</li>
+              <li><span class="math">h<sub>L</sub></span>: perda localizada em acessórios.</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="concept-strip">
+          <span>Energia no escoamento</span>
+          <span class="flow-arrow">&rarr;</span>
+          <span>Atrito e acessórios</span>
+          <span class="flow-arrow">&rarr;</span>
+          <span>Perda de pressão/carga</span>
+        </div>
+
+        <div class="topic-example">
+          <h4>Exemplo resolvido</h4>
+          <p>
+            Uma instalação apresenta <span class="math">h<sub>D</sub> = 3,2 m</span> em tubos retos
+            e <span class="math">h<sub>L</sub> = 1,8 m</span> em acessórios. Qual é a perda total?
+          </p>
+          <ol>
+            <li>Use <span class="math">h<sub>T</sub> = h<sub>D</sub> + h<sub>L</sub></span>.</li>
+            <li><span class="math">h<sub>T</sub> = 3,2 + 1,8</span>.</li>
+            <li>Resultado: <span class="math">h<sub>T</sub> = 5,0 m</span>.</li>
+          </ol>
+        </div>
       </article>
 
-      <article class="study-section">
-        <h2>Fórmulas essenciais</h2>
-        <p>Adicione aqui leis, correlações, unidades e limites de validade.</p>
+      <article class="lesson-topic" id="reynolds">
+        <header class="topic-header">
+          <span class="topic-number">03</span>
+          <div>
+            <p class="eyebrow">Classificação do escoamento</p>
+            <h3>Número de Reynolds</h3>
+          </div>
+        </header>
+
+        <div class="topic-content">
+          <div class="topic-explanation">
+            <p>
+              O número de Reynolds compara efeitos inerciais e viscosos no escoamento. Em
+              tubos circulares, ele ajuda a classificar o regime como laminar, de transição
+              ou turbulento. Essa classificação é importante porque o cálculo do fator de
+              atrito depende do regime.
+            </p>
+            <p>
+              Na prática, os limites não são absolutos. Rugosidade, vibrações e flutuações do
+              escoamento podem antecipar ou atrasar a transição. Mesmo assim, os valores de
+              referência são muito úteis para resolver problemas.
+            </p>
+          </div>
+
+          <aside class="formula-panel">
+            <h4>Fórmulas do tópico</h4>
+            <p class="formula">Re = &rho;V<sub>méd</sub>D/&mu;</p>
+            <p class="formula">Re &lt; 2300: laminar</p>
+            <p class="formula">2300 &le; Re &le; 4000: transição</p>
+            <p class="formula">Re &gt; 4000: turbulento</p>
+            <ul>
+              <li><span class="math">&rho;</span>: massa específica.</li>
+              <li><span class="math">V<sub>méd</sub></span>: velocidade média.</li>
+              <li><span class="math">D</span>: diâmetro interno.</li>
+              <li><span class="math">&mu;</span>: viscosidade dinâmica.</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="compare-block">
+          <div>
+            <h4>Laminar</h4>
+            <p>Camadas mais organizadas. Em tubos circulares, costuma ocorrer para <span class="math">Re &lt; 2300</span>.</p>
+          </div>
+          <div>
+            <h4>Transição</h4>
+            <p>Comportamento instável e sensível às condições da tubulação.</p>
+          </div>
+          <div>
+            <h4>Turbulento</h4>
+            <p>Movimento mais irregular. O fator de atrito costuma depender de correlações ou gráfico de Moody.</p>
+          </div>
+        </div>
+
+        <div class="topic-example">
+          <h4>Exemplo resolvido</h4>
+          <p>
+            Água escoa em um tubo de <span class="math">D = 0,050 m</span> com velocidade média
+            <span class="math">1,5 m/s</span>. Considere <span class="math">&rho; = 1000 kg/m³</span>
+            e <span class="math">&mu; = 1,0 &times; 10<sup>-3</sup> kg/(m.s)</span>. Classifique o escoamento.
+          </p>
+          <ol>
+            <li><span class="math">Re = &rho;VD/&mu;</span>.</li>
+            <li><span class="math">Re = 1000 &middot; 1,5 &middot; 0,050 / 0,001 = 75000</span>.</li>
+            <li>Como <span class="math">Re &gt; 4000</span>, o escoamento é turbulento.</li>
+          </ol>
+        </div>
       </article>
 
-      <article class="study-section">
-        <h2>Exemplos práticos</h2>
-        <p>Reserve este bloco para aplicações, diagramas e problemas resolvidos.</p>
+      <article class="lesson-topic" id="escoamento-interno">
+        <header class="topic-header">
+          <span class="topic-number">04</span>
+          <div>
+            <p class="eyebrow">Escoamento interno</p>
+            <h3>Tubos, dutos, região de entrada e rugosidade</h3>
+          </div>
+        </header>
+
+        <div class="topic-content">
+          <div class="topic-explanation">
+            <p>
+              Escoamento interno ocorre quando o fluido está completamente envolto por
+              superfícies sólidas, como em tubos, dutos e condutos. Tubos normalmente têm
+              seção circular e suportam pressões maiores; dutos aparecem muito em sistemas
+              de aquecimento e resfriamento de edifícios.
+            </p>
+            <p>
+              Ao entrar em uma tubulação, o fluido sofre a condição de não escorregamento:
+              a velocidade junto à parede é praticamente zero. As camadas próximas à parede
+              desaceleram, e o perfil de velocidades se desenvolve ao longo da região de
+              entrada. A rugosidade da parede também influencia as perdas, especialmente em
+              regime turbulento.
+            </p>
+          </div>
+
+          <aside class="formula-panel">
+            <h4>Relações úteis</h4>
+            <p class="formula">A = &pi;D²/4</p>
+            <p class="formula">V<sub>méd</sub> = Q/A</p>
+            <p class="formula">rugosidade relativa = e/D</p>
+            <ul>
+              <li><span class="math">Q</span>: vazão volumétrica.</li>
+              <li><span class="math">A</span>: área da seção do tubo.</li>
+              <li><span class="math">e/D</span>: parâmetro usado em correlações de atrito.</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="topic-example">
+          <h4>Exemplo resolvido</h4>
+          <p>
+            Um tubo circular tem diâmetro interno de <span class="math">0,10 m</span> e vazão
+            de <span class="math">0,020 m³/s</span>. Qual é a velocidade média?
+          </p>
+          <ol>
+            <li><span class="math">A = &pi;D²/4 = &pi;(0,10)²/4 &asymp; 0,00785 m²</span>.</li>
+            <li><span class="math">V = Q/A = 0,020/0,00785</span>.</li>
+            <li>Resultado: <span class="math">V &asymp; 2,55 m/s</span>.</li>
+          </ol>
+        </div>
       </article>
 
-      <article class="study-section">
-        <h2>Exercícios</h2>
-        <p>Liste exercícios de fixação, listas de aula e questões comentadas.</p>
+      <article class="lesson-topic" id="darcy">
+        <header class="topic-header">
+          <span class="topic-number">05</span>
+          <div>
+            <p class="eyebrow">Perda distribuída</p>
+            <h3>Equação de Darcy-Weisbach e fator de atrito</h3>
+          </div>
+        </header>
+
+        <div class="topic-content">
+          <div class="topic-explanation">
+            <p>
+              A perda distribuída ocorre em trechos retos de tubulação. Ela cresce com o
+              comprimento do tubo, com o quadrado da velocidade e com o fator de atrito.
+              Também diminui quando o diâmetro aumenta, pois um tubo maior reduz a velocidade
+              e a influência relativa da parede.
+            </p>
+            <p>
+              Em regime laminar, o fator de atrito pode ser calculado diretamente por
+              <span class="math">f = 64/Re</span>. Em regime turbulento, normalmente são usados
+              o gráfico de Moody ou correlações empíricas, pois entram efeitos de rugosidade
+              e não há uma expressão simples universal.
+            </p>
+          </div>
+
+          <aside class="formula-panel">
+            <h4>Fórmulas do tópico</h4>
+            <p class="formula">&Delta;P<sub>L</sub> = f(L/D)&rho;V²/2</p>
+            <p class="formula">h<sub>D</sub> = f(L/D)V²/(2g)</p>
+            <p class="formula">f = 64/Re &nbsp; (laminar)</p>
+            <ul>
+              <li><span class="math">L</span>: comprimento do trecho reto.</li>
+              <li><span class="math">D</span>: diâmetro interno.</li>
+              <li><span class="math">f</span>: fator de atrito.</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="topic-example">
+          <h4>Exemplo resolvido</h4>
+          <p>
+            Um tubo tem <span class="math">L = 20 m</span>, <span class="math">D = 0,05 m</span>,
+            <span class="math">V = 2,0 m/s</span> e <span class="math">f = 0,020</span>.
+            Calcule a perda distribuída. Use <span class="math">g = 9,81 m/s²</span>.
+          </p>
+          <ol>
+            <li>Use <span class="math">h<sub>D</sub> = f(L/D)V²/(2g)</span>.</li>
+            <li><span class="math">L/D = 20/0,05 = 400</span> e <span class="math">V²/(2g) = 4/19,62 &asymp; 0,204</span>.</li>
+            <li><span class="math">h<sub>D</sub> = 0,020 &middot; 400 &middot; 0,204 &asymp; 1,63 m</span>.</li>
+          </ol>
+        </div>
       </article>
 
-      <article class="study-section">
-        <h2>Resumos</h2>
-        <p>Inclua sínteses por tema para revisão rápida.</p>
+      <article class="lesson-topic" id="perdas-localizadas">
+        <header class="topic-header">
+          <span class="topic-number">06</span>
+          <div>
+            <p class="eyebrow">Acessórios e conexões</p>
+            <h3>Perdas localizadas e comprimento equivalente</h3>
+          </div>
+        </header>
+
+        <div class="topic-content">
+          <div class="topic-explanation">
+            <p>
+              Perdas localizadas, também chamadas perdas menores, aparecem em acessórios:
+              entradas, saídas, joelhos, curvas, válvulas, registros, contrações e expansões.
+              Elas são chamadas "menores", mas podem ser importantes quando a instalação tem
+              muitos acessórios ou trechos curtos.
+            </p>
+            <p>
+              Há duas formas comuns de calcular. A primeira usa o coeficiente experimental
+              <span class="math">K</span>. A segunda substitui o acessório por um comprimento
+              equivalente de tubo reto que causaria a mesma perda.
+            </p>
+          </div>
+
+          <aside class="formula-panel">
+            <h4>Fórmulas do tópico</h4>
+            <p class="formula">h<sub>L</sub> = K V²/(2g)</p>
+            <p class="formula">h<sub>L</sub> = f(L<sub>e</sub>/D)V²/(2g)</p>
+            <p class="formula">h<sub>T</sub> = &Sigma; f<sub>i</sub>(L<sub>i</sub>/D<sub>i</sub>)V<sub>i</sub>²/(2g) + &Sigma; K<sub>j</sub>V<sub>j</sub>²/(2g)</p>
+            <ul>
+              <li><span class="math">K</span>: coeficiente de perda localizada.</li>
+              <li><span class="math">L<sub>e</sub></span>: comprimento equivalente.</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="topic-example">
+          <h4>Exemplo resolvido</h4>
+          <p>
+            Uma curva tem <span class="math">K = 0,8</span>. A velocidade média é
+            <span class="math">2,5 m/s</span>. Calcule a perda localizada.
+          </p>
+          <ol>
+            <li>Use <span class="math">h<sub>L</sub> = K V²/(2g)</span>.</li>
+            <li><span class="math">V²/(2g) = 2,5²/(2 &middot; 9,81) = 6,25/19,62 &asymp; 0,319</span>.</li>
+            <li><span class="math">h<sub>L</sub> = 0,8 &middot; 0,319 &asymp; 0,255 m</span>.</li>
+          </ol>
+        </div>
       </article>
+
+      <article class="lesson-topic" id="calor">
+        <header class="topic-header">
+          <span class="topic-number">07</span>
+          <div>
+            <p class="eyebrow">Transferência de calor</p>
+            <h3>Calor, trabalho e mecanismos de transferência</h3>
+          </div>
+        </header>
+
+        <div class="topic-content">
+          <div class="topic-explanation">
+            <p>
+              Calor é energia transferida de um sistema para outro por causa de uma diferença
+              de temperatura. Energia também pode ser transferida por trabalho, mas em
+              transferência de calor o potencial motriz é a diferença de temperatura.
+            </p>
+            <p>
+              Os mecanismos principais são condução, convecção e radiação. Condução ocorre
+              por interação entre partículas; convecção combina condução com movimento
+              macroscópico do fluido; radiação é energia emitida por matéria em temperatura
+              não nula por ondas eletromagnéticas.
+            </p>
+          </div>
+
+          <aside class="formula-panel">
+            <h4>Ideias do tópico</h4>
+            <p class="formula">Calor: energia transferida por &Delta;T</p>
+            <p class="formula">Energia: Q ou W</p>
+            <p class="formula">Mecanismos: condução, convecção, radiação</p>
+            <ul>
+              <li><span class="math">&Delta;T</span>: diferença de temperatura que causa a transferência de calor.</li>
+              <li><span class="math">Q</span>: calor transferido entre sistemas.</li>
+              <li><span class="math">W</span>: trabalho, outra forma de transferência de energia.</li>
+              <li><span class="math">Condução</span>: transferência por interação entre partículas.</li>
+              <li><span class="math">Convecção</span>: transferência entre superfície e fluido em movimento.</li>
+              <li><span class="math">Radiação</span>: transferência por ondas eletromagnéticas.</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="compare-block">
+          <div>
+            <h4>Condução</h4>
+            <p>Energia passa das partículas mais energéticas para as menos energéticas dentro do material.</p>
+          </div>
+          <div>
+            <h4>Convecção</h4>
+            <p>Energia passa entre superfície e fluido em movimento, por difusão e advecção.</p>
+          </div>
+          <div>
+            <h4>Radiação</h4>
+            <p>Energia emitida por ondas eletromagnéticas; não exige contato direto com fluido ou sólido.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="lesson-topic" id="conducao">
+        <header class="topic-header">
+          <span class="topic-number">08</span>
+          <div>
+            <p class="eyebrow">Lei de Fourier</p>
+            <h3>Condução em paredes planas</h3>
+          </div>
+        </header>
+
+        <div class="topic-content">
+          <div class="topic-explanation">
+            <p>
+              Condução é transferência de calor através de um material por interação entre
+              partículas. Em uma parede plana, em regime permanente e unidimensional, a taxa
+              de calor que entra é igual à taxa que sai. A temperatura varia linearmente na
+              direção em que há diferença de temperatura.
+            </p>
+            <p>
+              A taxa de condução aumenta com a condutividade térmica, com a área e com a
+              diferença de temperatura. Ela diminui quando a espessura aumenta. Por isso,
+              materiais isolantes costumam ter baixa condutividade ou grande espessura.
+            </p>
+          </div>
+
+          <aside class="formula-panel">
+            <h4>Fórmulas do tópico</h4>
+            <p class="formula">q = kA(T<sub>1</sub> - T<sub>2</sub>)/L</p>
+            <p class="formula">q'' = q/A = k(T<sub>1</sub> - T<sub>2</sub>)/L</p>
+            <p class="formula">q'' = -k dT/dx</p>
+            <ul>
+              <li><span class="math">k</span>: condutividade térmica.</li>
+              <li><span class="math">A</span>: área normal à transferência.</li>
+              <li><span class="math">L</span>: espessura.</li>
+              <li><span class="math">q''</span>: fluxo térmico, em W/m².</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="topic-example">
+          <h4>Exemplo resolvido</h4>
+          <p>
+            Uma parede de tijolo tem <span class="math">L = 0,15 m</span>,
+            <span class="math">k = 1,7 W/(m.K)</span>, temperaturas de
+            <span class="math">1127°C</span> e <span class="math">877°C</span>, e área
+            <span class="math">0,5 &middot; 1,2 = 0,60 m²</span>. Calcule a taxa de calor.
+          </p>
+          <ol>
+            <li>Diferença de temperatura: <span class="math">&Delta;T = 250 K</span>.</li>
+            <li><span class="math">q = kA&Delta;T/L</span>.</li>
+            <li><span class="math">q = 1,7 &middot; 0,60 &middot; 250 / 0,15 = 1700 W</span>.</li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="lesson-topic" id="conveccao-radiacao">
+        <header class="topic-header">
+          <span class="topic-number">09</span>
+          <div>
+            <p class="eyebrow">Superfícies e emissão térmica</p>
+            <h3>Convecção e radiação</h3>
+          </div>
+        </header>
+
+        <div class="topic-content">
+          <div class="topic-explanation">
+            <p>
+              Convecção é a transferência de calor entre uma superfície e um fluido em
+              movimento. Pode ser natural, quando o movimento surge por diferença de densidade
+              causada por temperatura, ou forçada, quando o movimento é causado por ventilador,
+              bomba ou outro agente externo.
+            </p>
+            <p>
+              Radiação é energia emitida por matéria em temperatura não nula. Ela depende
+              fortemente da temperatura absoluta da superfície. Um corpo real emite menos que
+              um corpo negro, e essa diferença é representada pela emissividade.
+            </p>
+          </div>
+
+          <aside class="formula-panel">
+            <h4>Fórmulas do tópico</h4>
+            <p class="formula">q = hA(T<sub>s</sub> - T<sub>&infin;</sub>)</p>
+            <p class="formula">q'' = &sigma;T<sub>s</sub><sup>4</sup> &nbsp; (corpo negro)</p>
+            <p class="formula">q'' = &epsilon;&sigma;T<sub>s</sub><sup>4</sup> &nbsp; (corpo real)</p>
+            <ul>
+              <li><span class="math">h</span>: coeficiente convectivo.</li>
+              <li><span class="math">T<sub>s</sub></span>: temperatura da superfície.</li>
+              <li><span class="math">T<sub>&infin;</sub></span>: temperatura do fluido afastado.</li>
+              <li><span class="math">&sigma; = 5,67 &times; 10<sup>-8</sup> W/(m².K⁴)</span>.</li>
+              <li><span class="math">0 &le; &epsilon; &le; 1</span>: emissividade.</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="topic-example">
+          <h4>Exemplo resolvido</h4>
+          <p>
+            Um dispositivo eletrônico tem área exposta de <span class="math">100 mm²</span>.
+            Para manter sua superfície em <span class="math">50°C</span> com ambiente a
+            <span class="math">35°C</span>, ele precisa remover <span class="math">0,6 W</span>.
+            Determine <span class="math">h</span>.
+          </p>
+          <ol>
+            <li>Converta a área: <span class="math">100 mm² = 1,0 &times; 10<sup>-4</sup> m²</span>.</li>
+            <li>Use <span class="math">q = hA(T<sub>s</sub> - T<sub>&infin;</sub>)</span>.</li>
+            <li><span class="math">h = 0,6/[1,0 &times; 10<sup>-4</sup> &middot; 15] = 400 W/(m².K)</span>.</li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="lesson-topic" id="resistencia-termica">
+        <header class="topic-header">
+          <span class="topic-number">10</span>
+          <div>
+            <p class="eyebrow">Redes térmicas</p>
+            <h3>Resistência térmica em série e em paralelo</h3>
+          </div>
+        </header>
+
+        <div class="topic-content">
+          <div class="topic-explanation">
+            <p>
+              Resistência térmica é uma analogia com circuitos elétricos. A diferença de
+              temperatura é o potencial motriz, a taxa de transferência de calor é o fluxo
+              resultante, e a resistência térmica mede a dificuldade para o calor atravessar
+              uma camada ou uma interface convectiva.
+            </p>
+            <p>
+              Em paredes multicamadas, resistências em série são somadas diretamente. Em
+              caminhos paralelos, as taxas de calor se dividem e a resistência equivalente
+              segue uma soma de inversos. Essa abordagem simplifica paredes com várias
+              camadas, janelas, isolamentos e convecção nas superfícies.
+            </p>
+          </div>
+
+          <aside class="formula-panel">
+            <h4>Fórmulas do tópico</h4>
+            <p class="formula">R = &Delta;T/q</p>
+            <p class="formula">R<sub>cond</sub> = L/(kA)</p>
+            <p class="formula">R<sub>conv</sub> = 1/(hA)</p>
+            <p class="formula">q = &Delta;T<sub>total</sub>/R<sub>total</sub></p>
+            <p class="formula">R<sub>total,série</sub> = R<sub>1</sub> + R<sub>2</sub> + ...</p>
+            <p class="formula">1/R<sub>total,paralelo</sub> = 1/R<sub>1</sub> + 1/R<sub>2</sub> + ...</p>
+            <ul>
+              <li><span class="math">R</span>: resistência térmica, em K/W.</li>
+              <li><span class="math">&Delta;T</span>: diferença de temperatura entre os pontos analisados.</li>
+              <li><span class="math">q</span>: taxa de transferência de calor, em W.</li>
+              <li><span class="math">L</span>: espessura da camada; <span class="math">k</span>: condutividade térmica; <span class="math">A</span>: área.</li>
+              <li><span class="math">h</span>: coeficiente convectivo.</li>
+              <li><span class="math">R<sub>total</sub></span>: resistência equivalente da rede térmica.</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="concept-strip">
+          <span>&Delta;T</span>
+          <span class="flow-arrow">&rarr;</span>
+          <span>Resistências térmicas</span>
+          <span class="flow-arrow">&rarr;</span>
+          <span>Taxa q</span>
+        </div>
+
+        <div class="topic-example">
+          <h4>Exemplo resolvido</h4>
+          <p>
+            Uma parede plana tem <span class="math">L = 0,20 m</span>,
+            <span class="math">k = 0,50 W/(m.K)</span>, área <span class="math">A = 2,0 m²</span>
+            e diferença de temperatura de <span class="math">40 K</span>. Calcule
+            <span class="math">R<sub>cond</sub></span> e <span class="math">q</span>.
+          </p>
+          <ol>
+            <li><span class="math">R<sub>cond</sub> = L/(kA) = 0,20/(0,50 &middot; 2,0) = 0,20 K/W</span>.</li>
+            <li><span class="math">q = &Delta;T/R = 40/0,20</span>.</li>
+            <li>Resultado: <span class="math">q = 200 W</span>.</li>
+          </ol>
+        </div>
+      </article>
+    </section>
+
+    <section class="study-block" id="resumo-prova">
+      <div class="section-heading">
+        <p class="eyebrow">Resumo rápido</p>
+        <h2>Essencial para prova</h2>
+      </div>
+
+      <div class="exam-grid">
+        <article class="exam-card">
+          <h3>Teoria que precisa estar na cabeça</h3>
+          <ul>
+            <li>Bernoulli ideal conserva energia mecânica, mas tubulações reais exigem perda de carga.</li>
+            <li>Perda distribuída ocorre em tubos retos; perda localizada ocorre em acessórios.</li>
+            <li>Reynolds classifica o regime e orienta como estimar o fator de atrito.</li>
+            <li>Condução depende de <span class="math">k</span>, área, espessura e diferença de temperatura.</li>
+            <li>Convecção depende do coeficiente <span class="math">h</span> e da diferença entre superfície e fluido.</li>
+            <li>Resistência térmica transforma problemas de calor em redes semelhantes a circuitos.</li>
+          </ul>
+        </article>
+
+        <article class="exam-card">
+          <h3>Esquema de decisão</h3>
+          <div class="decision-flow">
+            <span>É escoamento ideal?</span>
+            <span>Use Bernoulli simples</span>
+            <span>Tem atrito em tubo?</span>
+            <span>Use Darcy-Weisbach</span>
+            <span>Tem curvas, registros ou entradas?</span>
+            <span>Some perdas localizadas</span>
+            <span>Tem calor atravessando camadas?</span>
+            <span>Use resistências térmicas</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="formula-cheatsheet">
+        <article>
+          <h3>Escoamento</h3>
+          <p><span class="math">Re = &rho;VD/&mu;</span></p>
+          <p><span class="math">V = Q/A</span></p>
+          <p><span class="math">A = &pi;D²/4</span></p>
+        </article>
+
+        <article>
+          <h3>Perda de carga</h3>
+          <p><span class="math">h<sub>T</sub> = h<sub>D</sub> + h<sub>L</sub></span></p>
+          <p><span class="math">h<sub>D</sub> = f(L/D)V²/(2g)</span></p>
+          <p><span class="math">h<sub>L</sub> = KV²/(2g)</span></p>
+          <p><span class="math">f = 64/Re</span></p>
+        </article>
+
+        <article>
+          <h3>Calor</h3>
+          <p><span class="math">q = kA&Delta;T/L</span></p>
+          <p><span class="math">q'' = -k dT/dx</span></p>
+          <p><span class="math">q = hA(T<sub>s</sub> - T<sub>&infin;</sub>)</span></p>
+          <p><span class="math">q'' = &epsilon;&sigma;T<sub>s</sub>⁴</span></p>
+        </article>
+
+        <article>
+          <h3>Resistências</h3>
+          <p><span class="math">R = &Delta;T/q</span></p>
+          <p><span class="math">R<sub>cond</sub> = L/(kA)</span></p>
+          <p><span class="math">R<sub>conv</sub> = 1/(hA)</span></p>
+          <p><span class="math">q = &Delta;T/R<sub>total</sub></span></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="study-block" id="quiz">
+      <div class="section-heading">
+        <p class="eyebrow">Questões abertas</p>
+        <h2>Resolva e confira a resolução</h2>
+      </div>
+
+      <div class="open-question-list">
+        <article class="open-question-card">
+          <div class="question-meta">Questão 1</div>
+          <h3>Explique o que é perda de carga e por que ela aparece em tubulações reais.</h3>
+          <p class="question-hint">Relacione energia mecânica, atrito e queda de pressão.</p>
+          <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
+          <div class="solution-panel" hidden>
+            <h4>Resolução comentada</h4>
+            <p>Perda de carga é a energia mecânica que o fluido perde durante o escoamento. Em tubulações reais, o atrito com a parede e as perturbações causadas por acessórios convertem parte dessa energia em calor. Por isso, muitas vezes ela aparece como queda de pressão entre duas seções.</p>
+          </div>
+        </article>
+
+        <article class="open-question-card">
+          <div class="question-meta">Questão 2</div>
+          <h3>Classifique um escoamento em tubo circular com <span class="math">Re = 3500</span> e explique o significado dessa faixa.</h3>
+          <p class="question-hint">Use os limites de regime laminar, transição e turbulento.</p>
+          <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
+          <div class="solution-panel" hidden>
+            <h4>Resolução comentada</h4>
+            <p>Como <span class="math">2300 &le; Re &le; 4000</span>, o escoamento está na zona de transição. Isso significa que ele pode oscilar entre comportamento laminar e turbulento, dependendo de rugosidade, vibrações e perturbações do sistema.</p>
+          </div>
+        </article>
+
+        <article class="open-question-card">
+          <div class="question-meta">Questão 3</div>
+          <h3>Um tubo tem <span class="math">f = 0,018</span>, <span class="math">L = 30 m</span>, <span class="math">D = 0,06 m</span> e <span class="math">V = 2 m/s</span>. Calcule a perda distribuída.</h3>
+          <p class="question-hint">Use <span class="math">g = 9,81 m/s²</span>.</p>
+          <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
+          <div class="solution-panel" hidden>
+            <h4>Resolução comentada</h4>
+            <p>A fórmula é <span class="math">h<sub>D</sub> = f(L/D)V²/(2g)</span>. Temos <span class="math">L/D = 30/0,06 = 500</span> e <span class="math">V²/(2g)=4/19,62 &asymp; 0,204</span>. Logo, <span class="math">h<sub>D</sub> = 0,018 &middot; 500 &middot; 0,204 &asymp; 1,84 m</span>.</p>
+          </div>
+        </article>
+
+        <article class="open-question-card">
+          <div class="question-meta">Questão 4</div>
+          <h3>Diferencie perda distribuída e perda localizada em uma instalação hidráulica.</h3>
+          <p class="question-hint">Cite exemplos de onde cada uma aparece.</p>
+          <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
+          <div class="solution-panel" hidden>
+            <h4>Resolução comentada</h4>
+            <p>A perda distribuída ocorre ao longo de trechos retos de tubulação e depende de comprimento, diâmetro, velocidade e fator de atrito. A perda localizada ocorre em acessórios e mudanças geométricas, como entradas, saídas, curvas, registros, expansões e contrações.</p>
+          </div>
+        </article>
+
+        <article class="open-question-card">
+          <div class="question-meta">Questão 5</div>
+          <h3>Explique as diferenças entre condução, convecção e radiação.</h3>
+          <p class="question-hint">Destaque o meio físico e o mecanismo de transporte de energia.</p>
+          <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
+          <div class="solution-panel" hidden>
+            <h4>Resolução comentada</h4>
+            <p>Condução ocorre por interação entre partículas dentro de um material. Convecção ocorre entre uma superfície e um fluido em movimento, combinando difusão e advecção. Radiação é energia emitida por matéria a temperatura não nula por ondas eletromagnéticas.</p>
+          </div>
+        </article>
+
+        <article class="open-question-card">
+          <div class="question-meta">Questão 6</div>
+          <h3>Uma parede tem <span class="math">k = 0,8 W/(m.K)</span>, <span class="math">A = 3 m²</span>, <span class="math">&Delta;T = 25 K</span> e <span class="math">L = 0,15 m</span>. Calcule a taxa de condução.</h3>
+          <p class="question-hint">Use a Lei de Fourier para parede plana em regime permanente.</p>
+          <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
+          <div class="solution-panel" hidden>
+            <h4>Resolução comentada</h4>
+            <p><span class="math">q = kA&Delta;T/L</span>. Substituindo: <span class="math">q = 0,8 &middot; 3 &middot; 25/0,15 = 400 W</span>. A taxa aumenta com condutividade, área e diferença de temperatura, e diminui com a espessura.</p>
+          </div>
+        </article>
+
+        <article class="open-question-card">
+          <div class="question-meta">Questão 7</div>
+          <h3>Um dispositivo perde <span class="math">12 W</span> por convecção, com <span class="math">A = 0,04 m²</span> e <span class="math">T<sub>s</sub> - T<sub>&infin;</sub> = 30 K</span>. Determine <span class="math">h</span>.</h3>
+          <p class="question-hint">Isole o coeficiente convectivo na Lei de resfriamento de Newton.</p>
+          <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
+          <div class="solution-panel" hidden>
+            <h4>Resolução comentada</h4>
+            <p>Usando <span class="math">q = hA(T<sub>s</sub> - T<sub>&infin;</sub>)</span>, temos <span class="math">h = q/[A&Delta;T] = 12/(0,04 &middot; 30) = 10 W/(m².K)</span>.</p>
+          </div>
+        </article>
+
+        <article class="open-question-card">
+          <div class="question-meta">Questão 8</div>
+          <h3>Explique a analogia entre resistência térmica e circuito elétrico em paredes multicamadas.</h3>
+          <p class="question-hint">Use os papéis de <span class="math">&Delta;T</span>, <span class="math">q</span> e <span class="math">R</span>.</p>
+          <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
+          <div class="solution-panel" hidden>
+            <h4>Resolução comentada</h4>
+            <p>A diferença de temperatura funciona como potencial motriz, a taxa de calor <span class="math">q</span> funciona como fluxo e a resistência térmica mede a dificuldade de passagem do calor. Em série, as resistências somam; em paralelo, somam-se os inversos.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="quiz-panel" data-quiz hidden aria-hidden="true">
+        <div class="quiz-toolbar">
+          <p data-quiz-score>Responda às questões para ver seu desempenho.</p>
+          <button class="nav-button" type="button" data-quiz-reset>Recomeçar</button>
+        </div>
+
+        <article class="quiz-card" data-correct="b">
+          <h3>1. Em uma tubulação real, perda de carga representa principalmente:</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="a">a criação de energia mecânica pelo fluido.</button>
+            <button type="button" data-option="b">a conversão de energia mecânica em energia térmica por atrito.</button>
+            <button type="button" data-option="c">o aumento obrigatório da velocidade em todo trecho reto.</button>
+            <button type="button" data-option="d">a eliminação da pressão em qualquer ponto da tubulação.</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p class="feedback-title" data-feedback-title></p>
+            <p><strong>Resolução:</strong> a perda de carga é a energia mecânica perdida pelo fluido devido ao atrito e perturbações, normalmente percebida como queda de pressão.</p>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-correct="c">
+          <h3>2. Para tubos circulares, um escoamento com <span class="math">Re = 1200</span> é classificado como:</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="a">turbulento.</button>
+            <button type="button" data-option="b">de transição.</button>
+            <button type="button" data-option="c">laminar.</button>
+            <button type="button" data-option="d">externo.</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p class="feedback-title" data-feedback-title></p>
+            <p><strong>Resolução:</strong> para tubos circulares, <span class="math">Re &lt; 2300</span> indica regime laminar. Como 1200 é menor que 2300, o escoamento é laminar.</p>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-correct="a">
+          <h3>3. Se <span class="math">Re = 1600</span>, o fator de atrito laminar é:</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="a">0,040</button>
+            <button type="button" data-option="b">0,064</button>
+            <button type="button" data-option="c">25</button>
+            <button type="button" data-option="d">1600</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p class="feedback-title" data-feedback-title></p>
+            <p><strong>Resolução:</strong> em regime laminar, <span class="math">f = 64/Re</span>. Portanto, <span class="math">f = 64/1600 = 0,040</span>.</p>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-correct="d">
+          <h3>4. Um trecho reto tem <span class="math">f = 0,02</span>, <span class="math">L/D = 300</span> e <span class="math">V²/(2g) = 0,20 m</span>. Qual é <span class="math">h<sub>D</sub></span>?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="a">0,12 m</button>
+            <button type="button" data-option="b">0,60 m</button>
+            <button type="button" data-option="c">1,00 m</button>
+            <button type="button" data-option="d">1,20 m</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p class="feedback-title" data-feedback-title></p>
+            <p><strong>Resolução:</strong> <span class="math">h<sub>D</sub> = f(L/D)V²/(2g) = 0,02 &middot; 300 &middot; 0,20 = 1,20 m</span>.</p>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-correct="b">
+          <h3>5. Qual expressão representa uma perda localizada pelo método algébrico?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="a">q = kA&Delta;T/L</button>
+            <button type="button" data-option="b">h<sub>L</sub> = KV²/(2g)</button>
+            <button type="button" data-option="c">Re = &rho;VD/&mu;</button>
+            <button type="button" data-option="d">R = L/(kA)</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p class="feedback-title" data-feedback-title></p>
+            <p><strong>Resolução:</strong> perdas localizadas em acessórios são frequentemente calculadas por <span class="math">h<sub>L</sub> = KV²/(2g)</span>, em que <span class="math">K</span> é experimental.</p>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-correct="c">
+          <h3>6. Condução é melhor descrita como transferência de energia:</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="a">apenas por ondas eletromagnéticas.</button>
+            <button type="button" data-option="b">somente por movimento macroscópico do fluido.</button>
+            <button type="button" data-option="c">entre partículas, das mais energéticas para as menos energéticas.</button>
+            <button type="button" data-option="d">sem diferença de temperatura.</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p class="feedback-title" data-feedback-title></p>
+            <p><strong>Resolução:</strong> condução ocorre pela interação microscópica entre partículas, transferindo energia de regiões mais quentes para regiões mais frias.</p>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-correct="a">
+          <h3>7. Uma parede tem <span class="math">k = 0,5 W/(m.K)</span>, <span class="math">A = 2 m²</span>, <span class="math">&Delta;T = 40 K</span> e <span class="math">L = 0,20 m</span>. Qual é a taxa de condução?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="a">200 W</button>
+            <button type="button" data-option="b">80 W</button>
+            <button type="button" data-option="c">20 W</button>
+            <button type="button" data-option="d">0,20 W</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p class="feedback-title" data-feedback-title></p>
+            <p><strong>Resolução:</strong> <span class="math">q = kA&Delta;T/L = 0,5 &middot; 2 &middot; 40 / 0,20 = 200 W</span>.</p>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-correct="d">
+          <h3>8. Na convecção, o coeficiente <span class="math">h</span> depende de:</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="a">apenas da cor da parede.</button>
+            <button type="button" data-option="b">apenas da temperatura absoluta da superfície.</button>
+            <button type="button" data-option="c">apenas da espessura do sólido.</button>
+            <button type="button" data-option="d">geometria, movimento do fluido, propriedades e velocidade.</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p class="feedback-title" data-feedback-title></p>
+            <p><strong>Resolução:</strong> <span class="math">h</span> não é uma propriedade fixa do fluido; ele depende da geometria, do regime de escoamento, das propriedades e da velocidade.</p>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-correct="b">
+          <h3>9. Para uma parede plana, a resistência térmica de condução é:</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="a">R<sub>cond</sub> = hA</button>
+            <button type="button" data-option="b">R<sub>cond</sub> = L/(kA)</button>
+            <button type="button" data-option="c">R<sub>cond</sub> = kA/L</button>
+            <button type="button" data-option="d">R<sub>cond</sub> = &rho;VD/&mu;</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p class="feedback-title" data-feedback-title></p>
+            <p><strong>Resolução:</strong> a resistência de condução aumenta com a espessura e diminui com a condutividade e a área: <span class="math">R<sub>cond</sub> = L/(kA)</span>.</p>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-correct="c">
+          <h3>10. Em resistências térmicas em série, a resistência equivalente é:</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="a">sempre igual à menor resistência.</button>
+            <button type="button" data-option="b">obtida pela soma dos inversos.</button>
+            <button type="button" data-option="c">a soma direta das resistências.</button>
+            <button type="button" data-option="d">igual ao produto das temperaturas.</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p class="feedback-title" data-feedback-title></p>
+            <p><strong>Resolução:</strong> em série, o calor atravessa uma resistência depois da outra. Por isso, <span class="math">R<sub>total</sub> = R<sub>1</sub> + R<sub>2</sub> + ...</span>.</p>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
 
-  <button class="back-to-top" type="button" aria-label="Voltar ao topo">↑</button>
+  <button class="back-to-top" type="button" aria-label="Voltar ao topo">&uarr;</button>
 
   <footer class="site-footer">
     <p>Site de Estudos - Fenômenos de Transporte.</p>
