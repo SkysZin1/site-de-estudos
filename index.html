@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site de Estudos</title>
+  <title>StudyHub</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <header class="site-header">
     <nav class="navbar" aria-label="Navegação principal">
-      <a class="brand" href="index.html">Site de Estudos</a>
+      <a class="brand" href="index.html">StudyHub</a>
       <div class="nav-links">
         <a href="materias/foe.html">FOE</a>
         <a href="materias/ft.html">FT</a>
@@ -22,10 +22,10 @@
     <section class="hero">
       <div class="hero-content">
         <p class="eyebrow">Organização acadêmica</p>
-        <h1>Site de Estudos</h1>
+        <h1>StudyHub</h1>
         <p>
-          Um espaço simples para reunir matérias, resumos, fórmulas, exemplos e exercícios
-          de forma organizada e fácil de consultar.
+          Um espaço simples para estudar matérias, consultar fórmulas, acompanhar exemplos
+          e revisar questões de forma organizada e fácil de navegar.
         </p>
       </div>
     </section>
@@ -56,12 +56,86 @@
         </a>
       </div>
     </section>
+
+    <section class="section how-section" id="como-usar" aria-labelledby="como-usar-title">
+      <div class="section-heading">
+        <p class="eyebrow">Fluxo de estudo</p>
+        <h2 id="como-usar-title">Como usar o site</h2>
+        <p>
+          Use o StudyHub como um roteiro de estudo: comece pela base, avance pelos tópicos,
+          pratique e finalize com revisão rápida antes da prova.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        <article class="step-card">
+          <span class="step-number">01</span>
+          <h3>Escolha uma matéria</h3>
+          <p>Entre em FOE, FT ou Cálculo 3 conforme o conteúdo que você quer estudar.</p>
+        </article>
+
+        <article class="step-card">
+          <span class="step-number">02</span>
+          <h3>Leia a visão geral</h3>
+          <p>Entenda a ideia central da disciplina antes de entrar nos tópicos principais.</p>
+        </article>
+
+        <article class="step-card">
+          <span class="step-number">03</span>
+          <h3>Consulte as fórmulas</h3>
+          <p>Use as caixas de fórmulas para revisar variáveis, unidades e quando aplicar cada relação.</p>
+        </article>
+
+        <article class="step-card">
+          <span class="step-number">04</span>
+          <h3>Veja exemplos práticos</h3>
+          <p>Acompanhe o raciocínio passo a passo para conectar teoria e aplicação.</p>
+        </article>
+
+        <article class="step-card">
+          <span class="step-number">05</span>
+          <h3>Resolva as questões</h3>
+          <p>Tente responder antes de abrir a resolução comentada e conferir sua linha de pensamento.</p>
+        </article>
+
+        <article class="step-card">
+          <span class="step-number">06</span>
+          <h3>Revise pelo resumo</h3>
+          <p>Volte aos esquemas essenciais para fixar teoria e fórmulas antes da prova.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section search-section" id="pesquisa" aria-labelledby="search-title">
+      <div class="section-heading">
+        <p class="eyebrow">Pesquisa global</p>
+        <h2 id="search-title">Pesquise no site</h2>
+        <p>
+          Encontre rapidamente matérias, tópicos, fórmulas, exemplos, resumos e questões
+          em todas as páginas do StudyHub.
+        </p>
+      </div>
+
+      <div class="search-panel" data-site-search>
+        <label class="search-label" for="global-search">Buscar conteúdo</label>
+        <input
+          class="search-input"
+          id="global-search"
+          type="search"
+          placeholder="Busque por conteúdo, fórmula, exemplo ou questão..."
+          autocomplete="off"
+          data-search-input
+        >
+        <p class="search-status" data-search-status>Digite pelo menos 2 caracteres para iniciar a busca.</p>
+        <div class="search-results" data-search-results aria-live="polite"></div>
+      </div>
+    </section>
   </main>
 
   <button class="back-to-top" type="button" aria-label="Voltar ao topo">↑</button>
 
   <footer class="site-footer">
-    <p>Site de Estudos - Projeto acadêmico em HTML, CSS e JavaScript.</p>
+    <p>StudyHub - Projeto acadêmico em HTML, CSS e JavaScript.</p>
   </footer>
 
   <script src="assets/js/main.js"></script>

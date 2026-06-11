@@ -1,9 +1,312 @@
-// Controla o botão de voltar ao topo, interações visuais e quizzes.
+// Indice simples usado pela busca global da pagina inicial.
+const searchData = [
+  {
+    title: "StudyHub",
+    description: "Pagina inicial com acesso as materias, fluxo de estudo e pesquisa global.",
+    category: "Geral",
+    type: "Pagina",
+    keywords: ["inicio", "home", "materias", "estudo", "studyhub"],
+    url: "index.html"
+  },
+  {
+    title: "Como usar o site",
+    description: "Fluxo recomendado para estudar: materia, topicos, formulas, exemplos, questoes e resumo.",
+    category: "Geral",
+    type: "Conteudo",
+    keywords: ["como usar", "roteiro", "fluxo", "revisao", "prova"],
+    url: "index.html#como-usar"
+  },
+  {
+    title: "FOE - Fenomenos Ondulatorios e Eletromagneticos",
+    description: "Pagina de estudo sobre inducao, corrente alternada, circuitos RLC, transformadores e Maxwell.",
+    category: "FOE",
+    type: "Pagina",
+    keywords: ["foe", "ondas", "eletromagnetismo", "campo magnetico", "inducao"],
+    url: "materias/foe.html"
+  },
+  {
+    title: "Resumo Facil FOE",
+    description: "Revisao rapida com teoria essencial, formulas, pegadinhas e checklist de FOE.",
+    category: "FOE",
+    type: "Resumo",
+    keywords: ["resumo foe", "resumo facil", "revisao rapida", "formulas foe", "inducao", "rlc"],
+    url: "materias/resumos/foe-resumo.html"
+  },
+  {
+    title: "Formulas FOE",
+    description: "Caixas rapidas com fluxo magnetico, Faraday-Lenz, fem de movimento, RL, reatancias e impedancia.",
+    category: "FOE",
+    type: "Formula",
+    keywords: ["formulas foe", "formula foe", "inducao", "circuito rlc", "corrente alternada", "revisao rapida"],
+    url: "materias/resumos/foe-resumo.html#formulas"
+  },
+  {
+    title: "Fluxo magnetico",
+    description: "Relacao entre campo magnetico, area, angulo e fluxo atraves de uma superficie.",
+    category: "FOE",
+    type: "Formula",
+    keywords: ["fluxo", "campo magnetico", "phi", "espira", "inducao", "formulas"],
+    url: "materias/foe.html#fluxo"
+  },
+  {
+    title: "Lei de Faraday-Lenz",
+    description: "Fem induzida pela variacao do fluxo magnetico e sentido de oposicao da corrente induzida.",
+    category: "FOE",
+    type: "Formula",
+    keywords: ["faraday", "lenz", "inducao", "fem", "fluxo magnetico", "formulas"],
+    url: "materias/foe.html#faraday"
+  },
+  {
+    title: "Fem de movimento e correntes de Foucault",
+    description: "Inducao causada por movimento em campo magnetico e correntes parasitas em materiais condutores.",
+    category: "FOE",
+    type: "Conteudo",
+    keywords: ["fem de movimento", "foucault", "correntes parasitas", "campo magnetico", "exemplo"],
+    url: "materias/foe.html#movimento"
+  },
+  {
+    title: "Circuito RL",
+    description: "Constante de tempo, crescimento e decaimento da corrente em circuito com resistor e indutor.",
+    category: "FOE",
+    type: "Formula",
+    keywords: ["circuito rl", "indutor", "constante de tempo", "corrente", "formulas"],
+    url: "materias/foe.html#rl"
+  },
+  {
+    title: "Corrente alternada",
+    description: "Valor eficaz, valor de pico, frequencia angular e comportamento senoidal.",
+    category: "FOE",
+    type: "Formula",
+    keywords: ["corrente alternada", "ca", "valor eficaz", "rms", "frequencia", "formulas"],
+    url: "materias/foe.html#ca"
+  },
+  {
+    title: "Circuito RLC",
+    description: "Impedancia, reatancia indutiva, reatancia capacitiva e ressonancia em circuito serie.",
+    category: "FOE",
+    type: "Formula",
+    keywords: ["circuito rlc", "impedancia", "ressonancia", "reatancia", "formulas"],
+    url: "materias/foe.html#rlc"
+  },
+  {
+    title: "Transformadores",
+    description: "Relacao entre espiras, tensao, corrente e potencia em transformadores ideais.",
+    category: "FOE",
+    type: "Conteudo",
+    keywords: ["transformador", "transformadores", "espiras", "tensao", "corrente", "formulas"],
+    url: "materias/foe.html#transformadores"
+  },
+  {
+    title: "Equacoes de Maxwell",
+    description: "Leis que conectam campos eletricos, campos magneticos, corrente de deslocamento e forca de Lorentz.",
+    category: "FOE",
+    type: "Resumo",
+    keywords: ["maxwell", "ampere", "lorentz", "campo eletrico", "campo magnetico", "resumo"],
+    url: "materias/foe.html#maxwell"
+  },
+  {
+    title: "Questoes de FOE",
+    description: "Exercicios abertos com resolucoes comentadas sobre inducao, RL, CA, RLC e Maxwell.",
+    category: "FOE",
+    type: "Questao",
+    keywords: ["questoes", "exercicios", "resolucao", "foe", "inducao", "rlc"],
+    url: "materias/foe.html#quiz"
+  },
+  {
+    title: "FT - Fenomenos de Transporte",
+    description: "Pagina de estudo sobre escoamento, perda de carga e transferencia de calor.",
+    category: "FT",
+    type: "Pagina",
+    keywords: ["ft", "fenomenos de transporte", "escoamento", "calor", "fluido"],
+    url: "materias/ft.html"
+  },
+  {
+    title: "Resumo Facil FT",
+    description: "Revisao rapida com Bernoulli, perda de carga, Reynolds, calor e resistencia termica.",
+    category: "FT",
+    type: "Resumo",
+    keywords: ["resumo ft", "resumo facil", "revisao rapida", "transferencia de calor", "perda de carga"],
+    url: "materias/resumos/ft-resumo.html"
+  },
+  {
+    title: "Formulas resistencia termica",
+    description: "Resumo visual com formulas de conducao, conveccao, radiacao e resistencias termicas.",
+    category: "FT",
+    type: "Formula",
+    keywords: ["formulas resistencia termica", "formulas ft", "conducao", "conveccao", "radiacao", "calor"],
+    url: "materias/resumos/ft-resumo.html#formulas"
+  },
+  {
+    title: "Equacao de Bernoulli",
+    description: "Conservacao de energia mecanica em escoamentos com pressoes, velocidades e cotas.",
+    category: "FT",
+    type: "Formula",
+    keywords: ["bernoulli", "energia", "pressao", "velocidade", "cota", "formulas"],
+    url: "materias/ft.html#bernoulli"
+  },
+  {
+    title: "Perda de carga",
+    description: "Energia mecanica dissipada por atrito e acessorios em tubulacoes reais.",
+    category: "FT",
+    type: "Conteudo",
+    keywords: ["perda de carga", "tubulacao", "atrito", "darcy", "formulas"],
+    url: "materias/ft.html#perda-carga"
+  },
+  {
+    title: "Numero de Reynolds",
+    description: "Criterio para classificar escoamentos laminares, transitorios ou turbulentos.",
+    category: "FT",
+    type: "Formula",
+    keywords: ["reynolds", "laminar", "turbulento", "viscosidade", "escoamento", "formulas"],
+    url: "materias/ft.html#reynolds"
+  },
+  {
+    title: "Darcy-Weisbach",
+    description: "Formula para perda distribuida em tubos usando fator de atrito, comprimento, diametro e velocidade.",
+    category: "FT",
+    type: "Formula",
+    keywords: ["darcy", "weisbach", "perda distribuida", "fator de atrito", "formulas"],
+    url: "materias/ft.html#darcy"
+  },
+  {
+    title: "Conducao",
+    description: "Transferencia de calor atraves de solidos ou meios parados por diferenca de temperatura.",
+    category: "FT",
+    type: "Formula",
+    keywords: ["conducao", "transferencia de calor", "fourier", "parede plana", "formulas"],
+    url: "materias/ft.html#conducao"
+  },
+  {
+    title: "Conveccao e radiacao",
+    description: "Troca de calor com fluido em movimento e emissao de energia por ondas eletromagneticas.",
+    category: "FT",
+    type: "Formula",
+    keywords: ["conveccao", "radiacao", "newton", "stefan boltzmann", "calor", "formulas"],
+    url: "materias/ft.html#conveccao-radiacao"
+  },
+  {
+    title: "Resistencia termica",
+    description: "Modelo de circuito termico para paredes em serie, paralelo, conducao e conveccao.",
+    category: "FT",
+    type: "Formula",
+    keywords: ["resistencia termica", "circuito termico", "serie", "paralelo", "calor", "formulas"],
+    url: "materias/ft.html#resistencia-termica"
+  },
+  {
+    title: "Questoes de FT",
+    description: "Exercicios abertos com resolucoes comentadas sobre escoamento, perdas e transferencia de calor.",
+    category: "FT",
+    type: "Questao",
+    keywords: ["questoes", "exercicios", "resolucao", "perda de carga", "calor"],
+    url: "materias/ft.html#quiz"
+  },
+  {
+    title: "Calculo 3 - Modelagem Matematica de Fenomenos",
+    description: "Pagina de estudo sobre transformacoes lineares, sistemas de EDOs e metodos numericos.",
+    category: "Calculo 3",
+    type: "Pagina",
+    keywords: ["calculo 3", "mmf", "modelagem", "edo", "sistemas lineares"],
+    url: "materias/calculo3.html"
+  },
+  {
+    title: "Resumo Facil Calculo 3",
+    description: "Revisao rapida com transformacoes lineares, autovalores, sistemas de EDO, Euler e RK4.",
+    category: "Calculo 3",
+    type: "Resumo",
+    keywords: ["resumo calculo 3", "resumo facil", "revisao rapida", "edo", "euler", "runge-kutta"],
+    url: "materias/resumos/calculo3-resumo.html"
+  },
+  {
+    title: "Formulas EDO e metodos numericos",
+    description: "Consulta rapida para sistemas de EDO, Euler, Runge-Kutta e autovalores.",
+    category: "Calculo 3",
+    type: "Formula",
+    keywords: ["formulas edo", "formulas calculo 3", "euler", "runge-kutta", "rk4", "sistemas lineares"],
+    url: "materias/resumos/calculo3-resumo.html#formulas"
+  },
+  {
+    title: "Transformacoes lineares",
+    description: "Aplicacoes que preservam soma e multiplicacao por escalar.",
+    category: "Calculo 3",
+    type: "Conteudo",
+    keywords: ["transformacoes lineares", "linearidade", "operador linear", "vetores"],
+    url: "materias/calculo3.html#transformacoes"
+  },
+  {
+    title: "Nucleo e imagem",
+    description: "Conjuntos associados a uma transformacao linear e interpretacao geometrica.",
+    category: "Calculo 3",
+    type: "Conteudo",
+    keywords: ["nucleo", "imagem", "kernel", "transformacao linear", "sistemas lineares"],
+    url: "materias/calculo3.html#nucleo-imagem"
+  },
+  {
+    title: "Matrizes e sistemas lineares",
+    description: "Representacao matricial de transformacoes e resolucao de sistemas.",
+    category: "Calculo 3",
+    type: "Conteudo",
+    keywords: ["matrizes", "sistemas lineares", "matriz", "vetores", "formulas"],
+    url: "materias/calculo3.html#matrizes"
+  },
+  {
+    title: "Autovalores e autovetores",
+    description: "Valores e vetores especiais usados para entender matrizes e resolver sistemas.",
+    category: "Calculo 3",
+    type: "Formula",
+    keywords: ["autovalores", "autovetores", "determinante", "matriz", "formulas"],
+    url: "materias/calculo3.html#autovalores"
+  },
+  {
+    title: "Sistemas lineares de EDOs",
+    description: "Modelos do tipo x' = Ax para variaveis acopladas em fenomenos dinamicos.",
+    category: "Calculo 3",
+    type: "Conteudo",
+    keywords: ["edo", "edos", "sistemas lineares", "sistema diferencial", "modelagem"],
+    url: "materias/calculo3.html#sistemas-lineares"
+  },
+  {
+    title: "Metodo de Euler",
+    description: "Metodo numerico de passo simples para aproximar solucoes de EDOs.",
+    category: "Calculo 3",
+    type: "Formula",
+    keywords: ["euler", "metodo euler", "edo", "metodo numerico", "formulas"],
+    url: "materias/calculo3.html#euler"
+  },
+  {
+    title: "Runge-Kutta RK4",
+    description: "Metodo numerico de quarta ordem para aproximar EDOs com maior precisao.",
+    category: "Calculo 3",
+    type: "Formula",
+    keywords: ["runge-kutta", "runge kutta", "rk4", "edo", "metodos numericos"],
+    url: "materias/calculo3.html#rk4"
+  },
+  {
+    title: "Checklist de revisao de Calculo 3",
+    description: "Lista final para conferir conceitos, formulas, variaveis e pegadinhas antes da prova.",
+    category: "Calculo 3",
+    type: "Resumo",
+    keywords: ["checklist", "revisao", "prova", "formulas", "calculo 3", "mmf"],
+    url: "materias/resumos/calculo3-resumo.html#checklist"
+  },
+  {
+    title: "Questoes de Calculo 3",
+    description: "Exercicios abertos com resolucoes comentadas sobre transformacoes, sistemas, Euler e RK4.",
+    category: "Calculo 3",
+    type: "Questao",
+    keywords: ["questoes", "exercicios", "resolucao", "euler", "runge-kutta", "edo"],
+    url: "materias/calculo3.html#quiz"
+  }
+];
+
+// Controla o botao de voltar ao topo, interacoes visuais, busca e quizzes.
 document.addEventListener("DOMContentLoaded", () => {
   const backToTopButton = document.querySelector(".back-to-top");
   const cards = document.querySelectorAll(".subject-card");
   const quizzes = document.querySelectorAll("[data-quiz]");
   const solutionToggles = document.querySelectorAll("[data-solution-toggle]");
+  const searchInput = document.querySelector("[data-search-input]");
+  const searchResults = document.querySelector("[data-search-results]");
+  const searchStatus = document.querySelector("[data-search-status]");
 
   if (backToTopButton) {
     window.addEventListener("scroll", () => {
@@ -26,6 +329,109 @@ document.addEventListener("DOMContentLoaded", () => {
     card.addEventListener("focus", () => card.classList.add("is-active"));
     card.addEventListener("blur", () => card.classList.remove("is-active"));
   });
+
+  const normalizeText = (text) => String(text)
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
+
+  const escapeHTML = (text) => String(text).replace(/[&<>"']/g, (character) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#039;"
+  }[character]));
+
+  const getSearchText = (item) => normalizeText([
+    item.title,
+    item.description,
+    item.category,
+    item.type,
+    item.keywords.join(" ")
+  ].join(" "));
+
+  const scoreSearchItem = (item, query, terms) => {
+    const searchableText = getSearchText(item);
+
+    if (!terms.every((term) => searchableText.includes(term))) {
+      return 0;
+    }
+
+    let score = 1;
+    const title = normalizeText(item.title);
+    const keywords = normalizeText(item.keywords.join(" "));
+
+    if (title.includes(query)) {
+      score += 5;
+    }
+
+    if (keywords.includes(query)) {
+      score += 3;
+    }
+
+    if (normalizeText(item.type).includes(query)) {
+      score += 1;
+    }
+
+    return score;
+  };
+
+  const renderSearchResults = (results) => {
+    if (!searchResults) {
+      return;
+    }
+
+    if (results.length === 0) {
+      searchResults.innerHTML = `
+        <div class="search-empty">
+          <strong>Nenhum resultado encontrado.</strong>
+          <p>Tente buscar por outro termo, como "formulas", "EDO", "Bernoulli" ou "circuito RLC".</p>
+        </div>
+      `;
+      return;
+    }
+
+    searchResults.innerHTML = results.map((item) => `
+      <article class="search-result-card">
+        <h3>${escapeHTML(item.title)}</h3>
+        <div class="search-result-meta">
+          <span>${escapeHTML(item.category)}</span>
+          <span>${escapeHTML(item.type)}</span>
+        </div>
+        <p class="search-result-description">${escapeHTML(item.description)}</p>
+        <a class="search-result-link" href="${escapeHTML(item.url)}">Abrir</a>
+      </article>
+    `).join("");
+  };
+
+  if (searchInput && searchResults && searchStatus) {
+    searchInput.addEventListener("input", () => {
+      const query = normalizeText(searchInput.value.trim());
+
+      if (query.length < 2) {
+        searchResults.innerHTML = "";
+        searchStatus.textContent = "Digite pelo menos 2 caracteres para iniciar a busca.";
+        return;
+      }
+
+      const terms = query.split(/\s+/).filter(Boolean);
+      const results = searchData
+        .map((item) => ({
+          item,
+          score: scoreSearchItem(item, query, terms)
+        }))
+        .filter((result) => result.score > 0)
+        .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title))
+        .map((result) => result.item);
+
+      searchStatus.textContent = results.length === 1
+        ? "1 resultado encontrado."
+        : `${results.length} resultados encontrados.`;
+
+      renderSearchResults(results);
+    });
+  }
 
   quizzes.forEach((quiz) => {
     const questions = quiz.querySelectorAll(".quiz-card");

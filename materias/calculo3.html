@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cálculo 3 / MMF | Site de Estudos</title>
+  <title>Cálculo 3 / MMF | StudyHub</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
   <header class="site-header">
     <nav class="navbar" aria-label="Navegação principal">
-      <a class="brand" href="../index.html">Site de Estudos</a>
+      <a class="brand" href="../index.html">StudyHub</a>
       <div class="nav-links">
         <a href="foe.html">FOE</a>
         <a href="ft.html">FT</a>
@@ -27,13 +27,15 @@
         Material de estudo sobre transformações lineares, matrizes, autovalores,
         sistemas lineares de EDOs, modelos de mistura e métodos numéricos.
       </p>
+      <div class="page-title-actions" id="resumo-facil">
+        <a class="nav-button summary-top-button" href="resumos/calculo3-resumo.html">Acessar Resumo Fácil</a>
+      </div>
     </section>
 
     <nav class="jump-nav" aria-label="Navegação da página">
       <a href="#visao-geral">Visão geral</a>
       <a href="#trilha">Trilha</a>
       <a href="#assuntos">Assuntos</a>
-      <a href="#resumo-prova">Resumo rápido</a>
       <a href="#quiz">Questões</a>
     </nav>
 
@@ -678,73 +680,6 @@
       </article>
     </section>
 
-    <section class="study-block" id="resumo-prova">
-      <div class="section-heading">
-        <p class="eyebrow">Resumo rápido</p>
-        <h2>Essencial para prova</h2>
-      </div>
-
-      <div class="exam-grid">
-        <article class="exam-card">
-          <h3>Teoria que precisa estar na cabeça</h3>
-          <ul>
-            <li>Transformação linear preserva soma e multiplicação por escalar.</li>
-            <li>O núcleo contém os vetores que vão para zero; a imagem contém as saídas possíveis.</li>
-            <li>Matrizes representam sistemas lineares e transformações em dimensão finita.</li>
-            <li>Autovalores vêm de <span class="math">det(A - &lambda;I)=0</span>.</li>
-            <li>Sistemas homogêneos com coeficientes constantes podem ser resolvidos por autovalores.</li>
-            <li>Em misturas, sempre use massa no tanque e concentração igual a massa dividida por volume.</li>
-            <li>Euler é simples; Euler aprimorado usa média de inclinações; RK4 usa quatro inclinações.</li>
-          </ul>
-        </article>
-
-        <article class="exam-card">
-          <h3>Esquema de decisão</h3>
-          <div class="decision-flow">
-            <span>Quer testar linearidade?</span>
-            <span>Verifique soma e escalar</span>
-            <span>Tem sistema de EDO?</span>
-            <span>Escreva x' = Ax + f(t)</span>
-            <span>É homogêneo com A constante?</span>
-            <span>Procure autovalores e autovetores</span>
-            <span>Não há solução simples?</span>
-            <span>Use Euler, Euler aprimorado ou RK4</span>
-          </div>
-        </article>
-      </div>
-
-      <div class="formula-cheatsheet">
-        <article>
-          <h3>Linearidade</h3>
-          <p><span class="math">T(u+v)=T(u)+T(v)</span></p>
-          <p><span class="math">T(kv)=kT(v)</span></p>
-          <p><span class="math">ker(T): T(u)=0</span></p>
-        </article>
-
-        <article>
-          <h3>Matrizes</h3>
-          <p><span class="math">Ax=b</span></p>
-          <p><span class="math">Av=&lambda;v</span></p>
-          <p><span class="math">det(A-&lambda;I)=0</span></p>
-        </article>
-
-        <article>
-          <h3>Sistemas</h3>
-          <p><span class="math">x'=A(t)x+f(t)</span></p>
-          <p><span class="math">x'=Ax</span></p>
-          <p><span class="math">x(t)=ve<sup>&lambda;t</sup></span></p>
-          <p><span class="math">x=c<sub>1</sub>x<sub>1</sub>+c<sub>2</sub>x<sub>2</sub></span></p>
-        </article>
-
-        <article>
-          <h3>Numéricos</h3>
-          <p><span class="math">x<sub>n+1</sub>=x<sub>n</sub>+h</span></p>
-          <p><span class="math">Euler: y<sub>n+1</sub>=y<sub>n</sub>+hf(x<sub>n</sub>,y<sub>n</sub>)</span></p>
-          <p><span class="math">RK4: y<sub>n+1</sub>=y<sub>n</sub>+h(k<sub>1</sub>+2k<sub>2</sub>+2k<sub>3</sub>+k<sub>4</sub>)/6</span></p>
-        </article>
-      </div>
-    </section>
-
     <section class="study-block" id="quiz">
       <div class="section-heading">
         <p class="eyebrow">Questões abertas</p>
@@ -993,7 +928,7 @@
   <button class="back-to-top" type="button" aria-label="Voltar ao topo">&uarr;</button>
 
   <footer class="site-footer">
-    <p>Site de Estudos - Cálculo 3 / MMF.</p>
+    <p>StudyHub - Cálculo 3 / MMF.</p>
   </footer>
 
   <script src="../assets/js/main.js"></script>

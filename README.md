@@ -1,6 +1,6 @@
-# Site de Estudos
+# StudyHub
 
-Projeto inicial de um site de estudos para organizar matérias, resumos, fórmulas, exemplos e exercícios.
+Projeto de um site de estudos para organizar matérias, resumos, fórmulas, exemplos, questões e exercícios.
 
 ## Objetivo
 

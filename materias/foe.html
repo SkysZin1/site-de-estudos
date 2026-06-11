@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FOE | Site de Estudos</title>
+  <title>FOE | StudyHub</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
   <header class="site-header">
     <nav class="navbar" aria-label="Navegação principal">
-      <a class="brand" href="../index.html">Site de Estudos</a>
+      <a class="brand" href="../index.html">StudyHub</a>
       <div class="nav-links">
         <a href="foe.html" aria-current="page">FOE</a>
         <a href="ft.html">FT</a>
@@ -27,13 +27,15 @@
         Material de estudo sobre indução eletromagnética, indutores, corrente alternada,
         circuitos RLC, transformadores e equações de Maxwell.
       </p>
+      <div class="page-title-actions" id="resumo-facil">
+        <a class="nav-button summary-top-button" href="resumos/foe-resumo.html">Acessar Resumo Fácil</a>
+      </div>
     </section>
 
     <nav class="jump-nav" aria-label="Navegação da página">
       <a href="#visao-geral">Visão geral</a>
       <a href="#trilha">Trilha</a>
       <a href="#assuntos">Assuntos</a>
-      <a href="#resumo-prova">Resumo rápido</a>
       <a href="#quiz">Questões</a>
     </nav>
 
@@ -685,74 +687,6 @@
       </article>
     </section>
 
-    <section class="study-block" id="resumo-prova">
-      <div class="section-heading">
-        <p class="eyebrow">Resumo rápido</p>
-        <h2>Essencial para prova</h2>
-      </div>
-
-      <div class="exam-grid">
-        <article class="exam-card">
-          <h3>Teoria que precisa estar na cabeça</h3>
-          <ul>
-            <li>Indução exige variação de fluxo magnético.</li>
-            <li>A Lei de Lenz dá o sentido da corrente induzida: sempre oposição à variação.</li>
-            <li>Indutor armazena energia no campo magnético e resiste a variações de corrente.</li>
-            <li>Em CA, fase importa tanto quanto amplitude.</li>
-            <li>Ressonância em RLC série ocorre quando <span class="math">X<sub>L</sub> = X<sub>C</sub></span>.</li>
-            <li>Maxwell adiciona a corrente de deslocamento para campos elétricos variáveis.</li>
-          </ul>
-        </article>
-
-        <article class="exam-card">
-          <h3>Esquema de decisão</h3>
-          <div class="decision-flow">
-            <span>Tem fluxo variando?</span>
-            <span>Use Faraday-Lenz</span>
-            <span>Tem barra se movendo em B?</span>
-            <span>Use fem de movimento</span>
-            <span>Tem CA com R, L, C?</span>
-            <span>Use reatâncias e impedância</span>
-            <span>Tem capacitor carregando?</span>
-            <span>Lembre da corrente de deslocamento</span>
-          </div>
-        </article>
-      </div>
-
-      <div class="formula-cheatsheet">
-        <article>
-          <h3>Indução</h3>
-          <p><span class="math">&Phi;<sub>B</sub> = BAcos(&theta;)</span></p>
-          <p><span class="math">&epsilon; = -N d&Phi;<sub>B</sub>/dt</span></p>
-          <p><span class="math">&epsilon; = vBL</span></p>
-        </article>
-
-        <article>
-          <h3>Indutor e RL</h3>
-          <p><span class="math">L = &mu;<sub>0</sub>N²A/l</span></p>
-          <p><span class="math">&epsilon; = -L di/dt</span></p>
-          <p><span class="math">U = (1/2)LI²</span></p>
-          <p><span class="math">&tau; = L/R</span></p>
-        </article>
-
-        <article>
-          <h3>Corrente alternada</h3>
-          <p><span class="math">v(t) = Vcos(&omega;t + &phi;)</span></p>
-          <p><span class="math">I<sub>rms</sub> = I/&radic;2</span></p>
-          <p><span class="math">X<sub>L</sub> = &omega;L</span></p>
-          <p><span class="math">X<sub>C</sub> = 1/(&omega;C)</span></p>
-        </article>
-
-        <article>
-          <h3>RLC e Maxwell</h3>
-          <p><span class="math">Z = &radic;[R² + (X<sub>L</sub> - X<sub>C</sub>)²]</span></p>
-          <p><span class="math">f<sub>0</sub> = 1/[2&pi;&radic;(LC)]</span></p>
-          <p><span class="math">I<sub>d</sub> = &epsilon;<sub>0</sub>d&Phi;<sub>E</sub>/dt</span></p>
-          <p><span class="math">F = qE + q(v &times; B)</span></p>
-        </article>
-      </div>
-    </section>
-
     <section class="study-block" id="quiz">
       <div class="section-heading">
         <p class="eyebrow">Questões abertas</p>
@@ -1001,7 +935,7 @@
   <button class="back-to-top" type="button" aria-label="Voltar ao topo">&uarr;</button>
 
   <footer class="site-footer">
-    <p>Site de Estudos - FOE.</p>
+    <p>StudyHub - FOE.</p>
   </footer>
 
   <script src="../assets/js/main.js"></script>

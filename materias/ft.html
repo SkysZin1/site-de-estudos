@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FT | Site de Estudos</title>
+  <title>FT | StudyHub</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
   <header class="site-header">
     <nav class="navbar" aria-label="Navegação principal">
-      <a class="brand" href="../index.html">Site de Estudos</a>
+      <a class="brand" href="../index.html">StudyHub</a>
       <div class="nav-links">
         <a href="foe.html">FOE</a>
         <a href="ft.html" aria-current="page">FT</a>
@@ -27,13 +27,15 @@
         Material de estudo sobre perda de carga em escoamentos internos e transferência de
         calor por condução, convecção, radiação e redes de resistência térmica.
       </p>
+      <div class="page-title-actions" id="resumo-facil">
+        <a class="nav-button summary-top-button" href="resumos/ft-resumo.html">Acessar Resumo Fácil</a>
+      </div>
     </section>
 
     <nav class="jump-nav" aria-label="Navegação da página">
       <a href="#visao-geral">Visão geral</a>
       <a href="#trilha">Trilha</a>
       <a href="#assuntos">Assuntos</a>
-      <a href="#resumo-prova">Resumo rápido</a>
       <a href="#quiz">Questões</a>
     </nav>
 
@@ -672,74 +674,6 @@
       </article>
     </section>
 
-    <section class="study-block" id="resumo-prova">
-      <div class="section-heading">
-        <p class="eyebrow">Resumo rápido</p>
-        <h2>Essencial para prova</h2>
-      </div>
-
-      <div class="exam-grid">
-        <article class="exam-card">
-          <h3>Teoria que precisa estar na cabeça</h3>
-          <ul>
-            <li>Bernoulli ideal conserva energia mecânica, mas tubulações reais exigem perda de carga.</li>
-            <li>Perda distribuída ocorre em tubos retos; perda localizada ocorre em acessórios.</li>
-            <li>Reynolds classifica o regime e orienta como estimar o fator de atrito.</li>
-            <li>Condução depende de <span class="math">k</span>, área, espessura e diferença de temperatura.</li>
-            <li>Convecção depende do coeficiente <span class="math">h</span> e da diferença entre superfície e fluido.</li>
-            <li>Resistência térmica transforma problemas de calor em redes semelhantes a circuitos.</li>
-          </ul>
-        </article>
-
-        <article class="exam-card">
-          <h3>Esquema de decisão</h3>
-          <div class="decision-flow">
-            <span>É escoamento ideal?</span>
-            <span>Use Bernoulli simples</span>
-            <span>Tem atrito em tubo?</span>
-            <span>Use Darcy-Weisbach</span>
-            <span>Tem curvas, registros ou entradas?</span>
-            <span>Some perdas localizadas</span>
-            <span>Tem calor atravessando camadas?</span>
-            <span>Use resistências térmicas</span>
-          </div>
-        </article>
-      </div>
-
-      <div class="formula-cheatsheet">
-        <article>
-          <h3>Escoamento</h3>
-          <p><span class="math">Re = &rho;VD/&mu;</span></p>
-          <p><span class="math">V = Q/A</span></p>
-          <p><span class="math">A = &pi;D²/4</span></p>
-        </article>
-
-        <article>
-          <h3>Perda de carga</h3>
-          <p><span class="math">h<sub>T</sub> = h<sub>D</sub> + h<sub>L</sub></span></p>
-          <p><span class="math">h<sub>D</sub> = f(L/D)V²/(2g)</span></p>
-          <p><span class="math">h<sub>L</sub> = KV²/(2g)</span></p>
-          <p><span class="math">f = 64/Re</span></p>
-        </article>
-
-        <article>
-          <h3>Calor</h3>
-          <p><span class="math">q = kA&Delta;T/L</span></p>
-          <p><span class="math">q'' = -k dT/dx</span></p>
-          <p><span class="math">q = hA(T<sub>s</sub> - T<sub>&infin;</sub>)</span></p>
-          <p><span class="math">q'' = &epsilon;&sigma;T<sub>s</sub>⁴</span></p>
-        </article>
-
-        <article>
-          <h3>Resistências</h3>
-          <p><span class="math">R = &Delta;T/q</span></p>
-          <p><span class="math">R<sub>cond</sub> = L/(kA)</span></p>
-          <p><span class="math">R<sub>conv</sub> = 1/(hA)</span></p>
-          <p><span class="math">q = &Delta;T/R<sub>total</sub></span></p>
-        </article>
-      </div>
-    </section>
-
     <section class="study-block" id="quiz">
       <div class="section-heading">
         <p class="eyebrow">Questões abertas</p>
@@ -988,7 +922,7 @@
   <button class="back-to-top" type="button" aria-label="Voltar ao topo">&uarr;</button>
 
   <footer class="site-footer">
-    <p>Site de Estudos - Fenômenos de Transporte.</p>
+    <p>StudyHub - Fenômenos de Transporte.</p>
   </footer>
 
   <script src="../assets/js/main.js"></script>

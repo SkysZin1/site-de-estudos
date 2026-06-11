@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumo Fácil Cálculo 3 | StudyHub</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navegação principal">
+      <a class="brand" href="../../index.html">StudyHub</a>
+      <div class="nav-links">
+        <a href="../foe.html">FOE</a>
+        <a href="../ft.html">FT</a>
+        <a href="../calculo3.html" aria-current="page">Cálculo 3</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="study-page summary-page">
+    <section class="page-title summary-title">
+      <a class="nav-button" href="../calculo3.html">&larr; Voltar para Cálculo 3</a>
+      <p class="eyebrow">Cálculo 3 / MMF</p>
+      <h1>Resumo Fácil</h1>
+      <p>
+        Revisão rápida sobre transformações lineares, matrizes, autovalores, sistemas de EDOs,
+        problemas de mistura, Euler e Runge-Kutta.
+      </p>
+    </section>
+
+    <nav class="jump-nav" aria-label="Navegação do resumo">
+      <a href="#introducao">Introdução</a>
+      <a href="#topicos">Tópicos</a>
+      <a href="#questoes">Para questões</a>
+      <a href="#formulas">Fórmulas</a>
+      <a href="#checklist">Checklist</a>
+    </nav>
+
+    <section class="study-block" id="introducao">
+      <div class="lead-panel">
+        <p>
+          Use este resumo para revisar rapidamente as ideias e fórmulas mais importantes antes
+          de listas, questões e provas. O foco é reconhecer o tipo de problema e escolher o
+          procedimento certo sem reler toda a página completa.
+        </p>
+      </div>
+    </section>
+
+    <section class="study-block" id="topicos">
+      <div class="section-heading">
+        <p class="eyebrow">Resumo por tópicos</p>
+        <h2>O que levar para a prova</h2>
+      </div>
+
+      <div class="easy-topic-list">
+        <article class="easy-topic-card">
+          <h3>Transformações lineares, núcleo e imagem</h3>
+          <div class="easy-topic-grid">
+            <div>
+              <h4>Teoria</h4>
+              <p>Transformações lineares preservam soma e multiplicação por escalar; núcleo e imagem mostram entradas que zeram e saídas possíveis.</p>
+            </div>
+            <div>
+              <h4>Fórmulas</h4>
+              <p class="formula">T(u+v)=T(u)+T(v)</p>
+              <p class="formula">T(kv)=kT(v)</p>
+              <p class="formula">ker(T): T(v)=0</p>
+            </div>
+            <div>
+              <h4>Quando usar</h4>
+              <p>Use para testar linearidade, achar núcleo, imagem e interpretar operadores diferenciais.</p>
+            </div>
+            <div class="attention-box">
+              <h4>Atenção</h4>
+              <p>Se aparecer termo constante, produto entre variáveis ou potência, desconfie da linearidade.</p>
+            </div>
+            <div class="memory-tip">
+              <h4>Dica rápida</h4>
+              <p>Linearidade é respeitar soma e escala.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="easy-topic-card">
+          <h3>Matrizes, sistemas lineares e autovalores</h3>
+          <div class="easy-topic-grid">
+            <div>
+              <h4>Teoria</h4>
+              <p>Matrizes representam transformações e sistemas; autovalores revelam direções especiais preservadas pela matriz.</p>
+            </div>
+            <div>
+              <h4>Fórmulas</h4>
+              <p class="formula">Ax=b</p>
+              <p class="formula">Av=&lambda;v</p>
+              <p class="formula">det(A-&lambda;I)=0</p>
+            </div>
+            <div>
+              <h4>Quando usar</h4>
+              <p>Use para resolver sistemas, escrever modelos em forma matricial e encontrar modos naturais.</p>
+            </div>
+            <div class="attention-box">
+              <h4>Atenção</h4>
+              <p>Autovetor não pode ser vetor nulo; autovalor pode ser zero.</p>
+            </div>
+            <div class="memory-tip">
+              <h4>Dica rápida</h4>
+              <p>Autovetor muda de tamanho, mas não de direção.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="easy-topic-card">
+          <h3>Sistemas lineares de EDOs</h3>
+          <div class="easy-topic-grid">
+            <div>
+              <h4>Teoria</h4>
+              <p>Sistemas de EDOs modelam variáveis acopladas. A forma matricial organiza as equações e facilita a solução.</p>
+            </div>
+            <div>
+              <h4>Fórmulas</h4>
+              <p class="formula">x'=A(t)x+f(t)</p>
+              <p class="formula">x'=Ax</p>
+              <p class="formula">x(t)=ve<sup>&lambda;t</sup></p>
+            </div>
+            <div>
+              <h4>Quando usar</h4>
+              <p>Use quando uma variável depende da outra e as equações aparecem como derivadas de primeira ordem.</p>
+            </div>
+            <div class="attention-box">
+              <h4>Atenção</h4>
+              <p>Para autovalores repetidos ou complexos, a forma da solução pode exigir tratamento especial.</p>
+            </div>
+            <div class="memory-tip">
+              <h4>Dica rápida</h4>
+              <p>Em <span class="math">x'=Ax</span>, autovalores ditam o comportamento.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="easy-topic-card">
+          <h3>Problemas de mistura e análise compartimental</h3>
+          <div class="easy-topic-grid">
+            <div>
+              <h4>Teoria</h4>
+              <p>O modelo acompanha quantidade de substância no tanque ou compartimento. Entrada aumenta, saída diminui.</p>
+            </div>
+            <div>
+              <h4>Fórmulas</h4>
+              <p class="formula">x' = taxa de entrada - taxa de saída</p>
+              <p class="formula">concentração = x(t)/V(t)</p>
+            </div>
+            <div>
+              <h4>Quando usar</h4>
+              <p>Use para tanques, reservatórios e sistemas em que uma quantidade se acumula com entrada e saída.</p>
+            </div>
+            <div class="attention-box">
+              <h4>Atenção</h4>
+              <p>Se entrada e saída têm vazões diferentes, o volume varia com o tempo.</p>
+            </div>
+            <div class="memory-tip">
+              <h4>Dica rápida</h4>
+              <p>Modele a massa, não apenas a concentração.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="easy-topic-card">
+          <h3>Euler, Euler aprimorado e Runge-Kutta</h3>
+          <div class="easy-topic-grid">
+            <div>
+              <h4>Teoria</h4>
+              <p>Métodos numéricos aproximam soluções passo a passo quando a solução analítica não é prática.</p>
+            </div>
+            <div>
+              <h4>Fórmulas</h4>
+              <p class="formula">Euler: y<sub>n+1</sub>=y<sub>n</sub>+hf(x<sub>n</sub>,y<sub>n</sub>)</p>
+              <p class="formula">RK4: y<sub>n+1</sub>=y<sub>n</sub>+h(k<sub>1</sub>+2k<sub>2</sub>+2k<sub>3</sub>+k<sub>4</sub>)/6</p>
+            </div>
+            <div>
+              <h4>Quando usar</h4>
+              <p>Use Euler para aproximação simples; RK4 quando quiser mais precisão por passo.</p>
+            </div>
+            <div class="attention-box">
+              <h4>Atenção</h4>
+              <p>Passo grande aumenta erro. Sempre atualize <span class="math">x</span> e <span class="math">y</span> na ordem correta.</p>
+            </div>
+            <div class="memory-tip">
+              <h4>Dica rápida</h4>
+              <p>Euler usa uma inclinação; RK4 combina quatro.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="study-block" id="questoes">
+      <div class="section-heading">
+        <p class="eyebrow">Para questões</p>
+        <h2>Lembre-se</h2>
+      </div>
+      <ul class="quick-list">
+        <li>Para testar linearidade, confira soma e multiplicação por escalar.</li>
+        <li>Para núcleo, iguale a transformação a zero e resolva o sistema.</li>
+        <li>Para autovalores, comece por <span class="math">det(A-&lambda;I)=0</span>.</li>
+        <li>Para sistemas de EDOs, escreva primeiro em forma matricial.</li>
+        <li>Em misturas, monte entrada menos saída usando concentração correta.</li>
+        <li>Em métodos numéricos, anote passo, ponto atual e função antes de calcular.</li>
+      </ul>
+    </section>
+
+    <section class="study-block" id="formulas">
+      <div class="section-heading">
+        <p class="eyebrow">Consulta rápida</p>
+        <h2>Fórmulas que mais caem</h2>
+      </div>
+      <div class="quick-formula-grid">
+        <article><h3>Linearidade</h3><p class="formula">T(u+v)=T(u)+T(v)</p></article>
+        <article><h3>Núcleo</h3><p class="formula">ker(T): T(v)=0</p></article>
+        <article><h3>Autovalores</h3><p class="formula">det(A-&lambda;I)=0</p></article>
+        <article><h3>Sistemas</h3><p class="formula">x'=Ax</p></article>
+        <article><h3>Euler</h3><p class="formula">y<sub>n+1</sub>=y<sub>n</sub>+hf(x<sub>n</sub>,y<sub>n</sub>)</p></article>
+        <article><h3>RK4</h3><p class="formula">y<sub>n+1</sub>=y<sub>n</sub>+h(k<sub>1</sub>+2k<sub>2</sub>+2k<sub>3</sub>+k<sub>4</sub>)/6</p></article>
+      </div>
+    </section>
+
+    <section class="study-block" id="checklist">
+      <div class="section-heading">
+        <p class="eyebrow">Checklist</p>
+        <h2>Antes de fechar a revisão</h2>
+      </div>
+      <div class="checklist-card">
+        <label><input type="checkbox"> Entendi o conceito de transformação linear.</label>
+        <label><input type="checkbox"> Sei identificar qual fórmula usar em linearidade, autovalores, EDOs ou métodos numéricos.</label>
+        <label><input type="checkbox"> Sei interpretar matriz, vetor, autovalor, passo <span class="math">h</span> e função <span class="math">f(x,y)</span>.</label>
+        <label><input type="checkbox"> Sei resolver um exemplo básico de Euler ou autovalores.</label>
+        <label><input type="checkbox"> Revisei as pegadinhas de núcleo, volume variável e ordem dos cálculos numéricos.</label>
+      </div>
+    </section>
+  </main>
+
+  <button class="back-to-top" type="button" aria-label="Voltar ao topo">&uarr;</button>
+
+  <footer class="site-footer">
+    <p>StudyHub - Resumo Fácil de Cálculo 3 / MMF.</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>
