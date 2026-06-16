@@ -18,10 +18,10 @@ const searchData = [
   },
   {
     title: "FOE - Fenomenos Ondulatorios e Eletromagneticos",
-    description: "Pagina de estudo sobre inducao, corrente alternada, circuitos RLC, transformadores e Maxwell.",
+    description: "Pagina de estudo sobre inducao, corrente alternada, circuitos RLC, transformadores, Maxwell e ondas eletromagneticas.",
     category: "FOE",
     type: "Pagina",
-    keywords: ["foe", "ondas", "eletromagnetismo", "campo magnetico", "inducao"],
+    keywords: ["foe", "ondas", "eletromagnetismo", "campo magnetico", "inducao", "aula 32"],
     url: "materias/foe.html"
   },
   {
@@ -34,10 +34,10 @@ const searchData = [
   },
   {
     title: "Formulas FOE",
-    description: "Caixas rapidas com fluxo magnetico, Faraday-Lenz, fem de movimento, RL, reatancias e impedancia.",
+    description: "Caixas rapidas com fluxo magnetico, Faraday-Lenz, fem de movimento, RL, reatancias, impedancia e ondas eletromagneticas.",
     category: "FOE",
     type: "Formula",
-    keywords: ["formulas foe", "formula foe", "inducao", "circuito rlc", "corrente alternada", "revisao rapida"],
+    keywords: ["formulas foe", "formula foe", "inducao", "circuito rlc", "corrente alternada", "ondas eletromagneticas", "revisao rapida"],
     url: "materias/resumos/foe-resumo.html#formulas"
   },
   {
@@ -105,12 +105,20 @@ const searchData = [
     url: "materias/foe.html#maxwell"
   },
   {
-    title: "Questoes de FOE",
-    description: "Exercicios abertos com resolucoes comentadas sobre inducao, RL, CA, RLC e Maxwell.",
+    title: "Ondas eletromagneticas",
+    description: "Conteudo da Aula 32 sobre equacao de onda, relacao E/B, Poynting, intensidade e energia.",
+    category: "FOE",
+    type: "Conteudo",
+    keywords: ["aula 32", "ondas eletromagneticas", "poynting", "intensidade", "densidade de energia", "campo eletrico", "campo magnetico"],
+    url: "materias/foe.html#ondas-eletromagneticas"
+  },
+  {
+    title: "Exercicios Sugeridos de FOE",
+    description: "Pagina com exercicios sugeridos e resolucoes comentadas de inducao, RL, CA, RLC, transformadores e ondas eletromagneticas.",
     category: "FOE",
     type: "Questao",
-    keywords: ["questoes", "exercicios", "resolucao", "foe", "inducao", "rlc"],
-    url: "materias/foe.html#quiz"
+    keywords: ["questoes", "exercicios sugeridos", "exercicios foe", "resolucao", "foe", "inducao", "rlc", "ondas eletromagneticas"],
+    url: "materias/exercicios/foe-exercicios.html"
   },
   {
     title: "FT - Fenomenos de Transporte",

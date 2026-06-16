@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercícios Sugeridos FOE | StudyHub</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navegação principal">
+      <a class="brand" href="../../index.html">StudyHub</a>
+      <div class="nav-links">
+        <a href="../foe.html" aria-current="page">FOE</a>
+        <a href="../ft.html">FT</a>
+        <a href="../calculo3.html">Cálculo 3</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="study-page exercise-page">
+    <section class="page-title">
+      <a class="nav-button" href="../foe.html">&larr; Voltar para FOE</a>
+      <p class="eyebrow">FOE</p>
+      <h1>Exercícios Sugeridos</h1>
+      <p>
+        Lista comentada para treinar indução, circuitos RL, corrente alternada, RLC,
+        transformadores, Maxwell e ondas eletromagnéticas.
+      </p>
+    </section>
+
+    <nav class="jump-nav" aria-label="Navegação dos exercícios">
+      <a href="#inducao">Indução</a>
+      <a href="#circuitos">Circuitos</a>
+      <a href="#ondas">Ondas EM</a>
+      <a href="#formulario">Fórmulas</a>
+    </nav>
+
+    <section class="study-block" id="inducao">
+      <div class="section-heading">
+        <p class="eyebrow">Bloco 1</p>
+        <h2>Indução eletromagnética</h2>
+        <p>Comece identificando o que muda no fluxo: campo, área, ângulo ou movimento.</p>
+      </div>
+
+      <div class="exercise-list">
+        <article class="exercise-card">
+          <div class="question-meta">Exercício 29.1</div>
+          <h3>Uma espira de área <span class="math">0,0900 m²</span> está em campo perpendicular que diminui a <span class="math">0,190 T/s</span>. Calcule a fem e a corrente para <span class="math">R = 0,600 &Omega;</span>.</h3>
+          <div class="formula-strip">
+            <span>|&epsilon;| = A|dB/dt|</span>
+            <span>I = |&epsilon;|/R</span>
+          </div>
+          <ol class="solution-steps">
+            <li>Como o campo é perpendicular, <span class="math">&Phi;<sub>B</sub> = BA</span>.</li>
+            <li><span class="math">|&epsilon;| = 0,0900 &middot; 0,190 = 0,0171 V</span>.</li>
+            <li><span class="math">I = 0,0171/0,600 = 0,0285 A = 28,5 mA</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">|&epsilon;| = 17,1 mV</span> e <span class="math">I = 28,5 mA</span>.</p>
+        </article>
+
+        <article class="exercise-card">
+          <div class="question-meta">Exercício 29.5</div>
+          <h3>Uma espira circular de raio <span class="math">12,0 cm</span> está em campo de <span class="math">1,5 T</span>. Ela é removida em <span class="math">2,0 ms</span>. Determine a fem média.</h3>
+          <div class="formula-strip">
+            <span>A = &pi;r²</span>
+            <span>|&epsilon;<sub>méd</sub>| = |&Delta;&Phi;<sub>B</sub>|/&Delta;t</span>
+          </div>
+          <ol class="solution-steps">
+            <li>Área: <span class="math">A = &pi;(0,120)² = 4,52&times;10⁻² m²</span>.</li>
+            <li>Fluxo inicial: <span class="math">&Phi;<sub>i</sub> = BA = 1,5 &middot; 4,52&times;10⁻² = 6,79&times;10⁻² Wb</span>.</li>
+            <li>Como a espira sai da região, <span class="math">&Phi;<sub>f</sub> = 0</span>.</li>
+            <li><span class="math">|&epsilon;<sub>méd</sub>| = 6,79&times;10⁻²/(2,0&times;10⁻³) = 33,9 V</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">33,9 V</span>. O sentido vem pela Lei de Lenz: a corrente tenta manter o fluxo original.</p>
+        </article>
+
+        <article class="exercise-card">
+          <div class="question-meta">Exercício 29.7</div>
+          <h3>Uma espira retangular está próxima de um fio longo cuja corrente aumenta a <span class="math">9,60 A/s</span>. Use <span class="math">a = 12,0 cm</span>, <span class="math">b = 36,0 cm</span> e <span class="math">L = 24,0 cm</span>.</h3>
+          <div class="formula-strip">
+            <span>B = &mu;<sub>0</sub>i/(2&pi;r)</span>
+            <span>&Phi;<sub>B</sub> = (&mu;<sub>0</sub>iL/2&pi;)ln(b/a)</span>
+          </div>
+          <ol class="solution-steps">
+            <li>O campo do fio varia com a distância, então integramos faixas estreitas da espira.</li>
+            <li><span class="math">|&epsilon;| = (&mu;<sub>0</sub>L/2&pi;)ln(b/a) &middot; di/dt</span>.</li>
+            <li><span class="math">|&epsilon;| = (2&times;10⁻⁷)(0,240)ln(3)(9,60)</span>.</li>
+            <li><span class="math">|&epsilon;| = 5,06&times;10⁻⁷ V = 0,506 &mu;V</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">0,506 &mu;V</span>. Como o fluxo para dentro da página aumenta, a corrente induzida cria campo para fora.</p>
+        </article>
+
+        <article class="exercise-card">
+          <div class="question-meta">Exercício 29.24</div>
+          <h3>Uma espira retangular se move para fora de uma região com campo magnético. Como calcular a força magnética enquanto só parte da espira está no campo?</h3>
+          <div class="formula-strip">
+            <span>&epsilon; = BLv</span>
+            <span>I = &epsilon;/R</span>
+            <span>F = ILB</span>
+          </div>
+          <ol class="solution-steps">
+            <li>Enquanto a espira sai da região, a área atravessada por campo diminui.</li>
+            <li>A fem de movimento no lado que cruza a fronteira é <span class="math">&epsilon; = BLv</span>.</li>
+            <li>A corrente é <span class="math">I = BLv/R</span>.</li>
+            <li>A força no trecho dentro do campo é <span class="math">F = ILB = B²L²v/R</span>.</li>
+          </ol>
+          <p class="result">A força se opõe ao movimento, de acordo com a Lei de Lenz.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="study-block" id="circuitos">
+      <div class="section-heading">
+        <p class="eyebrow">Bloco 2</p>
+        <h2>RL, CA, RLC e transformadores</h2>
+        <p>Nestes exercícios, preste atenção se os valores são de pico ou eficazes.</p>
+      </div>
+
+      <div class="exercise-list">
+        <article class="exercise-card">
+          <div class="question-meta">Exercício 30.23</div>
+          <h3>Um circuito RL tem <span class="math">L = 2,50 H</span>, <span class="math">R = 8,0 &Omega;</span> e bateria de <span class="math">6,0 V</span>. Determine taxas de crescimento, tempo para <span class="math">0,250 A</span> e corrente final.</h3>
+          <div class="formula-strip">
+            <span>L di/dt + Ri = V</span>
+            <span>i(t)=I(1-e⁻ᵗ/ᵗᵃᵘ)</span>
+            <span>&tau;=L/R</span>
+          </div>
+          <ol class="solution-steps">
+            <li>No instante inicial, <span class="math">i=0</span>, então <span class="math">di/dt = V/L = 6,0/2,50 = 2,4 A/s</span>.</li>
+            <li>Quando <span class="math">i=0,500 A</span>, <span class="math">di/dt = (V-Ri)/L = (6,0-8,0&middot;0,500)/2,50 = 0,80 A/s</span>.</li>
+            <li><span class="math">I = V/R = 0,750 A</span> e <span class="math">&tau; = 2,50/8,0 = 0,3125 s</span>.</li>
+            <li>Para <span class="math">0,250 A</span>: <span class="math">0,250 = 0,750(1-e^{-t/&tau;})</span>, então <span class="math">t = -&tau;ln(2/3) = 0,127 s</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">2,4 A/s</span>, <span class="math">0,80 A/s</span>, <span class="math">0,127 s</span> e <span class="math">0,750 A</span>.</p>
+        </article>
+
+        <article class="exercise-card">
+          <div class="question-meta">Exercício 31.4</div>
+          <h3>Um capacitor está ligado a uma fonte CA de amplitude <span class="math">60,0 V</span> e frequência <span class="math">80,0 Hz</span>. A corrente tem amplitude <span class="math">5,30 A</span>. Ache <span class="math">C</span>.</h3>
+          <div class="formula-strip">
+            <span>X<sub>C</sub> = V/I</span>
+            <span>X<sub>C</sub> = 1/(&omega;C)</span>
+            <span>&omega; = 2&pi;f</span>
+          </div>
+          <ol class="solution-steps">
+            <li><span class="math">X<sub>C</sub> = 60,0/5,30 = 11,32 &Omega;</span>.</li>
+            <li><span class="math">&omega; = 2&pi;80,0 = 502,7 rad/s</span>.</li>
+            <li><span class="math">C = 1/(&omega;X<sub>C</sub>) = 1/(502,7&middot;11,32)</span>.</li>
+            <li><span class="math">C = 1,76&times;10⁻⁴ F = 176 &mu;F</span>.</li>
+          </ol>
+          <p class="result">Em capacitor puro, a corrente adianta a tensão em <span class="math">90°</span>.</p>
+        </article>
+
+        <article class="exercise-card">
+          <div class="question-meta">Exercício 31.14</div>
+          <h3>Em um RLC série, use <span class="math">R=200 &Omega;</span>, <span class="math">L=0,400 H</span>, <span class="math">C=6,00 &mu;F</span>, <span class="math">V=60,0 V</span> e <span class="math">&omega;=250 rad/s</span>.</h3>
+          <div class="formula-strip">
+            <span>X<sub>L</sub>=&omega;L</span>
+            <span>X<sub>C</sub>=1/(&omega;C)</span>
+            <span>Z=&radic;[R²+(X<sub>L</sub>-X<sub>C</sub>)²]</span>
+          </div>
+          <ol class="solution-steps">
+            <li><span class="math">X<sub>L</sub>=250&middot;0,400=100 &Omega;</span>.</li>
+            <li><span class="math">X<sub>C</sub>=1/(250&middot;6,00&times;10⁻⁶)=667 &Omega;</span>.</li>
+            <li><span class="math">Z=&radic;[200²+(100-667)²]=601 &Omega;</span>.</li>
+            <li><span class="math">I=V/Z=60,0/601=9,98&times;10⁻² A</span>.</li>
+            <li><span class="math">V<sub>R</sub>=IR=20,0 V</span> e <span class="math">V<sub>L</sub>=IX<sub>L</sub>=10,0 V</span>.</li>
+          </ol>
+          <p class="result">O circuito é capacitivo, pois <span class="math">X<sub>C</sub> &gt; X<sub>L</sub></span>; a tensão atrasa em relação à corrente.</p>
+        </article>
+
+        <article class="exercise-card">
+          <div class="question-meta">Exercício 31.27</div>
+          <h3>Um RLC série tem <span class="math">R=200 &Omega;</span>, <span class="math">L=0,400 H</span>, <span class="math">C=5,00 &mu;F</span> e fonte de amplitude <span class="math">3,00 V</span>. Ache a frequência angular de máxima corrente.</h3>
+          <div class="formula-strip">
+            <span>&omega;<sub>0</sub>=1/&radic;(LC)</span>
+            <span>I<sub>máx</sub>=V/R</span>
+          </div>
+          <ol class="solution-steps">
+            <li>A corrente é máxima em ressonância: <span class="math">X<sub>L</sub>=X<sub>C</sub></span>.</li>
+            <li><span class="math">&omega;<sub>0</sub>=1/&radic;(0,400&middot;5,00&times;10⁻⁶)=707 rad/s</span>.</li>
+            <li>Na ressonância, <span class="math">Z=R</span>, então <span class="math">I<sub>máx</sub>=3,00/200=15,0 mA</span>.</li>
+            <li>Em <span class="math">&omega;=400 rad/s</span>, <span class="math">X<sub>L</sub>=160 &Omega;</span>, <span class="math">X<sub>C</sub>=500 &Omega;</span>, <span class="math">Z=395 &Omega;</span> e <span class="math">I=7,61 mA</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">&omega;<sub>0</sub> = 707 rad/s</span>, <span class="math">I=15,0 mA</span> na ressonância e <span class="math">7,61 mA</span> em <span class="math">400 rad/s</span>.</p>
+        </article>
+
+        <article class="exercise-card">
+          <div class="question-meta">Exercício 31.36</div>
+          <h3>Um transformador eleva <span class="math">120 V</span> para <span class="math">13.000 V</span>. O primário tem <span class="math">400</span> espiras e o fusível do secundário abre em <span class="math">8,50 mA</span>.</h3>
+          <div class="formula-strip">
+            <span>V<sub>s</sub>/V<sub>p</sub>=N<sub>s</sub>/N<sub>p</sub></span>
+            <span>P=VI</span>
+            <span>V<sub>p</sub>I<sub>p</sub>=V<sub>s</sub>I<sub>s</sub></span>
+          </div>
+          <ol class="solution-steps">
+            <li><span class="math">N<sub>s</sub>=400(13000/120)=4,33&times;10⁴</span> espiras.</li>
+            <li><span class="math">P=V<sub>s</sub>I<sub>s</sub>=13000&middot;0,00850=110,5 W</span>.</li>
+            <li><span class="math">I<sub>p</sub>=P/V<sub>p</sub>=110,5/120=0,921 A</span>.</li>
+          </ol>
+          <p class="result">Resposta: cerca de <span class="math">4,33&times;10⁴</span> espiras, <span class="math">110 W</span> e <span class="math">0,921 A</span>.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="study-block" id="ondas">
+      <div class="section-heading">
+        <p class="eyebrow">Bloco 3</p>
+        <h2>Maxwell e ondas eletromagnéticas</h2>
+        <p>Use sempre <span class="math">c = 3,0&times;10⁸ m/s</span> para ondas no vácuo/ar, salvo indicação diferente.</p>
+      </div>
+
+      <div class="exercise-list">
+        <article class="exercise-card">
+          <div class="question-meta">Exercício 32.1</div>
+          <h3>Quanto tempo a luz leva para ir da Lua à Terra, sabendo que a distância é <span class="math">384.000 km</span>? E qual a distância de Sirius se a luz leva <span class="math">8,6 anos</span>?</h3>
+          <div class="formula-strip">
+            <span>d=ct</span>
+            <span>c=3,0&times;10⁸ m/s</span>
+          </div>
+          <ol class="solution-steps">
+            <li>Lua-Terra: <span class="math">d=3,84&times;10⁸ m</span>.</li>
+            <li><span class="math">t=d/c=3,84&times;10⁸/(3,0&times;10⁸)=1,28 s</span>.</li>
+            <li>Um ano-luz vale aproximadamente <span class="math">9,46&times;10¹² km</span>.</li>
+            <li><span class="math">d=8,6(9,46&times;10¹²)=8,14&times;10¹³ km</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">1,28 s</span> e <span class="math">8,14&times;10¹³ km</span>.</p>
+        </article>
+
+        <article class="exercise-card">
+          <div class="question-meta">Exercício 32.3</div>
+          <h3>Uma onda se propaga no sentido <span class="math">+z</span>. Em certo ponto, o campo elétrico aponta em <span class="math">+x</span> e vale <span class="math">4,00 V/m</span>. Ache o campo magnético.</h3>
+          <div class="formula-strip">
+            <span>E<sub>0</sub>/B<sub>0</sub>=c</span>
+            <span>E &times; B aponta a propagação</span>
+          </div>
+          <ol class="solution-steps">
+            <li><span class="math">B=E/c=4,00/(3,0&times;10⁸)=1,33&times;10⁻⁸ T</span>.</li>
+            <li>Para <span class="math">E</span> em <span class="math">+x</span> e propagação em <span class="math">+z</span>, o campo <span class="math">B</span> deve apontar em <span class="math">+y</span>, pois <span class="math">x &times; y = z</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">B=1,33&times;10⁻⁸ T</span>, direção <span class="math">+y</span>.</p>
+        </article>
+
+        <article class="exercise-card">
+          <div class="question-meta">Exercício 32.7</div>
+          <h3>Uma onda tem <span class="math">B<sub>0</sub>=1,25 &mu;T</span> e <span class="math">&lambda;=432 nm</span>. Ache frequência e amplitude de <span class="math">E</span>.</h3>
+          <div class="formula-strip">
+            <span>f=c/&lambda;</span>
+            <span>E<sub>0</sub>=cB<sub>0</sub></span>
+          </div>
+          <ol class="solution-steps">
+            <li><span class="math">&lambda;=432&times;10⁻⁹ m</span>.</li>
+            <li><span class="math">f=3,0&times;10⁸/(432&times;10⁻⁹)=6,94&times;10¹⁴ Hz</span>.</li>
+            <li><span class="math">E<sub>0</sub>=3,0&times;10⁸(1,25&times;10⁻⁶)=375 V/m</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">6,94&times;10¹⁴ Hz</span> e <span class="math">375 V/m</span>.</p>
+        </article>
+
+        <article class="exercise-card">
+          <div class="question-meta">Exercício 32.9</div>
+          <h3>Determine frequências para comprimentos de onda de <span class="math">5,0 km</span>, <span class="math">5,0 &mu;m</span> e <span class="math">5,0 nm</span>; depois ache comprimentos de onda para raios gama e rádio AM.</h3>
+          <div class="formula-strip">
+            <span>c=&lambda;f</span>
+            <span>f=c/&lambda;</span>
+            <span>&lambda;=c/f</span>
+          </div>
+          <ol class="solution-steps">
+            <li><span class="math">5,0 km</span>: <span class="math">f=3,0&times;10⁸/5,0&times;10³ = 6,0&times;10⁴ Hz</span>.</li>
+            <li><span class="math">5,0 &mu;m</span>: <span class="math">f=6,0&times;10¹³ Hz</span>.</li>
+            <li><span class="math">5,0 nm</span>: <span class="math">f=6,0&times;10¹⁶ Hz</span>.</li>
+            <li>Para <span class="math">f=6,50&times;10²¹ Hz</span>, <span class="math">&lambda;=4,62&times;10⁻¹⁴ m</span>.</li>
+            <li>Para <span class="math">f=590 kHz</span>, <span class="math">&lambda;=508 m</span>.</li>
+          </ol>
+          <p class="result">O segredo é converter todas as unidades para SI antes de aplicar <span class="math">c=&lambda;f</span>.</p>
+        </article>
+
+        <article class="exercise-card">
+          <div class="question-meta">Exercício 32.11</div>
+          <h3>Uma onda tem campo elétrico de amplitude <span class="math">3,10&times;10⁵ V/m</span> e argumento do tipo <span class="math">ky-&omega;t</span>, com <span class="math">&omega;=12,65&times;10¹² rad/s</span>. Determine propagação, comprimento de onda e <span class="math">B</span>.</h3>
+          <div class="formula-strip">
+            <span>ky-&omega;t indica propagação em +y</span>
+            <span>&lambda;=2&pi;c/&omega;</span>
+            <span>B<sub>0</sub>=E<sub>0</sub>/c</span>
+          </div>
+          <ol class="solution-steps">
+            <li>Como o argumento é <span class="math">ky-\omega t</span>, a onda se propaga em <span class="math">+y</span>.</li>
+            <li><span class="math">&lambda;=2&pi;(3,0&times;10⁸)/(12,65&times;10¹²)=1,49&times;10⁻⁴ m</span>.</li>
+            <li><span class="math">B<sub>0</sub>=3,10&times;10⁵/(3,0&times;10⁸)=1,03&times;10⁻³ T</span>.</li>
+            <li>A direção de <span class="math">B</span> é escolhida para que <span class="math">E&times;B</span> aponte em <span class="math">+y</span>.</li>
+          </ol>
+          <p class="result">Resposta: propagação em <span class="math">+y</span>, <span class="math">&lambda;=1,49&times;10⁻⁴ m</span> e <span class="math">B<sub>0</sub>=1,03&times;10⁻³ T</span>.</p>
+        </article>
+
+        <article class="exercise-card">
+          <div class="question-meta">Exercício 32.23</div>
+          <h3>Uma fonte monocromática de <span class="math">60,0 W</span> irradia igualmente em todas as direções. A <span class="math">5,00 m</span>, calcule <span class="math">E<sub>máx</sub></span> e <span class="math">B<sub>máx</sub></span>.</h3>
+          <div class="formula-strip">
+            <span>I=P/(4&pi;r²)</span>
+            <span>I=(1/2)c&epsilon;<sub>0</sub>E<sub>0</sub>²</span>
+            <span>B<sub>0</sub>=E<sub>0</sub>/c</span>
+          </div>
+          <ol class="solution-steps">
+            <li><span class="math">I=60,0/[4&pi;(5,00)²]=0,191 W/m²</span>.</li>
+            <li><span class="math">E<sub>0</sub>=&radic;[2I/(c&epsilon;<sub>0</sub>)]</span>.</li>
+            <li><span class="math">E<sub>0</sub>=&radic;[2(0,191)/(3,0&times;10⁸&middot;8,85&times;10⁻¹²)] = 12,0 V/m</span>.</li>
+            <li><span class="math">B<sub>0</sub>=12,0/(3,0&times;10⁸)=4,0&times;10⁻⁸ T</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">E<sub>máx</sub>=12,0 V/m</span> e <span class="math">B<sub>máx</sub>=4,0&times;10⁻⁸ T</span>.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="study-block" id="formulario">
+      <div class="section-heading">
+        <p class="eyebrow">Conferência</p>
+        <h2>Fórmulas que guiam os exercícios</h2>
+      </div>
+      <div class="quick-formula-grid">
+        <article><h3>Indução</h3><p class="formula">&epsilon; = -N d&Phi;<sub>B</sub>/dt</p></article>
+        <article><h3>Fem de movimento</h3><p class="formula">&epsilon; = BLv</p></article>
+        <article><h3>RL</h3><p class="formula">&tau; = L/R; i(t)=V/R(1-e^{-t/&tau;})</p></article>
+        <article><h3>CA</h3><p class="formula">X<sub>L</sub>=&omega;L; X<sub>C</sub>=1/(&omega;C)</p></article>
+        <article><h3>RLC</h3><p class="formula">Z=&radic;[R²+(X<sub>L</sub>-X<sub>C</sub>)²]</p></article>
+        <article><h3>Ondas EM</h3><p class="formula">c=1/&radic;(&mu;<sub>0</sub>&epsilon;<sub>0</sub>)=E<sub>0</sub>/B<sub>0</sub></p></article>
+      </div>
+    </section>
+  </main>
+
+  <button class="back-to-top" type="button" aria-label="Voltar ao topo">&uarr;</button>
+
+  <footer class="site-footer">
+    <p>StudyHub - Exercícios Sugeridos de FOE.</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>
