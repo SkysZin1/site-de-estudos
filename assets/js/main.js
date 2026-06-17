@@ -201,12 +201,28 @@ const searchData = [
     url: "materias/ft.html#resistencia-termica"
   },
   {
-    title: "Questoes de FT",
-    description: "Exercicios abertos com resolucoes comentadas sobre escoamento, perdas e transferencia de calor.",
+    title: "Exercicios Sugeridos de FT",
+    description: "Pagina com as listas resolvidas de perda de carga e transferencia de calor.",
     category: "FT",
     type: "Questao",
-    keywords: ["questoes", "exercicios", "resolucao", "perda de carga", "calor"],
-    url: "materias/ft.html#quiz"
+    keywords: ["questoes", "exercicios", "exercicios sugeridos", "resolucao", "ft", "perda de carga", "transferencia de calor", "lista 1", "lista 2"],
+    url: "materias/exercicios/ft-exercicios.html"
+  },
+  {
+    title: "Lista 1 de FT - Perda de carga",
+    description: "Exercicios resolvidos sobre Darcy-Weisbach, Reynolds, comprimento equivalente, acessorios e pressao disponivel.",
+    category: "FT",
+    type: "Questao",
+    keywords: ["lista 1 ft", "perda de carga", "darcy", "weisbach", "moody", "comprimento equivalente", "oleoduto", "chuveiro"],
+    url: "materias/exercicios/ft-exercicios.html#perda-carga"
+  },
+  {
+    title: "Lista 2 de FT - Transferencia de calor",
+    description: "Exercicios resolvidos com diagramas de conducao, conveccao, resistencia termica e paredes compostas.",
+    category: "FT",
+    type: "Questao",
+    keywords: ["lista 2 ft", "transferencia de calor", "conducao", "conveccao", "resistencia termica", "parede composta", "geladeira", "forno"],
+    url: "materias/exercicios/ft-exercicios.html#transferencia-calor"
   },
   {
     title: "Calculo 3 - Modelagem Matematica de Fenomenos",

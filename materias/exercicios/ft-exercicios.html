@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercícios Sugeridos FT | StudyHub</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navegação principal">
+      <a class="brand" href="../../index.html">StudyHub</a>
+      <div class="nav-links">
+        <a href="../foe.html">FOE</a>
+        <a href="../ft.html" aria-current="page">FT</a>
+        <a href="../calculo3.html">Cálculo 3</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="study-page exercise-page">
+    <section class="page-title">
+      <a class="nav-button" href="../ft.html">&larr; Voltar para FT</a>
+      <p class="eyebrow">FT</p>
+      <h1>Exercícios Sugeridos</h1>
+      <p>
+        Resoluções comentadas das listas de perda de carga e transferência de calor,
+        com fórmulas, interpretação física, esquemas visuais e passo a passo.
+      </p>
+    </section>
+
+    <nav class="jump-nav" aria-label="Navegação dos exercícios">
+      <a href="#perda-carga">Lista 1 - Perda de carga</a>
+      <a href="#transferencia-calor">Lista 2 - Transferência de calor</a>
+      <a href="#formulas-ft">Fórmulas</a>
+    </nav>
+
+    <section class="study-block" id="perda-carga">
+      <div class="section-heading">
+        <p class="eyebrow">Lista 1</p>
+        <h2>Perda de carga em tubulações</h2>
+        <p>
+          Nesta lista, o ponto central é escrever a equação de energia com perdas,
+          calcular velocidade, Reynolds, fator de atrito e somar perdas distribuídas e localizadas.
+        </p>
+      </div>
+
+      <div class="exercise-list">
+        <article class="exercise-card" id="ft-l1-q1">
+          <div class="question-meta">Questão 1</div>
+          <h3>Água a 15 °C escoa em tubo horizontal de aço inoxidável, com <span class="math">L = 30 m</span>, <span class="math">D = 4 cm</span>, <span class="math">Q = 8 L/s</span>, <span class="math">&rho; = 1000 kg/m³</span>, <span class="math">&mu; = 1,307&times;10<sup>-3</sup> kg/(m.s)</span> e <span class="math">e = 0,00026 m</span>. Determine a perda de carga.</h3>
+          <div class="problem-visual hydraulic-strip">
+            <div class="hydro-schematic">
+              <span class="hydro-node">entrada</span>
+              <div class="hydro-pipe-body">
+                <span>tubo horizontal</span>
+              </div>
+              <span class="hydro-output">hD?</span>
+            </div>
+            <div class="hydro-callouts" aria-label="Dados principais da questão">
+              <span>Q = 8 L/s</span>
+              <span>D = 4 cm</span>
+              <span>L = 30 m</span>
+              <span>e = 0,00026 m</span>
+            </div>
+          </div>
+          <div class="formula-strip">
+            <span>A = &pi;D²/4</span>
+            <span>V = Q/A</span>
+            <span>Re = &rho;VD/&mu;</span>
+            <span>h<sub>D</sub> = f(L/D)V²/(2g)</span>
+          </div>
+          <ol class="solution-steps">
+            <li>Converta a vazão: <span class="math">Q = 8 L/s = 0,008 m³/s</span> e o diâmetro: <span class="math">D = 0,04 m</span>.</li>
+            <li>Área e velocidade: <span class="math">A = &pi;(0,04)²/4 = 1,257&times;10<sup>-3</sup> m²</span>, então <span class="math">V = 0,008/A = 6,37 m/s</span>.</li>
+            <li>Reynolds: <span class="math">Re = 1000&middot;6,37&middot;0,04/(1,307&times;10<sup>-3</sup>) &asymp; 1,95&times;10<sup>5</sup></span>. O regime é turbulento.</li>
+            <li>Com <span class="math">e/D = 0,00026/0,04 = 0,0065</span>, o fator de atrito pelo Moody/correlação fica próximo de <span class="math">f &asymp; 0,034</span>.</li>
+            <li>Aplicando Darcy-Weisbach: <span class="math">h<sub>D</sub> &asymp; 0,034(30/0,04)(6,37²/(2&middot;9,81))</span>.</li>
+          </ol>
+          <p class="result">Resposta aproximada: <span class="math">h<sub>D</sub> &asymp; 52 m</span>, equivalente a uma queda de pressão de cerca de <span class="math">509 kPa</span>.</p>
+        </article>
+
+        <article class="exercise-card" id="ft-l1-q2">
+          <div class="question-meta">Questão 2</div>
+          <h3>Água passa por uma expansão abrupta de <span class="math">D<sub>1</sub> = 8 cm</span> para <span class="math">D<sub>2</sub> = 24 cm</span>, com <span class="math">P<sub>1</sub> = 135 kPa</span>, <span class="math">V<sub>1</sub> = 10 m/s</span> e <span class="math">K = 0,7901</span>. Calcule a pressão no ponto 2.</h3>
+          <div class="problem-visual hydraulic-strip expansion-strip">
+            <div class="hydro-schematic">
+              <span class="hydro-node">P<sub>1</sub><br>V<sub>1</sub></span>
+              <div class="hydro-pipe-body">
+                <span>D<sub>1</sub> = 8 cm</span>
+                <span>D<sub>2</sub> = 24 cm</span>
+              </div>
+              <span class="hydro-output">P<sub>2</sub> ?</span>
+            </div>
+            <div class="hydro-callouts" aria-label="Dados principais da expansão">
+              <span>Expansão abrupta</span>
+              <span>K = 0,7901</span>
+              <span>V<sub>2</sub> diminui</span>
+              <span>perda localizada</span>
+            </div>
+          </div>
+          <div class="formula-strip">
+            <span>V<sub>2</sub> = V<sub>1</sub>(D<sub>1</sub>/D<sub>2</sub>)²</span>
+            <span>h<sub>L</sub> = KV<sub>1</sub>²/(2g)</span>
+            <span>P<sub>2</sub> = P<sub>1</sub> + &rho;(V<sub>1</sub>² - V<sub>2</sub>²)/2 - &rho;gh<sub>L</sub></span>
+          </div>
+          <ol class="solution-steps">
+            <li>Como a área cresce, a velocidade diminui: <span class="math">V<sub>2</sub> = 10(8/24)² = 1,11 m/s</span>.</li>
+            <li>A expansão recupera parte da pressão estática, mas também dissipa energia.</li>
+            <li>A perda localizada é <span class="math">h<sub>L</sub> = 0,7901(10²)/(2&middot;9,81) = 4,03 m</span>.</li>
+            <li>Substituindo na equação de energia horizontal: <span class="math">P<sub>2</sub> &asymp; 135 + 49,4 - 39,5</span> em kPa.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">P<sub>2</sub> &asymp; 145 kPa</span>. A pressão sobe, mas menos do que subiria sem perda localizada.</p>
+        </article>
+
+        <article class="exercise-card" id="ft-l1-q3">
+          <div class="question-meta">Questão 3</div>
+          <h3>Dois reservatórios abertos são conectados por tubo de ferro fundido de <span class="math">D = 5 cm</span>. Determine a elevação <span class="math">z<sub>1</sub></span> necessária para uma vazão de <span class="math">6 L/s</span>, considerando perdas na entrada, cotovelos, válvula e saída.</h3>
+          <div class="problem-visual pipe-visual reservoir-network-visual">
+            <div class="reservoir tall">Reservatório 1<br><strong>z<sub>1</sub> = ?</strong></div>
+            <div class="pipe-route">
+              <span>entrada K=0,5</span>
+              <span>9 m</span>
+              <span>80 m</span>
+              <span>válvula K=0,2</span>
+            </div>
+            <div class="reservoir small">Reservatório 2<br><strong>z<sub>2</sub> = 4 m</strong></div>
+          </div>
+          <div class="formula-strip">
+            <span>z<sub>1</sub> - z<sub>2</sub> = h<sub>T</sub></span>
+            <span>h<sub>T</sub> = [f(L/D) + &Sigma;K]V²/(2g)</span>
+          </div>
+          <ol class="solution-steps">
+            <li>Como os reservatórios são grandes e abertos, <span class="math">P<sub>1</sub> = P<sub>2</sub></span> e as velocidades nas superfícies livres são desprezíveis.</li>
+            <li>Calcule <span class="math">V = Q/A = 0,006/[&pi;(0,05)²/4] = 3,06 m/s</span>.</li>
+            <li>O Reynolds fica <span class="math">Re &asymp; 1,17&times;10<sup>5</sup></span>, regime turbulento. Com <span class="math">e/D = 0,0052</span>, use <span class="math">f &asymp; 0,032</span>.</li>
+            <li>Some as perdas localizadas: entrada, cotovelos, válvula e saída. Usando os coeficientes do enunciado, <span class="math">&Sigma;K &asymp; 2,36</span>.</li>
+            <li>Com comprimento total de aproximadamente <span class="math">89 m</span>, <span class="math">h<sub>T</sub> &asymp; 28,0 m</span>.</li>
+          </ol>
+          <p class="result">Resposta aproximada: <span class="math">z<sub>1</sub> = z<sub>2</sub> + h<sub>T</sub> &asymp; 4 + 28 = 32 m</span>.</p>
+        </article>
+
+        <article class="exercise-card" id="ft-l1-q4">
+          <div class="question-meta">Questão 4</div>
+          <h3>Água a 10 °C escoa em tubo de aço inoxidável com <span class="math">D = 0,12 cm</span>, <span class="math">L = 15 m</span>, <span class="math">V = 0,9 m/s</span>, <span class="math">&rho; = 1000 kg/m³</span> e <span class="math">&mu; = 1,307&times;10<sup>-3</sup> kg/(m.s)</span>. Determine a queda de pressão.</h3>
+          <div class="problem-visual hydraulic-strip microtube-strip">
+            <div class="hydro-schematic">
+              <span class="hydro-node">P<sub>1</sub></span>
+              <div class="hydro-pipe-body">
+                <span>D = 0,12 cm</span>
+              </div>
+              <span class="hydro-output">&Delta;P ?</span>
+            </div>
+            <div class="hydro-callouts" aria-label="Dados principais do microtubo">
+              <span>L = 15 m</span>
+              <span>V = 0,9 m/s</span>
+              <span>Re &lt; 2300</span>
+              <span>usar f = 64/Re</span>
+            </div>
+          </div>
+          <div class="formula-strip">
+            <span>Re = &rho;VD/&mu;</span>
+            <span>f = 64/Re</span>
+            <span>&Delta;P = f(L/D)&rho;V²/2</span>
+          </div>
+          <ol class="solution-steps">
+            <li>Converta <span class="math">D = 0,12 cm = 0,0012 m</span>.</li>
+            <li><span class="math">Re = 1000&middot;0,9&middot;0,0012/(1,307&times;10<sup>-3</sup>) &asymp; 826</span>. O escoamento é laminar.</li>
+            <li>Para laminar: <span class="math">f = 64/826 = 0,0775</span>.</li>
+            <li><span class="math">&Delta;P = 0,0775(15/0,0012)(1000&middot;0,9²/2)</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">&Delta;P &asymp; 3,92&times;10<sup>5</sup> Pa = 392 kPa</span>. O diâmetro muito pequeno aumenta bastante a perda.</p>
+        </article>
+
+        <article class="exercise-card" id="ft-l1-q5">
+          <div class="question-meta">Questão 5</div>
+          <h3>Avalie as afirmações sobre perda de carga: queda energética em tubulações, perdas localizadas em acessórios, dissipação por viscosidade/atrito/turbulência e existência de perda em escoamento sem viscosidade.</h3>
+          <div class="problem-visual loss-concept-visual">
+            <span>energia mecânica do escoamento</span>
+            <span class="concept-arrow">perdas reais</span>
+            <span>atrito, viscosidade e turbulência</span>
+            <span class="concept-arrow">dissipação</span>
+            <span>energia interna / calor</span>
+          </div>
+          <div class="formula-strip">
+            <span>Perda de carga depende de irreversibilidades</span>
+            <span>viscosidade + atrito + perturbações</span>
+          </div>
+          <ol class="solution-steps">
+            <li>A afirmação I é verdadeira: passar por tubo ou acessório gera queda de energia mecânica em escoamentos reais.</li>
+            <li>A afirmação II é verdadeira: perdas localizadas aparecem em acessórios e mudanças geométricas.</li>
+            <li>A afirmação III é verdadeira: a energia mecânica dissipada se transforma em energia interna/calor por efeitos viscosos e turbulentos.</li>
+            <li>A afirmação IV é falsa no modelo ideal invíscido, pois sem viscosidade não há dissipação por atrito.</li>
+          </ol>
+          <p class="result">Resposta conceitual: <span class="math">I, II e III</span> são as corretas; a IV é a pegadinha.</p>
+        </article>
+
+        <article class="exercise-card" id="ft-l1-q6">
+          <div class="question-meta">Questão 6</div>
+          <h3>Use o diagrama de Moody para avaliar afirmações sobre regime de escoamento e fator de atrito em tubos.</h3>
+          <div class="problem-visual regime-visual">
+            <div>
+              <strong>Laminar</strong>
+              <span>Re &lt; 2300</span>
+              <span>f = 64/Re</span>
+            </div>
+            <div>
+              <strong>Transição</strong>
+              <span>faixa instável</span>
+              <span>evite concluir direto</span>
+            </div>
+            <div>
+              <strong>Turbulento</strong>
+              <span>Moody</span>
+              <span>f depende de Re e e/D</span>
+            </div>
+          </div>
+          <div class="formula-strip">
+            <span>Re = &rho;VD/&mu;</span>
+            <span>f = 64/Re no laminar</span>
+            <span>Moody: f depende de Re e e/D no turbulento</span>
+          </div>
+          <ol class="solution-steps">
+            <li>Para ferro fundido com <span class="math">D = 0,50 m</span> e <span class="math">V = 2 m/s</span>: <span class="math">Re = 1,0&times;10<sup>6</sup></span>. É turbulento, então a afirmação I é correta.</li>
+            <li>Para <span class="math">D = 0,20 m</span> e <span class="math">V = 0,005 m/s</span>: <span class="math">Re = 1000</span>. É laminar e <span class="math">f = 64/1000 = 0,064</span>. A afirmação II é correta.</li>
+            <li>Para tubo liso com <span class="math">D = 0,10 m</span> e <span class="math">V = 2 m/s</span>, <span class="math">Re = 2,0&times;10<sup>5</sup></span>. É turbulento, mas não plenamente turbulento no sentido do Moody, pois em tubo liso o fator ainda depende de Reynolds. A afirmação III é falsa.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">I e II, apenas</span>.</p>
+        </article>
+
+        <article class="exercise-card" id="ft-l1-q7">
+          <div class="question-meta">Questão 7</div>
+          <h3>Calcule a perda de carga de uma instalação pelo método do comprimento equivalente, com <span class="math">Q = 0,01 m³/s</span>, tubo liso e <span class="math">D = 50 mm</span>.</h3>
+          <div class="problem-visual equivalent-length-visual">
+            <span>L<sub>real</sub></span>
+            <span class="plus-symbol">+</span>
+            <span>&Sigma;L<sub>e</sub></span>
+            <span class="equals-symbol">=</span>
+            <span>L<sub>total</sub></span>
+            <span class="arrow-symbol">calcular h</span>
+          </div>
+          <div class="formula-strip">
+            <span>L<sub>total</sub> = L<sub>real</sub> + &Sigma;L<sub>e</sub></span>
+            <span>h = f(L<sub>total</sub>/D)V²/(2g)</span>
+          </div>
+          <ol class="solution-steps">
+            <li>Velocidade: <span class="math">V = 0,01/[&pi;(0,05)²/4] = 5,09 m/s</span>.</li>
+            <li>Para tubo liso e <span class="math">Re &asymp; 2,55&times;10<sup>5</sup></span>, use <span class="math">f &asymp; 0,014</span>.</li>
+            <li>Da tabela para <span class="math">D = 50 mm</span>: entrada normal, três cotovelos 90° de raio curto, duas curvas 45°, registro gaveta aberto e saída dão <span class="math">&Sigma;L<sub>e</sub> &asymp; 8,7 m</span>.</li>
+            <li>Somando os trechos retos do desenho, <span class="math">L<sub>real</sub> &asymp; 10,4 m</span>. Logo, <span class="math">L<sub>total</sub> &asymp; 19,1 m</span>.</li>
+            <li><span class="math">h &asymp; 0,014(19,1/0,05)(5,09²/(2&middot;9,81))</span>.</li>
+          </ol>
+          <p class="result">Resposta aproximada: <span class="math">h &asymp; 7,1 m</span> de coluna de água.</p>
+        </article>
+
+        <article class="exercise-card" id="ft-l1-q8">
+          <div class="question-meta">Questão 8</div>
+          <h3>Na instalação predial com <span class="math">Q = 0,4 L/s</span> e <span class="math">D = 3/4" = 19,05 mm</span>, determine a pressão disponível no chuveiro usando os comprimentos equivalentes da figura.</h3>
+          <div class="problem-visual plumbing-visual">
+            <div class="plumbing-tank">
+              <span>caixa d'água</span>
+              <strong>nível livre</strong>
+            </div>
+            <div class="plumbing-drawing" aria-label="Esquema simplificado da instalação predial">
+              <span class="plumbing-label top-run">1,2 m até saída</span>
+              <span class="plumbing-label drop-run">10 m descida</span>
+              <span class="plumbing-label lower-run">3,5 m trecho inferior</span>
+              <span class="plumbing-label rise-run">4 m subida</span>
+              <span class="plumbing-label final-run">1 m até chuveiro</span>
+              <span class="plumbing-shower">chuveiro<br><strong>P ?</strong></span>
+            </div>
+          </div>
+          <div class="formula-strip">
+            <span>P/&gamma; = H - V²/(2g) - h<sub>L</sub></span>
+            <span>h<sub>L</sub> = f[(L<sub>real</sub> + &Sigma;L<sub>e</sub>)/D]V²/(2g)</span>
+          </div>
+          <ol class="solution-steps">
+            <li><span class="math">Q = 0,0004 m³/s</span>, então <span class="math">V = Q/A = 1,40 m/s</span>.</li>
+            <li>Para tubo liso, <span class="math">Re &asymp; 2,67&times;10<sup>4</sup></span>; use <span class="math">f &asymp; 0,025</span>.</li>
+            <li>Da tabela do enunciado: <span class="math">&Sigma;L<sub>e</sub> = 1,0 + 3(1,2) + 2(0,8) + 2,4 + 11,4 = 20,0 m</span>.</li>
+            <li>Comprimento real aproximado: <span class="math">L<sub>real</sub> = 1 + 10 + 3,5 + 4 + 1 = 19,5 m</span>.</li>
+            <li>A diferença geométrica entre nível livre e chuveiro é cerca de <span class="math">H = 7,2 m</span>. As perdas consomem aproximadamente <span class="math">5,15 m</span>.</li>
+          </ol>
+          <p class="result">Resposta aproximada: <span class="math">P/\gamma &asymp; 1,95 mca</span>, ou <span class="math">P &asymp; 19 kPa</span>.</p>
+        </article>
+
+        <article class="exercise-card" id="ft-l1-q9">
+          <div class="question-meta">Questão 9</div>
+          <h3>No oleoduto do Alasca, petróleo cru escoa com <span class="math">Q = 2,944 m³/s</span>, <span class="math">D = 1,22 m</span>, <span class="math">e = 0,15 mm</span>, <span class="math">SG = 0,93</span> e <span class="math">&mu; = 0,0168 N.s/m²</span>. Determine o espaçamento máximo entre estações de bombeamento.</h3>
+          <div class="problem-visual pipeline-visual">
+            <span class="pump-station">Estação A<br><strong>8,27 MPa</strong></span>
+            <div class="pipeline-body">
+              <span>petróleo cru</span>
+              <span>D = 1,22 m</span>
+              <span>L máximo?</span>
+            </div>
+            <span class="pump-station limit">Estação B<br><strong>344,5 kPa</strong></span>
+          </div>
+          <div class="formula-strip">
+            <span>V = Q/A</span>
+            <span>Re = &rho;VD/&mu;</span>
+            <span>&Delta;P = f(L/D)&rho;V²/2</span>
+          </div>
+          <ol class="solution-steps">
+            <li>Como <span class="math">SG = 0,93</span>, use <span class="math">&rho; = 930 kg/m³</span>.</li>
+            <li>Velocidade: <span class="math">V = 2,944/[&pi;(1,22)²/4] = 2,52 m/s</span>.</li>
+            <li><span class="math">Re = 930&middot;2,52&middot;1,22/0,0168 &asymp; 1,70&times;10<sup>5</sup></span>. O escoamento é turbulento.</li>
+            <li>Com <span class="math">e/D = 1,23&times;10<sup>-4</sup></span>, use <span class="math">f &asymp; 0,017</span>.</li>
+            <li>A queda de pressão disponível é <span class="math">8,27 MPa - 344,5 kPa = 7,93 MPa</span>.</li>
+            <li>Isole <span class="math">L</span> em Darcy-Weisbach.</li>
+          </ol>
+          <p class="result">Resposta aproximada: <span class="math">L &asymp; 193 km</span> entre estações.</p>
+        </article>
+
+        <article class="exercise-card" id="ft-l1-q10">
+          <div class="question-meta">Questão 10</div>
+          <h3>Um sistema de incêndio é alimentado por torre d'água com desnível de <span class="math">24,4 m</span>, tubo de <span class="math">182,9 m</span>, <span class="math">D = 101,6 mm</span>, <span class="math">f = 0,0308</span> e válvula gaveta 50% aberta. Determine a vazão máxima.</h3>
+          <div class="problem-visual pipe-visual fire-system-visual">
+            <div class="reservoir small">Torre<br><strong>24,4 m</strong></div>
+            <div class="pipe-route">
+              <span>L = 182,9 m</span>
+              <span>D = 101,6 mm</span>
+              <span>válvula gaveta 50% aberta</span>
+            </div>
+            <div class="fixture">Saída<br><strong>atmosfera</strong></div>
+          </div>
+          <div class="formula-strip">
+            <span>H = [1 + K + f(L/D)]V²/(2g)</span>
+            <span>Q = AV</span>
+          </div>
+          <ol class="solution-steps">
+            <li>A energia disponível é a carga de elevação: <span class="math">H = 24,4 m</span>.</li>
+            <li>Para válvula gaveta 50% aberta, use <span class="math">K = 3,6</span>.</li>
+            <li>O termo distribuído é <span class="math">fL/D = 0,0308(182,9/0,1016) &asymp; 55,4</span>.</li>
+            <li>Isole a velocidade: <span class="math">V = &radic;[2gH/(1 + K + fL/D)] &asymp; 2,82 m/s</span>.</li>
+            <li>Calcule a vazão: <span class="math">Q = [&pi;(0,1016)²/4]2,82</span>.</li>
+          </ol>
+          <p class="result">Resposta aproximada: <span class="math">Q &asymp; 0,0229 m³/s = 22,9 L/s</span>.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="study-block" id="transferencia-calor">
+      <div class="section-heading">
+        <p class="eyebrow">Lista 2</p>
+        <h2>Transferência de calor</h2>
+        <p>
+          Aqui a chave é transformar cada problema em um caminho de calor: condução,
+          convecção e redes de resistências térmicas em série ou paralelo.
+        </p>
+      </div>
+
+      <div class="exercise-list">
+        <article class="exercise-card" id="ft-l2-q1">
+          <div class="question-meta">Questão 1</div>
+          <h3>Um bloco isolante tem <span class="math">k = 0,74 W/(m.K)</span>, base <span class="math">50 cm</span>, altura <span class="math">80 cm</span> e diferença de temperatura de <span class="math">400 °C</span>. Qual espessura limita a taxa de calor a <span class="math">2000 W</span>?</h3>
+          <div class="problem-visual heat-flow-visual">
+            <span class="thermal-side hot">face quente<br>+400 °C</span>
+            <div class="thermal-stack single">
+              <span class="thermal-layer insulation">bloco isolante<br><strong>L = ?</strong></span>
+            </div>
+            <span class="thermal-side cold">face fria</span>
+          </div>
+          <div class="formula-strip">
+            <span>q = kA&Delta;T/L</span>
+            <span>L = kA&Delta;T/q</span>
+          </div>
+          <ol class="solution-steps">
+            <li>A área de passagem do calor é a face do bloco: <span class="math">A = 0,50&middot;0,80 = 0,40 m²</span>.</li>
+            <li>Como a condução é unidimensional, isole a espessura: <span class="math">L = kA&Delta;T/q</span>.</li>
+            <li><span class="math">L = 0,74&middot;0,40&middot;400/2000 = 0,0592 m</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">L = 0,0592 m</span>, ou cerca de <span class="math">5,9 cm</span>.</p>
+        </article>
+
+        <article class="exercise-card" id="ft-l2-q2">
+          <div class="question-meta">Questão 2</div>
+          <h3>Uma parede de argamassa com <span class="math">k = 0,75 W/(m.K)</span> deve transferir 75% do calor de uma parede estrutural composta com <span class="math">k = 0,25 W/(m.K)</span> e <span class="math">L = 100 mm</span>, sob a mesma área e mesma diferença de temperatura. Determine a espessura da argamassa.</h3>
+          <div class="problem-visual comparison-visual">
+            <div class="comparison-card">
+              <strong>Referência</strong>
+              <span>k = 0,25</span>
+              <span>L = 0,10 m</span>
+              <span>q = q<sub>ref</sub></span>
+            </div>
+            <span class="flow-arrow">&rarr;</span>
+            <div class="comparison-card accent">
+              <strong>Argamassa</strong>
+              <span>k = 0,75</span>
+              <span>L = ?</span>
+              <span>q = 0,75q<sub>ref</sub></span>
+            </div>
+          </div>
+          <div class="formula-strip">
+            <span>q/A = k&Delta;T/L</span>
+            <span>k<sub>arg</sub>/L<sub>arg</sub> = 0,75(k<sub>ref</sub>/L<sub>ref</sub>)</span>
+          </div>
+          <ol class="solution-steps">
+            <li>Como área e diferença de temperatura são iguais, compare apenas <span class="math">k/L</span>.</li>
+            <li><span class="math">0,75/L = 0,75(0,25/0,10)</span>.</li>
+            <li>O lado direito vale <span class="math">1,875</span>, então <span class="math">L = 0,75/1,875 = 0,40 m</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">L = 0,4 m</span>. A argamassa conduz mais, então precisa ser mais espessa para reduzir o fluxo.</p>
+        </article>
+
+        <article class="exercise-card" id="ft-l2-q3">
+          <div class="question-meta">Questão 3</div>
+          <h3>Um estudante adiciona papel de parede grosso em uma parede interna. Calcule a razão entre o fluxo sem papel e o fluxo com papel.</h3>
+          <div class="problem-visual heat-flow-visual">
+            <span class="thermal-side hot">Ambiente interno<br>20 °C<br>h = 5</span>
+            <div class="thermal-stack wallpaper">
+              <span class="diagram-note paper-note">papel: 1 cm<br>k = 0,01</span>
+              <span class="thermal-layer paper" aria-label="papel: 1 cm, k = 0,01"></span>
+              <span class="thermal-layer masonry">parede<br>10 cm<br>k = 0,04</span>
+            </div>
+            <span class="thermal-side cold">Ambiente externo<br>5 °C<br>h = 20</span>
+          </div>
+          <div class="formula-strip">
+            <span>R<sub>conv</sub> = 1/hA</span>
+            <span>R<sub>cond</sub> = L/kA</span>
+            <span>q'' = &Delta;T/R''</span>
+          </div>
+          <ol class="solution-steps">
+            <li>Use resistência por área, então não precisa conhecer a área: <span class="math">R'' = 1/h<sub>i</sub> + L/k + 1/h<sub>o</sub></span>.</li>
+            <li>Sem papel: <span class="math">R''<sub>sem</sub> = 1/5 + 0,10/0,04 + 1/20 = 2,75 m²K/W</span>.</li>
+            <li>Com papel: acrescente <span class="math">0,01/0,01 = 1,00 m²K/W</span>, então <span class="math">R''<sub>com</sub> = 3,75 m²K/W</span>.</li>
+            <li>Como <span class="math">q'' = &Delta;T/R''</span>, a razão pedida é <span class="math">q''<sub>sem</sub>/q''<sub>com</sub> = R''<sub>com</sub>/R''<sub>sem</sub></span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">3,75/2,75 = 1,36</span>. O papel aumenta a resistência e reduz o fluxo de calor.</p>
+        </article>
+
+        <article class="exercise-card" id="ft-l2-q4">
+          <div class="question-meta">Questão 4</div>
+          <h3>Avalie as afirmações sobre uma garrafa térmica com vácuo, superfícies espelhadas e tampa/apoio isolantes.</h3>
+          <div class="problem-visual thermos-visual">
+            <div class="thermos-body">
+              <span class="thermos-cap">tampa isolante</span>
+              <span class="thermos-vacuum">vácuo</span>
+              <span class="thermos-mirror">superfícies espelhadas</span>
+              <span class="thermos-base">apoio isolante</span>
+            </div>
+          </div>
+          <div class="formula-strip">
+            <span>vácuo reduz condução/convecção</span>
+            <span>espelhamento reduz radiação</span>
+          </div>
+          <ol class="solution-steps">
+            <li>A afirmação I é falsa: material de excelente condução não aumenta resistência térmica; ele facilitaria a perda de calor.</li>
+            <li>A afirmação II é verdadeira: o vácuo reduz condução e convecção entre o café e o ambiente.</li>
+            <li>A afirmação III é verdadeira: superfícies espelhadas reduzem a troca por radiação.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">II e III, apenas</span>.</p>
+        </article>
+
+        <article class="exercise-card" id="ft-l2-q5">
+          <div class="question-meta">Questão 5</div>
+          <h3>A parede de uma geladeira tem duas placas metálicas de <span class="math">1 mm</span>, isolamento de fibra de vidro <span class="math">k = 0,035 W/(m.K)</span>, ar interno a <span class="math">2 °C</span>, cozinha a <span class="math">24 °C</span>, <span class="math">h<sub>i</sub> = 4</span> e <span class="math">h<sub>o</sub> = 9 W/(m².K)</span>. Determine a espessura mínima para evitar condensação quando a superfície externa cai para <span class="math">20 °C</span>.</h3>
+          <div class="problem-visual heat-flow-visual">
+            <span class="thermal-side hot">cozinha<br>24 °C<br>h<sub>o</sub> = 9</span>
+            <div class="thermal-stack fridge">
+              <span class="diagram-note metal-note">Folhas de metal</span>
+              <span class="thermal-layer metal" aria-label="folha de metal de 1 mm"></span>
+              <span class="thermal-layer insulation">Isolamento<br><strong>L = ?</strong></span>
+              <span class="thermal-layer metal" aria-label="folha de metal de 1 mm"></span>
+            </div>
+            <span class="thermal-side cold">geladeira<br>2 °C<br>h<sub>i</sub> = 4</span>
+          </div>
+          <div class="formula-strip">
+            <span>q'' = h<sub>o</sub>(T<sub>&infin,o</sub> - T<sub>s,o</sub>)</span>
+            <span>R''<sub>total</sub> = &Delta;T/q''</span>
+            <span>L = kR''<sub>isol</sub></span>
+          </div>
+          <ol class="solution-steps">
+            <li>No limite de condensação, a superfície externa está em <span class="math">20 °C</span>.</li>
+            <li>Fluxo pelo lado externo: <span class="math">q'' = 9(24 - 20) = 36 W/m²</span>.</li>
+            <li>Resistência total necessária: <span class="math">R''<sub>total</sub> = (24 - 2)/36 = 0,611 m²K/W</span>.</li>
+            <li>Subtraia as resistências conhecidas: <span class="math">1/9 + 1/4 + 2(0,001/15,1)</span>.</li>
+            <li>Fica <span class="math">R''<sub>fibra</sub> &asymp; 0,2499 m²K/W</span>.</li>
+            <li><span class="math">L = kR'' = 0,035&middot;0,2499 = 0,00875 m</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">L &asymp; 8,75 mm</span>.</p>
+        </article>
+
+        <article class="exercise-card" id="ft-l2-q6">
+          <div class="question-meta">Questão 6</div>
+          <h3>Duas placas quadradas de lado <span class="math">20 cm</span>, espessuras iguais <span class="math">d<sub>1</sub> = d<sub>2</sub> = 5 cm</span>, condutividades <span class="math">k<sub>1</sub> = 10</span> e <span class="math">k<sub>2</sub> = 100 W/(m.K)</span>, têm extremidades em <span class="math">T<sub>1</sub> = 630 K</span> e <span class="math">T<sub>2</sub> = 300 K</span>. Ache a temperatura da interface.</h3>
+          <div class="problem-visual heat-flow-visual">
+            <span class="thermal-side hot">T<sub>1</sub><br>630 K</span>
+            <div class="thermal-stack two-plates">
+              <span class="thermal-layer masonry">placa 1<br>k = 10</span>
+              <span class="interface-label">T = ?</span>
+              <span class="thermal-layer metal">placa 2<br>k = 100</span>
+            </div>
+            <span class="thermal-side cold">T<sub>2</sub><br>300 K</span>
+          </div>
+          <div class="formula-strip">
+            <span>q = (T<sub>1</sub> - T)/R<sub>1</sub></span>
+            <span>q = (T - T<sub>2</sub>)/R<sub>2</sub></span>
+            <span>R = L/(kA)</span>
+          </div>
+          <ol class="solution-steps">
+            <li>Em regime permanente, o mesmo calor atravessa as duas placas em série.</li>
+            <li>Como as áreas e espessuras são iguais, <span class="math">R<sub>1</sub>/R<sub>2</sub> = k<sub>2</sub>/k<sub>1</sub> = 10</span>. A placa 1 oferece dez vezes mais resistência.</li>
+            <li>Use a média ponderada por resistências: <span class="math">T = (R<sub>2</sub>T<sub>1</sub> + R<sub>1</sub>T<sub>2</sub>)/(R<sub>1</sub> + R<sub>2</sub>)</span>.</li>
+            <li><span class="math">T = (1&middot;630 + 10&middot;300)/11 = 330 K</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">T = 330 K</span>.</p>
+        </article>
+
+        <article class="exercise-card" id="ft-l2-q7">
+          <div class="question-meta">Questão 7</div>
+          <h3>Para descongelar gelo no para-brisa, ar quente interno a <span class="math">25 °C</span> é soprado sobre o vidro de <span class="math">L = 5 mm</span> e <span class="math">k = 1,4 W/(m.K)</span>. Do lado externo, <span class="math">T<sub>&infin,o</sub> = -10 °C</span> e <span class="math">h<sub>o</sub> = 200 W/(m².K)</span>. Determine <span class="math">h<sub>i</sub></span> para o gelo começar a derreter.</h3>
+          <div class="problem-visual heat-flow-visual">
+            <span class="thermal-side cold">ar externo<br>-10 °C<br>h<sub>o</sub> = 200</span>
+            <div class="thermal-stack windshield">
+              <span class="thermal-layer glass">vidro<br>L = 5 mm<br>k = 1,4</span>
+            </div>
+            <span class="thermal-side hot">ar interno<br>25 °C<br>h<sub>i</sub> = ?</span>
+          </div>
+          <div class="formula-strip">
+            <span>q'' = h<sub>o</sub>(T<sub>s,o</sub> - T<sub>&infin,o</sub>)</span>
+            <span>q'' = k(T<sub>s,i</sub> - T<sub>s,o</sub>)/L</span>
+            <span>q'' = h<sub>i</sub>(T<sub>&infin,i</sub> - T<sub>s,i</sub>)</span>
+          </div>
+          <ol class="solution-steps">
+            <li>Para o gelo começar a derreter, a superfície externa precisa chegar a <span class="math">T<sub>s,o</sub> = 0 °C</span>.</li>
+            <li>Fluxo para o exterior: <span class="math">q'' = 200[0 - (-10)] = 2000 W/m²</span>.</li>
+            <li>Temperatura da face interna do vidro: <span class="math">T<sub>s,i</sub> = q''L/k = 2000&middot;0,005/1,4 = 7,14 °C</span>.</li>
+            <li>Agora isole o coeficiente interno: <span class="math">h<sub>i</sub> = q''/(25 - 7,14)</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">h<sub>i</sub> = 112 W/(m².K)</span>.</p>
+        </article>
+
+        <article class="exercise-card" id="ft-l2-q8">
+          <div class="question-meta">Questão 8</div>
+          <h3>Uma parede composta tem camadas A e F em série, regiões B/C e D/E em paralelo, comprimento <span class="math">1 m</span>, superfície esquerda a <span class="math">300 °C</span> e direita a <span class="math">100 °C</span>. Determine a taxa de calor.</h3>
+          <div class="problem-visual composite-wall-visual composite-wall-visual-detailed">
+            <span class="thermal-side hot">300 °C</span>
+            <div class="wall-diagram-wrap">
+              <div class="wall-depth-label">comprimento = 1 m</div>
+              <div class="wall-height-label">altura total = 12 cm</div>
+              <div class="composite-wall detailed-wall">
+                <span class="wall-layer wall-layer-a full">A</span>
+                <span class="wall-layer wall-layer-bc split three"><b>C<small>4 cm</small></b><b>B<small>4 cm</small></b><b>C<small>4 cm</small></b></span>
+                <span class="wall-layer wall-layer-de split two"><b>D<small>6 cm</small></b><b>E<small>6 cm</small></b></span>
+                <span class="wall-layer wall-layer-f full">F</span>
+                <span class="heat-rate-arrow">q</span>
+              </div>
+              <div class="wall-dimension-row" aria-label="Espessuras das camadas">
+                <span>1 cm</span>
+                <span>5 cm</span>
+                <span>10 cm</span>
+                <span>6 cm</span>
+              </div>
+            </div>
+            <span class="thermal-side cold">100 °C</span>
+          </div>
+          <div class="formula-strip">
+            <span>R = L/(kA)</span>
+            <span>paralelo: G = &Sigma;kA/L</span>
+            <span>q = &Delta;T/R<sub>eq</sub></span>
+          </div>
+          <ol class="solution-steps">
+            <li>Transforme cada faixa em resistência térmica. A e F atravessam a parede inteira, então entram em série.</li>
+            <li>Na camada B/C, as três faixas ocupam alturas de <span class="math">4 cm</span>, então suas condutâncias somam: <span class="math">G = kA/L</span>.</li>
+            <li>Na camada D/E, as duas faixas ocupam alturas de <span class="math">6 cm</span> cada e também ficam em paralelo.</li>
+            <li>Somando as resistências equivalentes em série, obtém-se <span class="math">R<sub>eq</sub> &asymp; 0,36 K/W</span>.</li>
+            <li><span class="math">q = (300 - 100)/R<sub>eq</sub></span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">q &asymp; 550 W</span>. A diferença em cálculos manuais costuma vir de arredondamentos nas áreas das faixas.</p>
+        </article>
+
+        <article class="exercise-card" id="ft-l2-q9">
+          <div class="question-meta">Questão 9</div>
+          <h3>Uma parede de edifício recebe uma segunda camada composta por materiais B e C. Dados: <span class="math">k<sub>A</sub> = 5</span>, <span class="math">k<sub>B</sub> = 0,2</span>, <span class="math">k<sub>C</sub> = 1,0 W/(m.K)</span>, cada camada com <span class="math">20 cm</span>, temperatura externa <span class="math">-20 °C</span>, <span class="math">h<sub>o</sub> = 50</span>, interface <span class="math">T<sub>2</sub> = 5 °C</span> e <span class="math">h<sub>i</sub> = 10</span>. Calcule a temperatura interna.</h3>
+          <div class="problem-visual composite-wall-visual">
+            <span class="thermal-side hot">ambiente interno<br>T<sub>i</sub> = ?</span>
+            <div class="building-wall">
+              <span class="wall-layer full">A</span>
+              <span class="wall-layer split building"><b>B</b><b>C</b></span>
+            </div>
+            <span class="thermal-side cold">externo<br>-20 °C<br>h<sub>o</sub>=50</span>
+          </div>
+          <div class="formula-strip">
+            <span>calor externo = calor interno</span>
+            <span>R<sub>A</sub> + R<sub>conv,i</sub></span>
+            <span>B e C em paralelo</span>
+          </div>
+          <ol class="solution-steps">
+            <li>Comece pelo lado externo, pois a interface é conhecida: <span class="math">T<sub>2</sub> = 5 °C</span> e <span class="math">T<sub>&infin,o</sub> = -20 °C</span>.</li>
+            <li>Calcule as resistências dos caminhos B e C incluindo a convecção externa de cada área.</li>
+            <li>Os caminhos B e C ficam em paralelo; a resistência equivalente externa fica próxima de <span class="math">1,18 K/W</span>.</li>
+            <li>Assim, <span class="math">q = (5 - (-20))/1,18 &asymp; 21,2 W</span>.</li>
+            <li>No lado interno, o mesmo calor atravessa a convecção interna e a parede A. Com <span class="math">R<sub>int</sub> &asymp; 0,28 K/W</span>, <span class="math">T<sub>i</sub> = 5 + qR<sub>int</sub></span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">T<sub>i</sub> &asymp; 11 °C</span>.</p>
+        </article>
+
+        <article class="exercise-card" id="ft-l2-q10">
+          <div class="question-meta">Questão 10</div>
+          <h3>Uma seção de parede de tijolo de forno mede <span class="math">2 m &times; 1,5 m</span>, tem superfície externa a <span class="math">110 °C</span>, ambiente a <span class="math">32 °C</span> e <span class="math">h = 10 W/(m².K)</span>. Determine a espessura de lã de vidro <span class="math">k = 0,038 W/(m.K)</span> para reduzir a perda de calor em 90%.</h3>
+          <div class="problem-visual heat-flow-visual">
+            <span class="thermal-side hot">tijolo<br>110 °C</span>
+            <div class="thermal-stack furnace">
+              <span class="thermal-layer insulation">lã de vidro<br><strong>L = ?</strong></span>
+            </div>
+            <span class="thermal-side cold">ambiente<br>32 °C<br>h = 10</span>
+          </div>
+          <div class="formula-strip">
+            <span>q<sub>0</sub> = hA(T<sub>s</sub> - T<sub>&infin;</sub>)</span>
+            <span>q = 0,10q<sub>0</sub></span>
+            <span>R<sub>total</sub> = &Delta;T/q</span>
+            <span>L = kA(R<sub>total</sub> - R<sub>conv</sub>)</span>
+          </div>
+          <ol class="solution-steps">
+            <li>Área: <span class="math">A = 2&middot;1,5 = 3 m²</span>.</li>
+            <li>Perda original: <span class="math">q<sub>0</sub> = 10&middot;3(110 - 32) = 2340 W</span>.</li>
+            <li>Reduzir 90% significa deixar apenas 10%: <span class="math">q = 234 W</span>.</li>
+            <li>Resistência total exigida: <span class="math">R<sub>total</sub> = 78/234 = 0,333 K/W</span>.</li>
+            <li>A convecção externa já vale <span class="math">R<sub>conv</sub> = 1/(hA) = 1/(10&middot;3) = 0,0333 K/W</span>.</li>
+            <li>Logo, <span class="math">L = 0,038&middot;3(0,333 - 0,0333) = 0,034 m</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">L &asymp; 34 mm</span>.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="study-block" id="formulas-ft">
+      <div class="section-heading">
+        <p class="eyebrow">Consulta rápida</p>
+        <h2>Fórmulas que guiam as listas</h2>
+      </div>
+
+      <div class="quick-formula-grid">
+        <article><h3>Continuidade</h3><p class="formula">Q = AV</p></article>
+        <article><h3>Reynolds</h3><p class="formula">Re = &rho;VD/&mu;</p></article>
+        <article><h3>Darcy-Weisbach</h3><p class="formula">h<sub>D</sub> = f(L/D)V²/(2g)</p></article>
+        <article><h3>Perda localizada</h3><p class="formula">h<sub>L</sub> = KV²/(2g)</p></article>
+        <article><h3>Condução plana</h3><p class="formula">q = kA&Delta;T/L</p></article>
+        <article><h3>Convecção</h3><p class="formula">q = hA(T<sub>s</sub> - T<sub>&infin;</sub>)</p></article>
+        <article><h3>Resistência de condução</h3><p class="formula">R<sub>cond</sub> = L/(kA)</p></article>
+        <article><h3>Resistência de convecção</h3><p class="formula">R<sub>conv</sub> = 1/(hA)</p></article>
+        <article><h3>Rede térmica</h3><p class="formula">q = &Delta;T/R<sub>eq</sub></p></article>
+      </div>
+    </section>
+  </main>
+
+  <button class="back-to-top" type="button" aria-label="Voltar ao topo">&uarr;</button>
+
+  <footer class="site-footer">
+    <p>StudyHub - Exercícios Sugeridos de FT.</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

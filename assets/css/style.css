@@ -2386,3 +2386,1446 @@ body {
   color: var(--accent);
   font-weight: 900;
 }
+
+.problem-visual {
+  display: grid;
+  align-items: center;
+  gap: 14px;
+  margin: 18px 0;
+  padding: 18px;
+  border: 1px solid rgba(226, 232, 240, 0.98);
+  border-radius: 22px;
+  background:
+    linear-gradient(135deg, rgba(239, 246, 255, 0.92), rgba(255, 255, 255, 0.86)),
+    #ffffff;
+}
+
+.heat-flow-visual,
+.composite-wall-visual {
+  grid-template-columns: minmax(92px, 0.75fr) minmax(220px, 1.3fr) minmax(92px, 0.75fr);
+}
+
+.thermal-side,
+.reservoir,
+.fixture,
+.comparison-card {
+  min-height: 88px;
+  display: grid;
+  place-items: center;
+  padding: 12px;
+  border: 1px solid rgba(226, 232, 240, 0.98);
+  border-radius: 18px;
+  background: #ffffff;
+  color: var(--navy);
+  font-weight: 800;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.05);
+}
+
+.thermal-side.hot {
+  border-color: rgba(249, 115, 22, 0.32);
+  background: #fff7ed;
+}
+
+.thermal-side.cold {
+  border-color: rgba(6, 182, 212, 0.28);
+  background: #ecfeff;
+}
+
+.thermal-stack {
+  position: relative;
+  min-height: 128px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 18px;
+  background:
+    linear-gradient(90deg, rgba(249, 115, 22, 0.18), transparent 24%, transparent 76%, rgba(6, 182, 212, 0.16)),
+    #ffffff;
+}
+
+.thermal-stack::before,
+.composite-wall::before,
+.building-wall::before {
+  content: "q";
+  position: absolute;
+  right: 14px;
+  top: 12px;
+  color: var(--accent);
+  font-weight: 900;
+}
+
+.thermal-stack::after,
+.composite-wall::after,
+.building-wall::after {
+  content: "";
+  position: absolute;
+  right: 14px;
+  top: 40px;
+  width: 56px;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 10px 0 0 var(--accent);
+}
+
+.thermal-layer {
+  min-width: 76px;
+  display: grid;
+  place-items: center;
+  padding: 12px 10px;
+  border-right: 1px solid rgba(148, 163, 184, 0.32);
+  color: var(--navy);
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.thermal-layer:last-child {
+  border-right: 0;
+}
+
+.thermal-layer.paper {
+  min-width: 44px;
+  background: #fef3c7;
+}
+
+.thermal-layer.masonry {
+  background: #e2e8f0;
+}
+
+.thermal-layer.insulation {
+  min-width: 150px;
+  background: #ccfbf1;
+}
+
+.thermal-layer.metal {
+  min-width: 42px;
+  background: #dbeafe;
+}
+
+.thermal-layer.glass {
+  min-width: 150px;
+  background: #e0f2fe;
+}
+
+.interface-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  translate: -50% -50%;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: var(--navy);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.comparison-visual {
+  grid-template-columns: minmax(160px, 1fr) auto minmax(160px, 1fr);
+}
+
+.comparison-card {
+  gap: 4px;
+  align-content: center;
+}
+
+.comparison-card.accent {
+  border-color: rgba(20, 184, 166, 0.28);
+  background: #ecfdf5;
+}
+
+.pipe-visual {
+  grid-template-columns: minmax(130px, 0.7fr) minmax(220px, 1.6fr) minmax(130px, 0.7fr);
+}
+
+.reservoir {
+  min-height: 112px;
+  border-color: rgba(6, 182, 212, 0.3);
+  background:
+    linear-gradient(to top, rgba(6, 182, 212, 0.24) 0 58%, transparent 58%),
+    #ffffff;
+}
+
+.reservoir.tall {
+  min-height: 150px;
+}
+
+.pipe-route {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  min-height: 120px;
+  padding: 18px;
+  border: 1px dashed rgba(29, 78, 216, 0.35);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.pipe-route::before {
+  content: "";
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  top: 50%;
+  height: 12px;
+  translate: 0 -50%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--cyan), var(--blue));
+  opacity: 0.22;
+}
+
+.pipe-route span {
+  position: relative;
+  z-index: 1;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--navy);
+  font-size: 0.78rem;
+  font-weight: 800;
+  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.08);
+}
+
+.fixture {
+  border-color: rgba(20, 184, 166, 0.28);
+  background: #ecfdf5;
+}
+
+.thermos-visual {
+  justify-items: center;
+}
+
+.thermos-body {
+  position: relative;
+  width: min(280px, 100%);
+  min-height: 260px;
+  display: grid;
+  gap: 10px;
+  padding: 18px 34px;
+  border: 8px solid #94a3b8;
+  border-radius: 32px 32px 22px 22px;
+  background:
+    linear-gradient(90deg, rgba(226, 232, 240, 0.9), #ffffff 18% 82%, rgba(226, 232, 240, 0.9)),
+    #ffffff;
+}
+
+.thermos-body span {
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  border-radius: 14px;
+  background: #eff6ff;
+  color: var(--navy);
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.thermos-cap,
+.thermos-base {
+  background: #ffedd5 !important;
+}
+
+.thermos-vacuum {
+  min-height: 82px;
+  border: 1px dashed rgba(37, 99, 235, 0.35);
+  background: #f8fafc !important;
+}
+
+.thermos-mirror {
+  background: #e0f2fe !important;
+}
+
+.composite-wall,
+.building-wall {
+  position: relative;
+  min-height: 170px;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+.wall-layer {
+  display: grid;
+  place-items: center;
+  min-width: 64px;
+  padding: 10px;
+  border-right: 1px solid rgba(148, 163, 184, 0.32);
+  color: var(--navy);
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.wall-layer:last-child {
+  border-right: 0;
+}
+
+.wall-layer.full {
+  background: #e2e8f0;
+}
+
+.wall-layer.split {
+  align-items: stretch;
+  padding: 0;
+}
+
+.wall-layer.split b {
+  display: grid;
+  place-items: center;
+  min-height: 44px;
+  padding: 8px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.32);
+}
+
+.wall-layer.split b:last-child {
+  border-bottom: 0;
+}
+
+.wall-layer.three b:nth-child(odd),
+.wall-layer.split.building b:nth-child(2) {
+  background: #dbeafe;
+}
+
+.wall-layer.three b:nth-child(2),
+.wall-layer.split.building b:nth-child(1) {
+  background: #ccfbf1;
+}
+
+.wall-layer.two b:nth-child(1) {
+  background: #ede9fe;
+}
+
+.wall-layer.two b:nth-child(2) {
+  background: #fef3c7;
+}
+
+@media (max-width: 820px) {
+  .heat-flow-visual,
+  .composite-wall-visual,
+  .comparison-visual,
+  .pipe-visual {
+    grid-template-columns: 1fr;
+  }
+
+  .pipe-route::before {
+    top: 22px;
+    bottom: 22px;
+    left: 50%;
+    right: auto;
+    width: 12px;
+    height: auto;
+    translate: -50% 0;
+  }
+
+  .thermal-stack,
+  .composite-wall,
+  .building-wall {
+    min-height: 150px;
+  }
+}
+
+/* Diagramas 2D das listas de FT: aparência de figura de enunciado. */
+.exercise-card .problem-visual {
+  max-width: 820px;
+  margin: 20px auto;
+  padding: clamp(18px, 3vw, 28px);
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: none;
+}
+
+.exercise-card .heat-flow-visual,
+.exercise-card .composite-wall-visual {
+  grid-template-columns: minmax(112px, 0.72fr) minmax(240px, 1.3fr) minmax(112px, 0.72fr);
+  justify-items: center;
+}
+
+.exercise-card .thermal-side,
+.exercise-card .reservoir,
+.exercise-card .fixture,
+.exercise-card .comparison-card {
+  min-height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: #374151;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.22;
+  max-width: 150px;
+  overflow-wrap: normal;
+}
+
+.exercise-card .thermal-side.hot,
+.exercise-card .thermal-side.cold {
+  border: 0;
+  background: transparent;
+}
+
+.exercise-card .thermal-stack {
+  width: min(330px, 100%);
+  min-height: 244px;
+  align-items: stretch;
+  justify-content: center;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.exercise-card .thermal-stack::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: -28px;
+  top: auto;
+  height: 1px;
+  background: #4b5563;
+  box-shadow: none;
+}
+
+.exercise-card .thermal-stack::after {
+  content: "L";
+  position: absolute;
+  left: 50%;
+  right: auto;
+  top: auto;
+  bottom: -43px;
+  width: auto;
+  height: auto;
+  translate: -50% 0;
+  border-radius: 0;
+  background: #ffffff;
+  box-shadow: none;
+  color: #374151;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.exercise-card .thermal-layer {
+  position: relative;
+  min-width: 58px;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px 10px;
+  border: 2px solid #6b7280;
+  border-right-width: 1px;
+  color: #1f2937;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.96rem;
+  font-weight: 700;
+  line-height: 1.22;
+  text-align: center;
+  overflow: visible;
+}
+
+.exercise-card .thermal-layer:last-child {
+  border-right-width: 2px;
+}
+
+.exercise-card .thermal-layer.paper {
+  flex: 0 0 34px;
+  min-width: 34px;
+  background: #fff4c4;
+  font-size: 0;
+}
+
+.exercise-card .thermal-layer.paper::after {
+  content: "1 cm";
+  position: absolute;
+  left: 50%;
+  bottom: -32px;
+  translate: -50% 0;
+  color: #374151;
+  font-size: 0.84rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.exercise-card .thermal-layer.masonry {
+  flex: 1 1 140px;
+  background:
+    radial-gradient(circle at 16px 18px, rgba(107, 114, 128, 0.24) 0 2px, transparent 3px),
+    radial-gradient(circle at 44px 48px, rgba(107, 114, 128, 0.2) 0 2px, transparent 3px),
+    #d7dce3;
+  background-size: 56px 58px;
+}
+
+.exercise-card .thermal-layer.insulation {
+  flex: 1 1 210px;
+  min-width: 150px;
+  background: #b8ccea;
+  border-color: #6b7280;
+}
+
+.exercise-card .thermal-layer.insulation::before,
+.exercise-card .thermal-layer.insulation::after,
+.exercise-card .thermal-layer.glass::before,
+.exercise-card .thermal-layer.glass::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  height: 18px;
+  background:
+    radial-gradient(22px 12px at 22px 100%, transparent 48%, #ffffff 51%, #ffffff 62%, transparent 65%) repeat-x;
+  background-size: 44px 18px;
+  pointer-events: none;
+}
+
+.exercise-card .thermal-layer.insulation::before,
+.exercise-card .thermal-layer.glass::before {
+  top: -3px;
+}
+
+.exercise-card .thermal-layer.insulation::after,
+.exercise-card .thermal-layer.glass::after {
+  bottom: -3px;
+  rotate: 180deg;
+}
+
+.exercise-card .thermal-layer.metal {
+  flex: 1 1 140px;
+  min-width: 120px;
+  padding: 16px 10px;
+  background: #dbeafe;
+  color: #374151;
+  font-size: 0.96rem;
+  writing-mode: horizontal-tb;
+  text-orientation: initial;
+}
+
+.exercise-card .thermal-layer.glass {
+  flex: 1 1 190px;
+  min-width: 170px;
+  background: #dceeff;
+}
+
+.exercise-card .thermal-stack.single .thermal-layer,
+.exercise-card .thermal-stack.furnace .thermal-layer,
+.exercise-card .thermal-stack.windshield .thermal-layer {
+  max-width: 230px;
+}
+
+.exercise-card .thermal-stack.wallpaper {
+  width: min(350px, 100%);
+  margin-top: 42px;
+}
+
+.exercise-card .thermal-stack.fridge {
+  width: min(340px, 100%);
+  margin-top: 42px;
+}
+
+.exercise-card .fridge .thermal-layer.metal {
+  flex: 0 0 18px;
+  min-width: 18px;
+  padding: 0;
+  background: linear-gradient(90deg, #b8bdc5, #f3f4f6, #9ca3af);
+  font-size: 0;
+}
+
+.exercise-card .fridge .thermal-layer.metal::after {
+  content: "1 mm";
+  position: absolute;
+  left: 50%;
+  bottom: -32px;
+  translate: -50% 0;
+  color: #374151;
+  font-size: 0.84rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.exercise-card .diagram-note {
+  position: absolute;
+  z-index: 3;
+  color: #374151;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.exercise-card .metal-note {
+  left: 50%;
+  top: -42px;
+  translate: -50% 0;
+  width: 180px;
+}
+
+.exercise-card .paper-note {
+  left: 4px;
+  top: -42px;
+  width: 120px;
+  text-align: left;
+}
+
+.exercise-card .metal-note::before,
+.exercise-card .metal-note::after {
+  content: "";
+  position: absolute;
+  top: 24px;
+  width: 54px;
+  height: 44px;
+  border-top: 2px solid #6b7280;
+  pointer-events: none;
+}
+
+.exercise-card .metal-note::before {
+  left: -8px;
+  border-left: 2px solid #6b7280;
+  border-radius: 36px 0 0 0;
+  rotate: -8deg;
+}
+
+.exercise-card .metal-note::after {
+  right: -8px;
+  border-right: 2px solid #6b7280;
+  border-radius: 0 36px 0 0;
+  rotate: 8deg;
+}
+
+.exercise-card .thermal-stack.two-plates {
+  width: min(360px, 100%);
+}
+
+.exercise-card .thermal-stack.two-plates::after {
+  content: "d1 = d2 = 5 cm";
+  white-space: nowrap;
+}
+
+.exercise-card .interface-label {
+  top: 48%;
+  border: 1px solid #374151;
+  background: #ffffff;
+  color: #111827;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.exercise-card .comparison-visual {
+  grid-template-columns: minmax(180px, 1fr) auto minmax(180px, 1fr);
+}
+
+.exercise-card .comparison-card {
+  width: min(240px, 100%);
+  min-height: 180px;
+  padding: 18px;
+  border: 2px solid #6b7280;
+  background: #e7edf5;
+}
+
+.exercise-card .comparison-card.accent {
+  border-color: #6b7280;
+  background: #d8eadb;
+}
+
+.exercise-card .composite-wall,
+.exercise-card .building-wall {
+  width: min(360px, 100%);
+  min-height: 238px;
+  overflow: visible;
+  border: 2px solid #374151;
+  border-radius: 0;
+  background: #ffffff;
+}
+
+.exercise-card .composite-wall::before,
+.exercise-card .building-wall::before {
+  content: "";
+}
+
+.exercise-card .composite-wall::after,
+.exercise-card .building-wall::after {
+  content: "q";
+  right: -42px;
+  top: 50%;
+  width: auto;
+  height: auto;
+  translate: 0 -50%;
+  background: transparent;
+  box-shadow: none;
+  color: #2563eb;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.exercise-card .wall-layer {
+  min-width: 56px;
+  padding: 10px 8px;
+  border-right: 2px solid #374151;
+  color: #111827;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.28rem;
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+}
+
+.exercise-card .wall-layer.split {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.exercise-card .wall-layer.full {
+  background: #d1d5db;
+}
+
+.exercise-card .wall-layer.split b {
+  border-bottom: 2px solid #374151;
+  font-size: 1.22rem;
+}
+
+.exercise-card .wall-layer.three b:nth-child(odd),
+.exercise-card .wall-layer.split.building b:nth-child(2) {
+  background: #dbeafe;
+}
+
+.exercise-card .wall-layer.three b:nth-child(2),
+.exercise-card .wall-layer.split.building b:nth-child(1) {
+  background: #d1d5db;
+}
+
+.exercise-card .wall-layer.two b:nth-child(1) {
+  background: #e5e7eb;
+}
+
+.exercise-card .wall-layer.two b:nth-child(2) {
+  background: #cbd5e1;
+}
+
+.exercise-card .building-wall {
+  width: min(300px, 100%);
+  min-height: 250px;
+}
+
+.exercise-card .building-wall .wall-layer.full {
+  flex: 0 0 46%;
+}
+
+.exercise-card .building-wall .wall-layer.split {
+  flex: 0 0 54%;
+}
+
+.exercise-card .building-wall .wall-layer.split b:first-child {
+  flex: 4 1 0;
+}
+
+.exercise-card .building-wall .wall-layer.split b:last-child {
+  flex: 1 1 0;
+}
+
+.exercise-card .pipe-visual {
+  grid-template-columns: minmax(120px, 0.74fr) minmax(280px, 1.5fr) minmax(120px, 0.74fr);
+}
+
+.exercise-card .pipe-route {
+  min-height: 134px;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 18px 12px 8px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.exercise-card .pipe-route::before {
+  left: 14px;
+  right: 14px;
+  top: 68%;
+  height: 13px;
+  border: 2px solid #374151;
+  border-radius: 0;
+  background: #c8d7e8;
+  opacity: 1;
+}
+
+.exercise-card .pipe-route span {
+  max-width: 96px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #374151;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  box-shadow: none;
+}
+
+.exercise-card .reservoir {
+  width: min(130px, 100%);
+  min-height: 128px;
+  align-self: end;
+  border: 2px solid #374151;
+  background:
+    linear-gradient(to top, #b8d8f2 0 60%, transparent 60%),
+    #ffffff;
+}
+
+.exercise-card .reservoir.tall {
+  min-height: 168px;
+}
+
+.exercise-card .fixture {
+  position: relative;
+  width: min(130px, 100%);
+  min-height: 72px;
+  align-self: end;
+  border: 2px solid #374151;
+  background: #f9fafb;
+}
+
+.exercise-card .thermos-visual {
+  justify-items: center;
+}
+
+.exercise-card .thermos-body {
+  width: min(260px, 100%);
+  min-height: 290px;
+  display: block;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.exercise-card .thermos-body::before {
+  content: "";
+  position: absolute;
+  left: 82px;
+  top: 44px;
+  width: 96px;
+  height: 196px;
+  border: 5px solid #6b7280;
+  border-top-width: 12px;
+  border-radius: 12px 12px 8px 8px;
+  background:
+    linear-gradient(90deg, transparent 0 18px, #ffffff 18px 24px, #dbeafe 24px 72px, #ffffff 72px 78px, transparent 78px),
+    #f3f4f6;
+}
+
+.exercise-card .thermos-body span {
+  position: absolute;
+  display: block;
+  padding: 0;
+  border-radius: 0;
+  background: transparent !important;
+  color: #374151;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.exercise-card .thermos-cap {
+  left: 74px;
+  top: 8px;
+  width: 112px;
+}
+
+.exercise-card .thermos-vacuum {
+  left: 0;
+  top: 112px;
+  width: 72px;
+}
+
+.exercise-card .thermos-mirror {
+  right: 0;
+  top: 118px;
+  width: 86px;
+}
+
+.exercise-card .thermos-base {
+  left: 62px;
+  bottom: 0;
+  width: 136px;
+}
+
+.exercise-card .thermos-cap::after,
+.exercise-card .thermos-vacuum::after,
+.exercise-card .thermos-mirror::after,
+.exercise-card .thermos-base::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background: #6b7280;
+}
+
+.exercise-card .thermos-cap::after {
+  left: 54px;
+  top: 30px;
+  width: 48px;
+  rotate: 44deg;
+}
+
+.exercise-card .thermos-vacuum::after {
+  right: -36px;
+  top: 14px;
+  width: 42px;
+}
+
+.exercise-card .thermos-mirror::after {
+  left: -36px;
+  top: 14px;
+  width: 42px;
+}
+
+.exercise-card .thermos-base::after {
+  left: 68px;
+  top: -18px;
+  width: 34px;
+  rotate: -28deg;
+}
+
+.exercise-card .hydraulic-strip {
+  display: block;
+  padding: clamp(18px, 3vw, 26px);
+}
+
+.exercise-card .hydro-schematic {
+  display: grid;
+  grid-template-columns: minmax(76px, 0.7fr) minmax(240px, 2.1fr) minmax(76px, 0.7fr);
+  align-items: center;
+  gap: clamp(12px, 2vw, 22px);
+  min-height: 116px;
+}
+
+.exercise-card .hydro-node,
+.exercise-card .hydro-output,
+.exercise-card .pump-station {
+  display: grid;
+  place-items: center;
+  min-height: 70px;
+  padding: 10px 12px;
+  border: 2px solid #374151;
+  background: #f8fafc;
+  color: #1f2937;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.94rem;
+  font-weight: 800;
+  line-height: 1.18;
+  text-align: center;
+}
+
+.exercise-card .hydro-output {
+  background: #eff6ff;
+  min-width: 116px;
+  white-space: nowrap;
+}
+
+.exercise-card .hydro-pipe-body {
+  position: relative;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 6px 24px;
+  border: 2px solid #374151;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.7), transparent 44%),
+    #c8d7e8;
+  color: #1f2937;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.93rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.exercise-card .hydro-pipe-body::before,
+.exercise-card .pipeline-body::before {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  width: 58px;
+  height: 2px;
+  translate: 0 -50%;
+  background: #1d4ed8;
+}
+
+.exercise-card .hydro-pipe-body::after,
+.exercise-card .pipeline-body::after {
+  content: "";
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  translate: 0 -50%;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 10px solid #1d4ed8;
+}
+
+.exercise-card .hydro-callouts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.exercise-card .hydro-callouts span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 6px 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #374151;
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.12;
+  text-align: center;
+}
+
+.exercise-card .expansion-strip .hydro-pipe-body {
+  min-height: 70px;
+  justify-content: space-between;
+  padding-inline: 26px;
+  clip-path: polygon(0 30%, 42% 30%, 58% 0, 100% 0, 100% 100%, 58% 100%, 42% 70%, 0 70%);
+}
+
+.exercise-card .microtube-strip .hydro-pipe-body {
+  min-height: 28px;
+  max-width: 100%;
+  box-shadow: 0 -18px 0 -15px #374151, 0 18px 0 -15px #374151;
+}
+
+.exercise-card .loss-concept-visual,
+.exercise-card .regime-visual,
+.exercise-card .equivalent-length-visual,
+.exercise-card .pipeline-visual {
+  display: grid;
+  align-items: center;
+  gap: 12px;
+}
+
+.exercise-card .loss-concept-visual {
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+}
+
+.exercise-card .loss-concept-visual span:not(.concept-arrow),
+.exercise-card .regime-visual div,
+.exercise-card .equivalent-length-visual span:not(.plus-symbol, .equals-symbol, .arrow-symbol) {
+  min-height: 70px;
+  display: grid;
+  place-items: center;
+  padding: 12px 14px;
+  border: 2px solid #374151;
+  background: #f8fafc;
+  color: #1f2937;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.exercise-card .concept-arrow,
+.exercise-card .plus-symbol,
+.exercise-card .equals-symbol,
+.exercise-card .arrow-symbol {
+  color: #1d4ed8;
+  font-size: 0.88rem;
+  font-weight: 900;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.exercise-card .concept-arrow::after,
+.exercise-card .arrow-symbol::before {
+  content: " →";
+}
+
+.exercise-card .regime-visual {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.exercise-card .regime-visual div {
+  min-height: 122px;
+  gap: 6px;
+  background: linear-gradient(180deg, #ffffff, #eff6ff);
+}
+
+.exercise-card .regime-visual strong {
+  color: #111827;
+  font-size: 1rem;
+}
+
+.exercise-card .regime-visual span {
+  display: block;
+  color: #475569;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.exercise-card .equivalent-length-visual {
+  grid-template-columns: 1fr auto 1fr auto 1fr auto;
+}
+
+.exercise-card .equivalent-length-visual span:not(.plus-symbol, .equals-symbol, .arrow-symbol) {
+  background: #f8fafc;
+}
+
+.exercise-card .equivalent-length-visual .arrow-symbol {
+  min-height: 70px;
+  display: grid;
+  place-items: center;
+  padding: 0 6px;
+}
+
+.exercise-card .pipeline-visual {
+  grid-template-columns: minmax(110px, 0.8fr) minmax(260px, 2fr) minmax(110px, 0.8fr);
+}
+
+.exercise-card .pump-station {
+  min-height: 96px;
+  background: #f8fafc;
+}
+
+.exercise-card .pump-station.limit {
+  background: #fff7ed;
+}
+
+.exercise-card .pipeline-body {
+  position: relative;
+  min-height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 12px;
+  padding: 12px 64px 12px 18px;
+  border: 2px solid #374151;
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0 12px, transparent 12px 24px),
+    #c8d7e8;
+}
+
+.exercise-card .pipeline-body span {
+  position: relative;
+  z-index: 1;
+  padding: 6px 8px;
+  background: rgba(255, 255, 255, 0.82);
+  color: #1f2937;
+  font-size: 0.84rem;
+  font-weight: 800;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.exercise-card .reservoir-network-visual .pipe-route,
+.exercise-card .fire-system-visual .pipe-route {
+  min-height: 154px;
+  padding-top: 26px;
+}
+
+.exercise-card .reservoir-network-visual .pipe-route span,
+.exercise-card .fire-system-visual .pipe-route span {
+  position: relative;
+  z-index: 1;
+  max-width: 108px;
+  padding: 6px 8px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  font-size: 0.78rem;
+  line-height: 1.1;
+}
+
+.exercise-card .plumbing-visual {
+  grid-template-columns: minmax(124px, 0.7fr) minmax(300px, 1.8fr);
+  align-items: start;
+}
+
+.exercise-card .plumbing-tank {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 150px;
+  padding: 14px;
+  border: 2px solid #374151;
+  background:
+    linear-gradient(to top, #b8d8f2 0 58%, transparent 58%),
+    #ffffff;
+  color: #1f2937;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.exercise-card .plumbing-tank strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.82rem;
+}
+
+.exercise-card .plumbing-drawing {
+  position: relative;
+  min-height: 270px;
+  background:
+    linear-gradient(#374151, #374151) 7% 42px / 34% 10px no-repeat,
+    linear-gradient(#374151, #374151) 39% 42px / 10px 140px no-repeat,
+    linear-gradient(#374151, #374151) 39% 172px / 42% 10px no-repeat,
+    linear-gradient(#374151, #374151) 80% 104px / 10px 78px no-repeat,
+    linear-gradient(#374151, #374151) 80% 104px / 18% 10px no-repeat;
+  border: 1px dashed #cbd5e1;
+}
+
+.exercise-card .plumbing-label,
+.exercise-card .plumbing-shower {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 78px;
+  max-width: 126px;
+  padding: 6px 8px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #374151;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.08;
+  text-align: center;
+}
+
+.exercise-card .plumbing-label.top-run {
+  left: 8%;
+  top: 4px;
+}
+
+.exercise-card .plumbing-label.drop-run {
+  left: 7%;
+  top: 104px;
+}
+
+.exercise-card .plumbing-label.lower-run {
+  left: 43%;
+  top: 194px;
+}
+
+.exercise-card .plumbing-label.rise-run {
+  right: 17%;
+  top: 134px;
+}
+
+.exercise-card .plumbing-label.final-run {
+  right: 2%;
+  top: 62px;
+}
+
+.exercise-card .plumbing-shower {
+  right: 0;
+  top: 112px;
+  flex-direction: column;
+  min-height: 58px;
+  background: #eff6ff;
+}
+
+.exercise-card .composite-wall-visual-detailed {
+  grid-template-columns: minmax(90px, 0.55fr) minmax(340px, 1.8fr) minmax(90px, 0.55fr);
+}
+
+.exercise-card .wall-diagram-wrap {
+  position: relative;
+  width: min(460px, 100%);
+  padding: 42px 32px 42px;
+}
+
+.exercise-card .wall-depth-label,
+.exercise-card .wall-height-label {
+  position: absolute;
+  z-index: 3;
+  padding: 5px 8px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #374151;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.exercise-card .wall-depth-label {
+  top: 4px;
+  right: 32px;
+  translate: 0 0;
+}
+
+.exercise-card .wall-height-label {
+  left: 32px;
+  top: 4px;
+  translate: 0 0;
+}
+
+.exercise-card .detailed-wall {
+  width: 100%;
+  min-height: 242px;
+  position: relative;
+}
+
+.exercise-card .detailed-wall::after {
+  display: none;
+}
+
+.exercise-card .wall-layer-a {
+  flex: 0 0 12%;
+}
+
+.exercise-card .wall-layer-bc {
+  flex: 0 0 27%;
+}
+
+.exercise-card .wall-layer-de {
+  flex: 0 0 42%;
+}
+
+.exercise-card .wall-layer-f {
+  flex: 0 0 19%;
+  border-right: 0;
+}
+
+.exercise-card .detailed-wall .wall-layer b {
+  display: grid;
+  place-items: center;
+  flex: 1 1 0;
+  gap: 3px;
+  min-height: 0;
+}
+
+.exercise-card .detailed-wall .wall-layer small {
+  display: block;
+  color: #475569;
+  font-size: 0.7rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.exercise-card .heat-rate-arrow {
+  position: absolute;
+  right: -35px;
+  top: 50%;
+  translate: 0 -50%;
+  color: #1d4ed8;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.exercise-card .heat-rate-arrow::after {
+  content: " →";
+}
+
+.exercise-card .wall-dimension-row {
+  display: grid;
+  grid-template-columns: 12fr 27fr 42fr 19fr;
+  margin-top: 10px;
+  color: #374151;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.exercise-card .wall-dimension-row span {
+  position: relative;
+  padding-top: 8px;
+  border-top: 2px solid #6b7280;
+}
+
+.exercise-card .wall-dimension-row span + span {
+  border-left: 1px solid #9ca3af;
+}
+
+@media (max-width: 820px) {
+  .exercise-card .heat-flow-visual,
+  .exercise-card .composite-wall-visual,
+  .exercise-card .comparison-visual,
+  .exercise-card .pipe-visual,
+  .exercise-card .plumbing-visual,
+  .exercise-card .pipeline-visual {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .exercise-card .hydro-schematic,
+  .exercise-card .loss-concept-visual,
+  .exercise-card .regime-visual,
+  .exercise-card .equivalent-length-visual {
+    grid-template-columns: 1fr;
+  }
+
+  .exercise-card .concept-arrow::after,
+  .exercise-card .arrow-symbol::before {
+    content: "";
+  }
+
+  .exercise-card .concept-arrow,
+  .exercise-card .plus-symbol,
+  .exercise-card .equals-symbol,
+  .exercise-card .arrow-symbol {
+    padding: 0;
+    font-size: 1rem;
+  }
+
+  .exercise-card .plumbing-drawing {
+    width: min(420px, 100%);
+    margin: 0 auto;
+  }
+
+  .exercise-card .composite-wall-visual-detailed {
+    grid-template-columns: 1fr;
+  }
+
+  .exercise-card .wall-diagram-wrap {
+    padding-inline: 18px;
+  }
+
+  .exercise-card .wall-height-label {
+    left: 18px;
+    top: 32px;
+    translate: 0 0;
+  }
+
+  .exercise-card .thermal-stack::before,
+  .exercise-card .thermal-stack::after {
+    display: none;
+  }
+
+  .exercise-card .pipe-route::before {
+    top: 68%;
+    bottom: auto;
+    left: 14px;
+    right: 14px;
+    width: auto;
+    height: 13px;
+    translate: 0 -50%;
+  }
+}
