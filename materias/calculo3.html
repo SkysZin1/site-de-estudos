@@ -24,8 +24,8 @@
       <p class="eyebrow">Matéria</p>
       <h1>Cálculo 3 - Modelagem Matemática de Fenômenos</h1>
       <p>
-        Material de estudo sobre transformações lineares, matrizes, autovalores,
-        sistemas lineares de EDOs, modelos de mistura e métodos numéricos.
+        Material de estudo sobre matrizes, autovalores, sistemas lineares de EDOs,
+        modelos de mistura e métodos numéricos.
       </p>
       <div class="page-title-actions" id="resumo-facil">
         <a class="nav-button summary-top-button" href="resumos/calculo3-resumo.html">Acessar Resumo Fácil</a>
@@ -49,8 +49,8 @@
         <p>
           Modelagem Matemática de Fenômenos usa ferramentas de álgebra linear e equações
           diferenciais para representar sistemas que mudam no tempo. Nesta parte, a base
-          começa em transformações lineares e matrizes, passa por autovalores e autovetores,
-          e chega a sistemas de EDOs lineares de primeira ordem.
+          começa em matrizes, passa por autovalores e autovetores, e chega a sistemas de
+          EDOs lineares de primeira ordem.
         </p>
         <p>
           O objetivo prático é montar modelos, interpretar soluções e calcular aproximações
@@ -63,8 +63,8 @@
       <div class="concept-grid">
         <article class="info-card">
           <span class="card-code">Álgebra</span>
-          <h3>Transformações lineares preservam estrutura</h3>
-          <p>Elas levam soma em soma e multiplicação por escalar em multiplicação por escalar.</p>
+          <h3>Matrizes organizam sistemas</h3>
+          <p>Elas permitem representar equações acopladas e realizar cálculos de forma compacta.</p>
         </article>
 
         <article class="info-card">
@@ -88,16 +88,14 @@
       </div>
 
       <div class="learning-path">
-        <a href="#transformacoes">1. Transformações lineares</a>
-        <a href="#nucleo-imagem">2. Núcleo e imagem</a>
-        <a href="#matrizes">3. Matrizes</a>
-        <a href="#autovalores">4. Autovalores</a>
-        <a href="#sistemas-lineares">5. Sistemas lineares</a>
-        <a href="#solucoes-sistemas">6. Soluções de sistemas</a>
-        <a href="#metodo-autovalores">7. Método dos autovalores</a>
-        <a href="#misturas">8. Misturas</a>
-        <a href="#euler">9. Euler e Euler aprimorado</a>
-        <a href="#rk4">10. RK4 e sistemas numéricos</a>
+        <a href="#matrizes">1. Matrizes</a>
+        <a href="#autovalores">2. Autovalores</a>
+        <a href="#sistemas-lineares">3. Sistemas lineares</a>
+        <a href="#solucoes-sistemas">4. Soluções de sistemas</a>
+        <a href="#metodo-autovalores">5. Método dos autovalores</a>
+        <a href="#misturas">6. Misturas</a>
+        <a href="#euler">7. Euler e Euler aprimorado</a>
+        <a href="#rk4">8. RK4 e sistemas numéricos</a>
       </div>
     </section>
 
@@ -107,118 +105,9 @@
         <h2>Assuntos explicados por tópico</h2>
       </div>
 
-      <article class="lesson-topic" id="transformacoes">
-        <header class="topic-header">
-          <span class="topic-number">01</span>
-          <div>
-            <p class="eyebrow">Álgebra linear</p>
-            <h3>Transformações lineares</h3>
-          </div>
-        </header>
-
-        <div class="topic-content">
-          <div class="topic-explanation">
-            <p>
-              Uma transformação linear é uma função entre espaços vetoriais que preserva as
-              operações de soma e multiplicação por escalar. Isso significa que transformar
-              uma soma dá o mesmo resultado que somar as transformações, e transformar um
-              múltiplo escalar dá o mesmo resultado que multiplicar a transformação pelo escalar.
-            </p>
-            <p>
-              Essa ideia generaliza funções lineares simples, como <span class="math">f(x) = 5x</span>,
-              para vetores, matrizes, polinômios e funções. Em modelagem, isso é importante
-              porque permite representar relações entre variáveis por matrizes e operadores.
-            </p>
-          </div>
-
-          <aside class="formula-panel">
-            <h4>Fórmulas do tópico</h4>
-            <p class="formula">T(u + v) = T(u) + T(v)</p>
-            <p class="formula">T(kv) = kT(v)</p>
-            <p class="formula">T(au + bv) = aT(u) + bT(v)</p>
-            <ul>
-              <li><span class="math">U</span>: domínio da transformação.</li>
-              <li><span class="math">V</span>: contradomínio da transformação.</li>
-              <li><span class="math">u, v</span>: vetores do domínio.</li>
-              <li><span class="math">a, b, k</span>: escalares reais.</li>
-            </ul>
-          </aside>
-        </div>
-
-        <div class="topic-example">
-          <h4>Exemplo resolvido</h4>
-          <p>
-            Verifique se <span class="math">T(x, y) = (x, 2y, 0)</span>, de
-            <span class="math">R²</span> em <span class="math">R³</span>, é linear.
-          </p>
-          <ol>
-            <li>Considere <span class="math">u = (x<sub>1</sub>, y<sub>1</sub>)</span> e <span class="math">v = (x<sub>2</sub>, y<sub>2</sub>)</span>.</li>
-            <li><span class="math">T(u + v) = (x<sub>1</sub> + x<sub>2</sub>, 2(y<sub>1</sub> + y<sub>2</sub>), 0)</span>.</li>
-            <li>Isso é igual a <span class="math">(x<sub>1</sub>, 2y<sub>1</sub>, 0) + (x<sub>2</sub>, 2y<sub>2</sub>, 0)</span>.</li>
-            <li>Também vale <span class="math">T(ku) = kT(u)</span>. Portanto, <span class="math">T</span> é linear.</li>
-          </ol>
-        </div>
-      </article>
-
-      <article class="lesson-topic" id="nucleo-imagem">
-        <header class="topic-header">
-          <span class="topic-number">02</span>
-          <div>
-            <p class="eyebrow">Estrutura de soluções</p>
-            <h3>Núcleo, imagem e operadores diferenciais</h3>
-          </div>
-        </header>
-
-        <div class="topic-content">
-          <div class="topic-explanation">
-            <p>
-              A imagem de uma transformação linear é o conjunto de todos os vetores que
-              podem aparecer como saída. O núcleo é o conjunto de vetores do domínio que
-              são levados ao vetor zero. Ambos são subespaços vetoriais e ajudam a entender
-              o comportamento da transformação.
-            </p>
-            <p>
-              Em equações diferenciais, o operador derivada é um exemplo importante de
-              operador linear. Uma EDO linear homogênea pode ser escrita como
-              <span class="math">L(y) = 0</span>. O conjunto de soluções é o núcleo do
-              operador diferencial <span class="math">L</span>.
-            </p>
-          </div>
-
-          <aside class="formula-panel">
-            <h4>Fórmulas do tópico</h4>
-            <p class="formula">Im(T) = {v em V | existe u em U com T(u) = v}</p>
-            <p class="formula">ker(T) = {u em U | T(u) = 0}</p>
-            <p class="formula">L = a<sub>n</sub>D<sup>n</sup> + ... + a<sub>1</sub>D + a<sub>0</sub></p>
-            <p class="formula">L(y) = 0</p>
-            <ul>
-              <li><span class="math">T</span>: transformação linear analisada.</li>
-              <li><span class="math">U</span>: domínio; <span class="math">V</span>: contradomínio.</li>
-              <li><span class="math">Im(T)</span>: imagem da transformação, conjunto das saídas possíveis.</li>
-              <li><span class="math">ker(T)</span>: núcleo, conjunto de vetores que viram zero.</li>
-              <li><span class="math">L</span>: operador diferencial linear; <span class="math">D</span>: operador derivada.</li>
-              <li><span class="math">a<sub>n</sub>, ..., a<sub>0</sub></span>: coeficientes constantes do operador.</li>
-            </ul>
-          </aside>
-        </div>
-
-        <div class="topic-example">
-          <h4>Exemplo resolvido</h4>
-          <p>
-            Encontre o núcleo de <span class="math">T(x, y) = (2x, 0, y)</span>.
-          </p>
-          <ol>
-            <li>Para estar no núcleo, precisamos de <span class="math">T(x, y) = (0, 0, 0)</span>.</li>
-            <li>Isso gera <span class="math">2x = 0</span> e <span class="math">y = 0</span>.</li>
-            <li>Logo, <span class="math">x = 0</span> e <span class="math">y = 0</span>.</li>
-            <li>Portanto, <span class="math">ker(T) = {(0, 0)}</span>.</li>
-          </ol>
-        </div>
-      </article>
-
       <article class="lesson-topic" id="matrizes">
         <header class="topic-header">
-          <span class="topic-number">03</span>
+          <span class="topic-number">01</span>
           <div>
             <p class="eyebrow">Representação matricial</p>
             <h3>Matrizes e sistemas lineares</h3>
@@ -228,9 +117,9 @@
         <div class="topic-content">
           <div class="topic-explanation">
             <p>
-              Matrizes organizam números em linhas e colunas. Elas representam transformações
-              lineares, sistemas algébricos e sistemas de equações diferenciais. Uma matriz
-              multiplicada por um vetor-coluna produz outro vetor-coluna.
+              Matrizes organizam números em linhas e colunas. Elas representam sistemas
+              algébricos e sistemas de equações diferenciais. Uma matriz multiplicada por
+              um vetor-coluna produz outro vetor-coluna.
             </p>
             <p>
               A escrita matricial é mais compacta e permite usar operações de álgebra linear.
@@ -271,7 +160,7 @@
 
       <article class="lesson-topic" id="autovalores">
         <header class="topic-header">
-          <span class="topic-number">04</span>
+          <span class="topic-number">02</span>
           <div>
             <p class="eyebrow">Matrizes quadradas</p>
             <h3>Autovalores e autovetores</h3>
@@ -321,7 +210,7 @@
 
       <article class="lesson-topic" id="sistemas-lineares">
         <header class="topic-header">
-          <span class="topic-number">05</span>
+          <span class="topic-number">03</span>
           <div>
             <p class="eyebrow">Equações diferenciais</p>
             <h3>Sistemas lineares de EDOs de 1ª ordem</h3>
@@ -373,7 +262,7 @@
 
       <article class="lesson-topic" id="solucoes-sistemas">
         <header class="topic-header">
-          <span class="topic-number">06</span>
+          <span class="topic-number">04</span>
           <div>
             <p class="eyebrow">Soluções e independência</p>
             <h3>Solução geral, condições iniciais e Wronskiano</h3>
@@ -427,7 +316,7 @@
 
       <article class="lesson-topic" id="metodo-autovalores">
         <header class="topic-header">
-          <span class="topic-number">07</span>
+          <span class="topic-number">05</span>
           <div>
             <p class="eyebrow">Solução analítica</p>
             <h3>Método dos autovalores e autovetores</h3>
@@ -489,7 +378,7 @@
 
       <article class="lesson-topic" id="misturas">
         <header class="topic-header">
-          <span class="topic-number">08</span>
+          <span class="topic-number">06</span>
           <div>
             <p class="eyebrow">Aplicação</p>
             <h3>Análise compartimental e problemas de mistura</h3>
@@ -563,7 +452,7 @@
 
       <article class="lesson-topic" id="euler">
         <header class="topic-header">
-          <span class="topic-number">09</span>
+          <span class="topic-number">07</span>
           <div>
             <p class="eyebrow">Métodos numéricos</p>
             <h3>Método de Euler e Euler aprimorado</h3>
@@ -622,7 +511,7 @@
 
       <article class="lesson-topic" id="rk4">
         <header class="topic-header">
-          <span class="topic-number">10</span>
+          <span class="topic-number">08</span>
           <div>
             <p class="eyebrow">Alta precisão</p>
             <h3>Runge-Kutta de 4ª ordem e sistemas numéricos</h3>
@@ -689,28 +578,6 @@
       <div class="open-question-list">
         <article class="open-question-card">
           <div class="question-meta">Questão 1</div>
-          <h3>Explique como verificar se uma transformação <span class="math">T</span> é linear.</h3>
-          <p class="question-hint">Use as propriedades de soma e multiplicação por escalar.</p>
-          <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
-          <div class="solution-panel" hidden>
-            <h4>Resolução comentada</h4>
-            <p>É necessário verificar se <span class="math">T(u+v)=T(u)+T(v)</span> e <span class="math">T(kv)=kT(v)</span> para vetores do domínio e escalares reais. Uma forma equivalente é testar <span class="math">T(au+bv)=aT(u)+bT(v)</span>.</p>
-          </div>
-        </article>
-
-        <article class="open-question-card">
-          <div class="question-meta">Questão 2</div>
-          <h3>Encontre o núcleo de <span class="math">T(x,y)=(x-y,2x-2y)</span>.</h3>
-          <p class="question-hint">No núcleo, a transformação deve resultar no vetor zero.</p>
-          <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
-          <div class="solution-panel" hidden>
-            <h4>Resolução comentada</h4>
-            <p>Precisamos de <span class="math">x-y=0</span> e <span class="math">2x-2y=0</span>. As duas equações dizem a mesma coisa: <span class="math">x=y</span>. Portanto, <span class="math">ker(T)={(t,t) | t em R}</span>.</p>
-          </div>
-        </article>
-
-        <article class="open-question-card">
-          <div class="question-meta">Questão 3</div>
           <h3>Calcule os autovalores de <span class="math">A=[[4,0],[0,-2]]</span>.</h3>
           <p class="question-hint">Use <span class="math">det(A-&lambda;I)=0</span>.</p>
           <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
@@ -721,7 +588,7 @@
         </article>
 
         <article class="open-question-card">
-          <div class="question-meta">Questão 4</div>
+          <div class="question-meta">Questão 2</div>
           <h3>Escreva em forma matricial o sistema <span class="math">x'=2x-y</span> e <span class="math">y'=3x+4y</span>.</h3>
           <p class="question-hint">Identifique a matriz dos coeficientes e o vetor das incógnitas.</p>
           <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
@@ -732,7 +599,7 @@
         </article>
 
         <article class="open-question-card">
-          <div class="question-meta">Questão 5</div>
+          <div class="question-meta">Questão 3</div>
           <h3>Explique por que soluções da forma <span class="math">x(t)=ve<sup>&lambda;t</sup></span> aparecem em sistemas <span class="math">x'=Ax</span>.</h3>
           <p class="question-hint">Substitua essa forma no sistema e observe o que sobra.</p>
           <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
@@ -743,7 +610,7 @@
         </article>
 
         <article class="open-question-card">
-          <div class="question-meta">Questão 6</div>
+          <div class="question-meta">Questão 4</div>
           <h3>Monte a EDO de um tanque com volume constante de <span class="math">80 L</span>, entrada de <span class="math">2 L/min</span> com concentração <span class="math">0,05 kg/L</span> e saída de <span class="math">2 L/min</span>.</h3>
           <p class="question-hint">Use massa de sal <span class="math">x(t)</span>, não concentração, como incógnita.</p>
           <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
@@ -754,7 +621,7 @@
         </article>
 
         <article class="open-question-card">
-          <div class="question-meta">Questão 7</div>
+          <div class="question-meta">Questão 5</div>
           <h3>Aplique um passo de Euler em <span class="math">y'=x+y</span>, com <span class="math">y(0)=1</span> e <span class="math">h=0,1</span>.</h3>
           <p class="question-hint">Calcule <span class="math">x<sub>1</sub></span> e <span class="math">y<sub>1</sub></span>.</p>
           <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
@@ -765,7 +632,7 @@
         </article>
 
         <article class="open-question-card">
-          <div class="question-meta">Questão 8</div>
+          <div class="question-meta">Questão 6</div>
           <h3>Transforme <span class="math">y''+4y'+3y=0</span> em um sistema de duas EDOs de 1ª ordem.</h3>
           <p class="question-hint">Use <span class="math">u=y</span> e <span class="math">v=y'</span>.</p>
           <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
@@ -782,50 +649,8 @@
           <button class="nav-button" type="button" data-quiz-reset>Recomeçar</button>
         </div>
 
-        <article class="quiz-card" data-correct="b">
-          <h3>1. Para uma transformação ser linear, ela deve preservar:</h3>
-          <div class="quiz-options">
-            <button type="button" data-option="a">apenas o domínio da função.</button>
-            <button type="button" data-option="b">soma vetorial e multiplicação por escalar.</button>
-            <button type="button" data-option="c">somente produtos entre matrizes.</button>
-            <button type="button" data-option="d">apenas valores positivos.</button>
-          </div>
-          <div class="quiz-feedback" hidden>
-            <p class="feedback-title" data-feedback-title></p>
-            <p><strong>Resolução:</strong> a definição de transformação linear exige <span class="math">T(u+v)=T(u)+T(v)</span> e <span class="math">T(kv)=kT(v)</span>.</p>
-          </div>
-        </article>
-
-        <article class="quiz-card" data-correct="c">
-          <h3>2. Qual das aplicações abaixo não é linear?</h3>
-          <div class="quiz-options">
-            <button type="button" data-option="a">T(x,y) = (x, 2y, 0)</button>
-            <button type="button" data-option="b">D(f) = f'</button>
-            <button type="button" data-option="c">T(x) = x²</button>
-            <button type="button" data-option="d">T(x,y) = (3x - y)</button>
-          </div>
-          <div class="quiz-feedback" hidden>
-            <p class="feedback-title" data-feedback-title></p>
-            <p><strong>Resolução:</strong> <span class="math">T(x)=x²</span> não preserva multiplicação por escalar, pois <span class="math">T(kx)=k²x²</span>, enquanto <span class="math">kT(x)=kx²</span>.</p>
-          </div>
-        </article>
-
-        <article class="quiz-card" data-correct="a">
-          <h3>3. O núcleo de uma transformação linear é o conjunto dos vetores que:</h3>
-          <div class="quiz-options">
-            <button type="button" data-option="a">são levados ao vetor zero.</button>
-            <button type="button" data-option="b">formam apenas a diagonal principal.</button>
-            <button type="button" data-option="c">não pertencem ao domínio.</button>
-            <button type="button" data-option="d">são sempre autovalores.</button>
-          </div>
-          <div class="quiz-feedback" hidden>
-            <p class="feedback-title" data-feedback-title></p>
-            <p><strong>Resolução:</strong> por definição, <span class="math">ker(T) = {u | T(u)=0}</span>. Ele é um subespaço do domínio.</p>
-          </div>
-        </article>
-
         <article class="quiz-card" data-correct="d">
-          <h3>4. Os autovalores de uma matriz <span class="math">A</span> são encontrados por:</h3>
+          <h3>1. Os autovalores de uma matriz <span class="math">A</span> são encontrados por:</h3>
           <div class="quiz-options">
             <button type="button" data-option="a">A + I = 0</button>
             <button type="button" data-option="b">Ax = b</button>
@@ -839,7 +664,7 @@
         </article>
 
         <article class="quiz-card" data-correct="b">
-          <h3>5. Para <span class="math">A = [[3,0],[0,5]]</span>, os autovalores são:</h3>
+          <h3>2. Para <span class="math">A = [[3,0],[0,5]]</span>, os autovalores são:</h3>
           <div class="quiz-options">
             <button type="button" data-option="a">0 e 1</button>
             <button type="button" data-option="b">3 e 5</button>
@@ -853,7 +678,7 @@
         </article>
 
         <article class="quiz-card" data-correct="c">
-          <h3>6. Um sistema linear homogêneo de 1ª ordem com coeficientes constantes pode ser escrito como:</h3>
+          <h3>3. Um sistema linear homogêneo de 1ª ordem com coeficientes constantes pode ser escrito como:</h3>
           <div class="quiz-options">
             <button type="button" data-option="a">Ax = b</button>
             <button type="button" data-option="b">y = mx + b</button>
@@ -867,7 +692,7 @@
         </article>
 
         <article class="quiz-card" data-correct="a">
-          <h3>7. No método dos autovalores para <span class="math">x'=Ax</span>, uma solução não trivial tem a forma:</h3>
+          <h3>4. No método dos autovalores para <span class="math">x'=Ax</span>, uma solução não trivial tem a forma:</h3>
           <div class="quiz-options">
             <button type="button" data-option="a">x(t) = ve<sup>&lambda;t</sup></button>
             <button type="button" data-option="b">x(t) = v + &lambda;t²</button>
@@ -881,7 +706,7 @@
         </article>
 
         <article class="quiz-card" data-correct="d">
-          <h3>8. Em um problema de mistura, se um tanque tem massa de sal <span class="math">x(t)</span> e volume <span class="math">V</span>, a concentração é:</h3>
+          <h3>5. Em um problema de mistura, se um tanque tem massa de sal <span class="math">x(t)</span> e volume <span class="math">V</span>, a concentração é:</h3>
           <div class="quiz-options">
             <button type="button" data-option="a">V/x(t)</button>
             <button type="button" data-option="b">x'(t)V</button>
@@ -895,7 +720,7 @@
         </article>
 
         <article class="quiz-card" data-correct="b">
-          <h3>9. No método de Euler para <span class="math">y'=f(x,y)</span>, a fórmula básica é:</h3>
+          <h3>6. No método de Euler para <span class="math">y'=f(x,y)</span>, a fórmula básica é:</h3>
           <div class="quiz-options">
             <button type="button" data-option="a">y<sub>n+1</sub> = y<sub>n</sub> - h/f(x<sub>n</sub>,y<sub>n</sub>)</button>
             <button type="button" data-option="b">y<sub>n+1</sub> = y<sub>n</sub> + h f(x<sub>n</sub>,y<sub>n</sub>)</button>
@@ -909,7 +734,7 @@
         </article>
 
         <article class="quiz-card" data-correct="c">
-          <h3>10. Sobre o RK4, a afirmação correta é:</h3>
+          <h3>7. Sobre o RK4, a afirmação correta é:</h3>
           <div class="quiz-options">
             <button type="button" data-option="a">usa apenas a inclinação inicial, como Euler simples.</button>
             <button type="button" data-option="b">não pode ser usado em engenharia.</button>

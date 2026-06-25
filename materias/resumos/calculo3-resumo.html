@@ -24,8 +24,8 @@
       <p class="eyebrow">Cálculo 3 / MMF</p>
       <h1>Resumo Fácil</h1>
       <p>
-        Revisão rápida sobre transformações lineares, matrizes, autovalores, sistemas de EDOs,
-        problemas de mistura, Euler e Runge-Kutta.
+        Revisão rápida sobre matrizes, autovalores, sistemas de EDOs, problemas de mistura,
+        Euler e Runge-Kutta.
       </p>
     </section>
 
@@ -55,39 +55,11 @@
 
       <div class="easy-topic-list">
         <article class="easy-topic-card">
-          <h3>Transformações lineares, núcleo e imagem</h3>
-          <div class="easy-topic-grid">
-            <div>
-              <h4>Teoria</h4>
-              <p>Transformações lineares preservam soma e multiplicação por escalar; núcleo e imagem mostram entradas que zeram e saídas possíveis.</p>
-            </div>
-            <div>
-              <h4>Fórmulas</h4>
-              <p class="formula">T(u+v)=T(u)+T(v)</p>
-              <p class="formula">T(kv)=kT(v)</p>
-              <p class="formula">ker(T): T(v)=0</p>
-            </div>
-            <div>
-              <h4>Quando usar</h4>
-              <p>Use para testar linearidade, achar núcleo, imagem e interpretar operadores diferenciais.</p>
-            </div>
-            <div class="attention-box">
-              <h4>Atenção</h4>
-              <p>Se aparecer termo constante, produto entre variáveis ou potência, desconfie da linearidade.</p>
-            </div>
-            <div class="memory-tip">
-              <h4>Dica rápida</h4>
-              <p>Linearidade é respeitar soma e escala.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="easy-topic-card">
           <h3>Matrizes, sistemas lineares e autovalores</h3>
           <div class="easy-topic-grid">
             <div>
               <h4>Teoria</h4>
-              <p>Matrizes representam transformações e sistemas; autovalores revelam direções especiais preservadas pela matriz.</p>
+              <p>Matrizes representam sistemas algébricos e diferenciais; autovalores revelam direções especiais preservadas pela matriz.</p>
             </div>
             <div>
               <h4>Fórmulas</h4>
@@ -200,8 +172,6 @@
         <h2>Lembre-se</h2>
       </div>
       <ul class="quick-list">
-        <li>Para testar linearidade, confira soma e multiplicação por escalar.</li>
-        <li>Para núcleo, iguale a transformação a zero e resolva o sistema.</li>
         <li>Para autovalores, comece por <span class="math">det(A-&lambda;I)=0</span>.</li>
         <li>Para sistemas de EDOs, escreva primeiro em forma matricial.</li>
         <li>Em misturas, monte entrada menos saída usando concentração correta.</li>
@@ -215,8 +185,6 @@
         <h2>Fórmulas que mais caem</h2>
       </div>
       <div class="quick-formula-grid">
-        <article><h3>Linearidade</h3><p class="formula">T(u+v)=T(u)+T(v)</p></article>
-        <article><h3>Núcleo</h3><p class="formula">ker(T): T(v)=0</p></article>
         <article><h3>Autovalores</h3><p class="formula">det(A-&lambda;I)=0</p></article>
         <article><h3>Sistemas</h3><p class="formula">x'=Ax</p></article>
         <article><h3>Euler</h3><p class="formula">y<sub>n+1</sub>=y<sub>n</sub>+hf(x<sub>n</sub>,y<sub>n</sub>)</p></article>
@@ -230,11 +198,11 @@
         <h2>Antes de fechar a revisão</h2>
       </div>
       <div class="checklist-card">
-        <label><input type="checkbox"> Entendi o conceito de transformação linear.</label>
-        <label><input type="checkbox"> Sei identificar qual fórmula usar em linearidade, autovalores, EDOs ou métodos numéricos.</label>
+        <label><input type="checkbox"> Entendi como matrizes organizam sistemas de equações.</label>
+        <label><input type="checkbox"> Sei identificar qual fórmula usar em autovalores, EDOs ou métodos numéricos.</label>
         <label><input type="checkbox"> Sei interpretar matriz, vetor, autovalor, passo <span class="math">h</span> e função <span class="math">f(x,y)</span>.</label>
         <label><input type="checkbox"> Sei resolver um exemplo básico de Euler ou autovalores.</label>
-        <label><input type="checkbox"> Revisei as pegadinhas de núcleo, volume variável e ordem dos cálculos numéricos.</label>
+        <label><input type="checkbox"> Revisei as pegadinhas de volume variável e ordem dos cálculos numéricos.</label>
       </div>
     </section>
   </main>

@@ -226,7 +226,7 @@ const searchData = [
   },
   {
     title: "Calculo 3 - Modelagem Matematica de Fenomenos",
-    description: "Pagina de estudo sobre transformacoes lineares, sistemas de EDOs e metodos numericos.",
+    description: "Pagina de estudo sobre matrizes, autovalores, sistemas de EDOs e metodos numericos.",
     category: "Calculo 3",
     type: "Pagina",
     keywords: ["calculo 3", "mmf", "modelagem", "edo", "sistemas lineares"],
@@ -234,7 +234,7 @@ const searchData = [
   },
   {
     title: "Resumo Facil Calculo 3",
-    description: "Revisao rapida com transformacoes lineares, autovalores, sistemas de EDO, Euler e RK4.",
+    description: "Revisao rapida com matrizes, autovalores, sistemas de EDO, Euler e RK4.",
     category: "Calculo 3",
     type: "Resumo",
     keywords: ["resumo calculo 3", "resumo facil", "revisao rapida", "edo", "euler", "runge-kutta"],
@@ -249,24 +249,8 @@ const searchData = [
     url: "materias/resumos/calculo3-resumo.html#formulas"
   },
   {
-    title: "Transformacoes lineares",
-    description: "Aplicacoes que preservam soma e multiplicacao por escalar.",
-    category: "Calculo 3",
-    type: "Conteudo",
-    keywords: ["transformacoes lineares", "linearidade", "operador linear", "vetores"],
-    url: "materias/calculo3.html#transformacoes"
-  },
-  {
-    title: "Nucleo e imagem",
-    description: "Conjuntos associados a uma transformacao linear e interpretacao geometrica.",
-    category: "Calculo 3",
-    type: "Conteudo",
-    keywords: ["nucleo", "imagem", "kernel", "transformacao linear", "sistemas lineares"],
-    url: "materias/calculo3.html#nucleo-imagem"
-  },
-  {
     title: "Matrizes e sistemas lineares",
-    description: "Representacao matricial de transformacoes e resolucao de sistemas.",
+    description: "Representacao matricial e resolucao de sistemas algebricos e diferenciais.",
     category: "Calculo 3",
     type: "Conteudo",
     keywords: ["matrizes", "sistemas lineares", "matriz", "vetores", "formulas"],
@@ -314,7 +298,7 @@ const searchData = [
   },
   {
     title: "Questoes de Calculo 3",
-    description: "Exercicios abertos com resolucoes comentadas sobre transformacoes, sistemas, Euler e RK4.",
+    description: "Exercicios abertos com resolucoes comentadas sobre autovalores, sistemas, Euler e RK4.",
     category: "Calculo 3",
     type: "Questao",
     keywords: ["questoes", "exercicios", "resolucao", "euler", "runge-kutta", "edo"],
