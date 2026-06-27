@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercícios Sugeridos Cálculo 3 | StudyHub</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navegação principal">
+      <a class="brand" href="../../index.html">StudyHub</a>
+      <div class="nav-links">
+        <a href="../foe.html">FOE</a>
+        <a href="../ft.html">FT</a>
+        <a href="../calculo3.html" aria-current="page">Cálculo 3</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="study-page exercise-page">
+    <section class="page-title">
+      <a class="nav-button" href="../calculo3.html">&larr; Voltar para Cálculo 3</a>
+      <p class="eyebrow">Cálculo 3 / MMF</p>
+      <h1>Exercícios Sugeridos</h1>
+      <p>
+        Resoluções comentadas de duas provas antigas de AV3, com o enunciado completo,
+        identificação do método e passo a passo para repetir o raciocínio em questões parecidas.
+      </p>
+    </section>
+
+    <nav class="jump-nav" aria-label="Navegação dos exercícios">
+      <a href="#av3-old-01">AV3 antiga 01</a>
+      <a href="#av3-old-02">AV3 antiga 02</a>
+      <a href="#formulas-calculo">Fórmulas</a>
+    </nav>
+
+    <section class="study-block" id="av3-old-01">
+      <div class="section-heading">
+        <p class="eyebrow">Prova 2378526.0</p>
+        <h2>AV3 antiga 01</h2>
+        <p>O foco desta prova é mistura, autovalores, autovetores, transformações lineares, operador diferencial e solução de sistemas.</p>
+      </div>
+
+      <div class="exercise-list">
+        <article class="exercise-card" id="av3-old-01-q1">
+          <div class="question-meta">Questão 1</div>
+          <h3>Uma solução de salmoura flui para um tanque a uma vazão constante de <span class="math">3 L/min</span>. O texto informa volume de <span class="math">100 L</span>, enquanto a figura mostra o tanque com <span class="math">10 L</span>. Inicialmente não há sal diluído no tanque. A solução é bem agitada e sai na mesma vazão. A concentração de entrada é <span class="math">0,1 kg/L</span>. Qual será o valor limite da massa de sal no tanque?</h3>
+          <p>Alternativas: a) <span class="math">0,5 kg</span>; b) <span class="math">1 kg</span>; c) <span class="math">3 kg</span>; d) <span class="math">2 kg</span>; e) <span class="math">0,25 kg</span>.</p>
+          <div class="formula-strip">
+            <span>massa' = entrada - saída</span>
+            <span>concentração no tanque = x/V</span>
+            <span>limite: x' = 0</span>
+          </div>
+          <ol class="solution-steps">
+            <li>A entrada de sal é <span class="math">3 &middot; 0,1 = 0,3 kg/min</span>.</li>
+            <li>A saída de sal é <span class="math">3(x/V)</span>, pois a mistura sai com concentração <span class="math">x/V</span>.</li>
+            <li>O modelo é <span class="math">x' = 0,3 - 3x/V</span>.</li>
+            <li>No valor limite, a massa não muda mais, então <span class="math">x'=0</span>.</li>
+            <li>Logo, <span class="math">0 = 0,3 - 3x/V</span>, portanto <span class="math">x = 0,1V</span>.</li>
+          </ol>
+          <p class="result">Resposta: usando o volume da figura, <span class="math">V=10 L</span>, fica <span class="math">x=1 kg</span>. Alternativa b. Se fosse usado o volume de <span class="math">100 L</span> do texto, daria <span class="math">10 kg</span>, que não aparece nas alternativas.</p>
+        </article>
+
+        <article class="exercise-card" id="av3-old-01-q2">
+          <div class="question-meta">Questão 2</div>
+          <h3>Considere o sistema de EDOs de 1ª ordem <span class="math">x' = x + y</span> e <span class="math">y' = x - y</span>. Qual das alternativas apresenta um autovalor da matriz do sistema?</h3>
+          <p>Alternativas: a) <span class="math">2</span>; b) <span class="math">&radic;2</span>; c) <span class="math">-2&radic;2</span>; d) <span class="math">0</span>; e) <span class="math">1</span>.</p>
+          <div class="formula-strip">
+            <span>x' = Ax</span>
+            <span>det(A - &lambda;I) = 0</span>
+          </div>
+          <ol class="solution-steps">
+            <li>A matriz do sistema é <span class="math">A = [[1,1],[1,-1]]</span>.</li>
+            <li>Monte <span class="math">A - &lambda;I = [[1-&lambda;,1],[1,-1-&lambda;]]</span>.</li>
+            <li>O determinante é <span class="math">(1-&lambda;)(-1-&lambda;) - 1 = &lambda;² - 2</span>.</li>
+            <li>Igualando a zero: <span class="math">&lambda;² - 2 = 0</span>, então <span class="math">&lambda; = &plusmn;&radic;2</span>.</li>
+          </ol>
+          <p class="result">Resposta: um autovalor listado é <span class="math">&radic;2</span>. Alternativa b.</p>
+        </article>
+
+        <article class="exercise-card" id="av3-old-01-q3">
+          <div class="question-meta">Questão 3</div>
+          <h3>O vetor <span class="math">x(t) = [1/2, 1]<sup>T</sup> e<sup>3t</sup></span> é solução de qual sistema proposto?</h3>
+          <p>Alternativas: a) <span class="math">x' = [[1,-4],[-1,1]]x</span>; b) <span class="math">x' = [[-4,1],[-2,1]]x</span>; c) <span class="math">x' = [[1,4],[1,1]]x</span>; d) <span class="math">x' = [[-1,1],[4,1]]x</span>; e) <span class="math">x' = [[1,1],[4,1]]x</span>.</p>
+          <div class="formula-strip">
+            <span>x(t) = ve<sup>&lambda;t</sup></span>
+            <span>Av = &lambda;v</span>
+          </div>
+          <ol class="solution-steps">
+            <li>A solução está na forma <span class="math">v e<sup>&lambda;t</sup></span>, com <span class="math">v=[1/2,1]<sup>T</sup></span> e <span class="math">&lambda;=3</span>.</li>
+            <li>Então a matriz correta precisa satisfazer <span class="math">Av = 3v</span>.</li>
+            <li>Calculando <span class="math">3v</span>, temos <span class="math">[3/2,3]<sup>T</sup></span>.</li>
+            <li>Na alternativa e: <span class="math">[[1,1],[4,1]][1/2,1]<sup>T</sup> = [3/2,3]<sup>T</sup></span>.</li>
+          </ol>
+          <p class="result">Resposta: alternativa e.</p>
+        </article>
+
+        <article class="exercise-card" id="av3-old-01-q4">
+          <div class="question-meta">Questão 4</div>
+          <h3>Dois tanques de salmoura interconectados têm o mesmo volume, <span class="math">36 L</span> cada. No tanque A entra água pura a <span class="math">9 L/min</span>. Há vazão de A para B de <span class="math">12 L/min</span>, vazão de B para A de <span class="math">3 L/min</span> e saída externa do tanque B de <span class="math">9 L/min</span>. Inicialmente há <span class="math">3,0 kg</span> de sal no tanque B e nenhum sal no tanque A. Qual a massa de sal em cada tanque em <span class="math">t=5 min</span>?</h3>
+          <p>Alternativas: a) <span class="math">0,57 kg</span> em A e <span class="math">3,12 kg</span> em B; b) <span class="math">3,12 kg</span> em A e <span class="math">1,06 kg</span> em B; c) <span class="math">1,06 kg</span> em A e <span class="math">0,78 kg</span> em B; d) <span class="math">3,12 kg</span> em ambos; e) <span class="math">0,78 kg</span> em A e <span class="math">1,06 kg</span> em B.</p>
+          <div class="formula-strip">
+            <span>x' = entrada em A - saída de A</span>
+            <span>y' = entrada em B - saída de B</span>
+            <span>concentração = massa/volume</span>
+          </div>
+          <ol class="solution-steps">
+            <li>Chame de <span class="math">x(t)</span> a massa no tanque A e <span class="math">y(t)</span> a massa no tanque B.</li>
+            <li>A concentração em A é <span class="math">x/36</span>; a concentração em B é <span class="math">y/36</span>.</li>
+            <li>No tanque A: entra sal de B a <span class="math">3y/36</span> e sai sal para B a <span class="math">12x/36</span>. Então <span class="math">x'=-x/3+y/12</span>.</li>
+            <li>No tanque B: entra sal de A a <span class="math">12x/36</span> e sai por duas vazões, <span class="math">(3+9)y/36</span>. Então <span class="math">y'=x/3-y/3</span>.</li>
+            <li>Com <span class="math">x(0)=0</span> e <span class="math">y(0)=3</span>, a solução dá <span class="math">x(5)=0,264 kg</span> e <span class="math">y(5)=0,775 kg</span>.</li>
+          </ol>
+          <p class="result">Resposta: pelo modelo físico da figura, fica aproximadamente <span class="math">0,26 kg</span> em A e <span class="math">0,78 kg</span> em B. Nenhuma alternativa coincide com as duas massas; a letra c parece usar a massa total como se fosse a massa do tanque A.</p>
+        </article>
+
+        <article class="exercise-card" id="av3-old-01-q5">
+          <div class="question-meta">Questão 5</div>
+          <h3>Considere as transformações: 1. <span class="math">T:V&rarr;W</span>, dada por <span class="math">T(v)=0</span>; 2. <span class="math">T:P₂(R)&rarr;P₂(R)</span>, dada por <span class="math">T(p)=p'</span>; 3. <span class="math">T:R²&rarr;R</span>, dada por <span class="math">T(x,y)=x+y-1</span>. Quais são lineares?</h3>
+          <p>Alternativas: a) apenas 1; b) apenas 3; c) 1 e 2; d) 2 e 3; e) apenas 2.</p>
+          <div class="formula-strip">
+            <span>transformação linear precisa ter T(0)=0</span>
+            <span>T(u+v)=T(u)+T(v)</span>
+            <span>T(cu)=cT(u)</span>
+          </div>
+          <ol class="solution-steps">
+            <li>A transformação 1 é a transformação nula. Ela é linear.</li>
+            <li>A transformação 2 é derivação de polinômios. Derivar soma e constante vezes polinômio preserva linearidade.</li>
+            <li>A transformação 3 falha no teste do zero: <span class="math">T(0,0)=-1</span>, não zero.</li>
+          </ol>
+          <p class="result">Resposta: são lineares 1 e 2. Alternativa c.</p>
+        </article>
+
+        <article class="exercise-card" id="av3-old-01-q6">
+          <div class="question-meta">Questão 6</div>
+          <h3>Considere o sistema <span class="math">x'=Ax</span>, com <span class="math">A=[[-1,1],[-2,2]]</span>. Dadas as condições iniciais <span class="math">x(0)=2</span> e <span class="math">y(0)=1</span>, qual o valor de <span class="math">x(1)-y(1)</span>?</h3>
+          <p>Alternativas: a) <span class="math">e<sup>-2</sup></span>; b) <span class="math">e<sup>-1</sup></span>; c) <span class="math">e²</span>; d) <span class="math">e³</span>; e) <span class="math">e</span>.</p>
+          <div class="formula-strip">
+            <span>use z = x - y</span>
+            <span>se z' = z, então z = Ce<sup>t</sup></span>
+          </div>
+          <ol class="solution-steps">
+            <li>Do sistema, temos <span class="math">x'=-x+y</span> e <span class="math">y'=-2x+2y</span>.</li>
+            <li>Defina <span class="math">z=x-y</span>. Então <span class="math">z'=x'-y'</span>.</li>
+            <li>Substituindo: <span class="math">z'=(-x+y)-(-2x+2y)=x-y=z</span>.</li>
+            <li>Como <span class="math">z(0)=x(0)-y(0)=1</span>, temos <span class="math">z(t)=e<sup>t</sup></span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">x(1)-y(1)=z(1)=e</span>. Alternativa e.</p>
+        </article>
+
+        <article class="exercise-card" id="av3-old-01-q7">
+          <div class="question-meta">Questão 7</div>
+          <h3>Dada a matriz <span class="math">A=[[-1,3],[9,5]]</span>, considere as afirmações: 1. O vetor nulo <span class="math">[0,0]<sup>T</sup></span> sempre é autovetor de A. 2. A matriz A possui autovalores reais <span class="math">&lambda;=-4</span> e <span class="math">&lambda;=8</span>. 3. <span class="math">v=[1,3]<sup>T</sup></span> é autovetor associado a <span class="math">&lambda;=8</span>. 4. <span class="math">v=[3,2]<sup>T</sup></span> é autovetor associado a <span class="math">&lambda;=-4</span>. Quais estão corretas?</h3>
+          <p>Alternativas: a) afirmações 2 e 3; b) afirmações 1, 2 e 3; c) afirmações 3 e 4; d) afirmações 1 e 2; e) afirmações 2, 3 e 4.</p>
+          <div class="formula-strip">
+            <span>autovetor não pode ser zero</span>
+            <span>det(A - &lambda;I)=0</span>
+            <span>Av = &lambda;v</span>
+          </div>
+          <ol class="solution-steps">
+            <li>A afirmação 1 é falsa, porque autovetor precisa ser não nulo.</li>
+            <li>O traço de A é <span class="math">4</span> e o determinante é <span class="math">-32</span>.</li>
+            <li>A equação característica é <span class="math">&lambda;²-4&lambda;-32=0</span>, isto é, <span class="math">(&lambda;-8)(&lambda;+4)=0</span>. A afirmação 2 é verdadeira.</li>
+            <li>Para <span class="math">v=[1,3]<sup>T</sup></span>, <span class="math">Av=[8,24]<sup>T</sup>=8v</span>. A afirmação 3 é verdadeira.</li>
+            <li>Para <span class="math">v=[3,2]<sup>T</sup></span>, <span class="math">Av=[3,37]<sup>T</sup></span>, que não é <span class="math">-4v</span>. A afirmação 4 é falsa.</li>
+          </ol>
+          <p class="result">Resposta: afirmações 2 e 3. Alternativa a.</p>
+        </article>
+
+        <article class="exercise-card" id="av3-old-01-q8">
+          <div class="question-meta">Questão 8</div>
+          <h3>Dado o sistema de EDOs lineares de 1ª ordem <span class="math">(D+4)[x]-5y=0</span> e <span class="math">3x-(D-2)[y]=0</span>, assinale a forma matricial correta.</h3>
+          <p>Alternativas: a) <span class="math">x'=[[-4,5],[2,-3]]x</span>; b) <span class="math">x'=[[-4,5],[-3,2]]x</span>; c) <span class="math">x'=[[-4,5],[3,2]]x</span>; d) <span class="math">x'=[[4,-5],[-3,-2]]x</span>; e) <span class="math">x'=[[4,-5],[3,-2]]x</span>.</p>
+          <div class="formula-strip">
+            <span>D[x] = x'</span>
+            <span>D[y] = y'</span>
+            <span>isole as derivadas</span>
+          </div>
+          <ol class="solution-steps">
+            <li>A primeira equação vira <span class="math">x'+4x-5y=0</span>, então <span class="math">x'=-4x+5y</span>.</li>
+            <li>A segunda equação vira <span class="math">3x-(y'-2y)=0</span>.</li>
+            <li>Logo, <span class="math">3x-y'+2y=0</span>, então <span class="math">y'=3x+2y</span>.</li>
+            <li>A matriz é formada pelos coeficientes de <span class="math">x</span> e <span class="math">y</span> em cada equação.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">[x',y']<sup>T</sup>=[[-4,5],[3,2]][x,y]<sup>T</sup></span>. Alternativa c.</p>
+        </article>
+
+        <article class="exercise-card" id="av3-old-01-q9">
+          <div class="question-meta">Questão 9</div>
+          <h3>Seja uma função <span class="math">y(t)</span>. Qual alternativa apresenta o resultado correto de <span class="math">D[ty] - tD[y]</span>?</h3>
+          <p>Alternativas: a) <span class="math">y(t)</span>; b) <span class="math">t+y(t)</span>; c) <span class="math">ty(t)</span>; d) <span class="math">0</span>; e) <span class="math">1</span>.</p>
+          <div class="formula-strip">
+            <span>D[uv] = u'v + uv'</span>
+            <span>D[t] = 1</span>
+          </div>
+          <ol class="solution-steps">
+            <li>Pela regra do produto, <span class="math">D[ty]=D[t]y+tD[y]</span>.</li>
+            <li>Como <span class="math">D[t]=1</span>, fica <span class="math">D[ty]=y+tD[y]</span>.</li>
+            <li>Então <span class="math">D[ty]-tD[y]=(y+tD[y])-tD[y]=y(t)</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">y(t)</span>. Alternativa a.</p>
+        </article>
+
+        <article class="exercise-card" id="av3-old-01-q10">
+          <div class="question-meta">Questão 10</div>
+          <h3>Considere o sistema <span class="math">x'=-2x-3y</span> e <span class="math">y'=x+2y</span>, onde <span class="math">x</span> e <span class="math">y</span> são funções de <span class="math">t</span>. Assinale a alternativa que contém as soluções do sistema.</h3>
+          <p>Alternativas: a) <span class="math">x=c₁e<sup>-t</sup>-(1/2)c₂e<sup>t</sup>, y=5c₁e<sup>-t</sup>+2c₂e<sup>t</sup></span>; b) <span class="math">x=-c₁e<sup>-t</sup>-c₂e<sup>t</sup>, y=2c₁e<sup>-t</sup>+4c₂e<sup>t</sup></span>; c) <span class="math">x=-c₁e<sup>-t</sup>+(1/2)c₂e<sup>t</sup>, y=c₁e<sup>-t</sup>+c₂e<sup>t</sup></span>; d) <span class="math">x=-3c₁e<sup>-t</sup>-c₂e<sup>t</sup>, y=c₁e<sup>-t</sup>+c₂e<sup>t</sup></span>; e) <span class="math">x=-(1/2)c₁e<sup>-t</sup>+(1/2)c₂e<sup>t</sup>, y=(1/2)c₁e<sup>-t</sup>+c₂e<sup>t</sup></span>.</p>
+          <div class="formula-strip">
+            <span>x' = Ax</span>
+            <span>x(t)=c₁v₁e<sup>&lambda;₁t</sup> + c₂v₂e<sup>&lambda;₂t</sup></span>
+          </div>
+          <ol class="solution-steps">
+            <li>A matriz é <span class="math">A=[[-2,-3],[1,2]]</span>.</li>
+            <li>A equação característica tem autovalores <span class="math">&lambda;=-1</span> e <span class="math">&lambda;=1</span>.</li>
+            <li>Para <span class="math">&lambda;=-1</span>, um autovetor é <span class="math">[-3,1]<sup>T</sup></span>.</li>
+            <li>Para <span class="math">&lambda;=1</span>, um autovetor é <span class="math">[-1,1]<sup>T</sup></span>.</li>
+            <li>A solução geral é <span class="math">c₁[-3,1]<sup>T</sup>e<sup>-t</sup> + c₂[-1,1]<sup>T</sup>e<sup>t</sup></span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">x=-3c₁e<sup>-t</sup>-c₂e<sup>t</sup></span> e <span class="math">y=c₁e<sup>-t</sup>+c₂e<sup>t</sup></span>. Alternativa d.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="study-block" id="av3-old-02">
+      <div class="section-heading">
+        <p class="eyebrow">Prova 2378284.0</p>
+        <h2>AV3 antiga 02</h2>
+        <p>Esta prova repete os principais modelos: linearidade, derivada com operador D, autovalores, tanques e solução de sistemas.</p>
+      </div>
+
+      <div class="exercise-list">
+        <article class="exercise-card" id="av3-old-02-q1">
+          <div class="question-meta">Questão 1</div>
+          <h3>Considere as transformações: 1. <span class="math">T:V&rarr;W</span>, dada por <span class="math">T(v)=0</span>; 2. <span class="math">T:R²&rarr;R²</span>, dada por <span class="math">T(x,y)=(x+1,y)</span>; 3. <span class="math">T:R²&rarr;R</span>, dada por <span class="math">T(x,y)=xy</span>. Quais são lineares?</h3>
+          <p>Alternativas: a) apenas 2; b) apenas 3; c) apenas 1; d) 1 e 3; e) 1 e 2.</p>
+          <div class="formula-strip">
+            <span>teste rápido: T(0)=0</span>
+            <span>teste de soma</span>
+          </div>
+          <ol class="solution-steps">
+            <li>A transformação 1 é a transformação nula; ela é linear.</li>
+            <li>A transformação 2 não é linear, pois <span class="math">T(0,0)=(1,0)</span>, não <span class="math">(0,0)</span>.</li>
+            <li>A transformação 3 também não é linear: <span class="math">T(1,0)=0</span> e <span class="math">T(0,1)=0</span>, mas <span class="math">T(1,1)=1</span>.</li>
+          </ol>
+          <p class="result">Resposta: apenas a transformação 1. Alternativa c.</p>
+        </article>
+
+        <article class="exercise-card" id="av3-old-02-q2">
+          <div class="question-meta">Questão 2</div>
+          <h3>Considere <span class="math">y(t)=t²</span>. Qual alternativa mostra o resultado correto de <span class="math">D[ty]</span>?</h3>
+          <p>Alternativas: a) <span class="math">2t²</span>; b) <span class="math">t²+2t</span>; c) <span class="math">3t²</span>; d) <span class="math">2t</span>; e) <span class="math">2t²+t</span>.</p>
+          <div class="formula-strip">
+            <span>substitua y(t)</span>
+            <span>ou use regra do produto</span>
+          </div>
+          <ol class="solution-steps">
+            <li>Como <span class="math">y(t)=t²</span>, então <span class="math">t y(t)=t&middot;t²=t³</span>.</li>
+            <li>Derivando, <span class="math">D[t³]=3t²</span>.</li>
+            <li>Pela regra do produto também dá: <span class="math">D[ty]=y+tD[y]=t²+t(2t)=3t²</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">3t²</span>. Alternativa c.</p>
+        </article>
+
+        <article class="exercise-card" id="av3-old-02-q3">
+          <div class="question-meta">Questão 3</div>
+          <h3>Dada a matriz <span class="math">A=[[5,-6],[2,-2]]</span>, considere: 1. A matriz A não possui autovalores reais. 2. Os autovalores são <span class="math">&lambda;=1</span> e <span class="math">&lambda;=2</span>. 3. <span class="math">v=[2,1]<sup>T</sup></span> é autovetor associado a <span class="math">&lambda;=-1</span>. 4. <span class="math">v=[3,2]<sup>T</sup></span> é autovetor associado a <span class="math">&lambda;=1</span>. Quais estão corretas?</h3>
+          <p>Alternativas: a) afirmações 1, 3 e 4; b) afirmações 2 e 4; c) afirmações 2, 3 e 4; d) afirmações 2 e 3; e) afirmações 1 e 2.</p>
+          <div class="formula-strip">
+            <span>det(A - &lambda;I)=0</span>
+            <span>Av = &lambda;v</span>
+          </div>
+          <ol class="solution-steps">
+            <li>O traço é <span class="math">3</span> e o determinante é <span class="math">2</span>.</li>
+            <li>A equação característica é <span class="math">&lambda;²-3&lambda;+2=0</span>, então <span class="math">&lambda;=1</span> e <span class="math">&lambda;=2</span>. A afirmação 2 é verdadeira e a 1 é falsa.</li>
+            <li>Para <span class="math">[2,1]<sup>T</sup></span>, <span class="math">Av=[4,2]<sup>T</sup>=2[2,1]<sup>T</sup></span>. Não é autovetor de <span class="math">&lambda;=-1</span>. A afirmação 3 é falsa.</li>
+            <li>Para <span class="math">[3,2]<sup>T</sup></span>, <span class="math">Av=[3,2]<sup>T</sup></span>. A afirmação 4 é verdadeira.</li>
+          </ol>
+          <p class="result">Resposta: afirmações 2 e 4. Alternativa b.</p>
+        </article>
+
+        <article class="exercise-card" id="av3-old-02-q4">
+          <div class="question-meta">Questão 4</div>
+          <h3>Considere o sistema de EDOs de 1ª ordem <span class="math">x'=y</span> e <span class="math">y'=x</span>. Qual alternativa apresenta um autovalor da matriz do sistema?</h3>
+          <p>Alternativas: a) <span class="math">0</span>; b) <span class="math">1/2</span>; c) <span class="math">-1/2</span>; d) <span class="math">2</span>; e) <span class="math">1</span>.</p>
+          <div class="formula-strip">
+            <span>A = [[0,1],[1,0]]</span>
+            <span>det(A - &lambda;I)=0</span>
+          </div>
+          <ol class="solution-steps">
+            <li>A matriz do sistema é <span class="math">A=[[0,1],[1,0]]</span>.</li>
+            <li><span class="math">A-&lambda;I=[[-&lambda;,1],[1,-&lambda;]]</span>.</li>
+            <li>O determinante é <span class="math">&lambda;²-1</span>.</li>
+            <li>Portanto, <span class="math">&lambda;=1</span> ou <span class="math">&lambda;=-1</span>.</li>
+          </ol>
+          <p class="result">Resposta: um autovalor listado é <span class="math">1</span>. Alternativa e.</p>
+        </article>
+
+        <article class="exercise-card" id="av3-old-02-q5">
+          <div class="question-meta">Questão 5</div>
+          <h3>O vetor <span class="math">x(t)=[1,-2]<sup>T</sup>e<sup>-t</sup></span> é solução de qual sistema proposto?</h3>
+          <p>Alternativas: a) <span class="math">x'=[[1,4],[1,1]]x</span>; b) <span class="math">x'=[[1,1],[-4,4]]x</span>; c) <span class="math">x'=[[-4,1],[-2,1]]x</span>; d) <span class="math">x'=[[1,-4],[-1,1]]x</span>; e) <span class="math">x'=[[1,1],[4,1]]x</span>.</p>
+          <div class="formula-strip">
+            <span>x(t)=ve<sup>&lambda;t</sup></span>
+            <span>Av=&lambda;v</span>
+          </div>
+          <ol class="solution-steps">
+            <li>Aqui <span class="math">v=[1,-2]<sup>T</sup></span> e <span class="math">&lambda;=-1</span>.</li>
+            <li>Então a matriz correta precisa fazer <span class="math">Av=-v=[-1,2]<sup>T</sup></span>.</li>
+            <li>Na alternativa e: <span class="math">[[1,1],[4,1]][1,-2]<sup>T</sup>=[-1,2]<sup>T</sup></span>.</li>
+          </ol>
+          <p class="result">Resposta: alternativa e.</p>
+        </article>
+
+        <article class="exercise-card" id="av3-old-02-q6">
+          <div class="question-meta">Questão 6</div>
+          <h3>Uma solução de salmoura flui a <span class="math">10 L/min</span> para um tanque de <span class="math">100 L</span>. Inicialmente havia <span class="math">5,0 kg</span> de sal no tanque. A mistura é bem agitada e sai na mesma vazão. A concentração de entrada é <span class="math">0,1 kg/L</span>. Qual será aproximadamente a massa de sal após <span class="math">5 min</span>?</h3>
+          <p>Alternativas: a) <span class="math">9,23 kg</span>; b) <span class="math">6,97 kg</span>; c) <span class="math">1,73 kg</span>; d) <span class="math">8,15 kg</span>; e) <span class="math">3,45 kg</span>.</p>
+          <div class="formula-strip">
+            <span>x' = entrada - saída</span>
+            <span>x(t)=x_lim + (x₀-x_lim)e<sup>-kt</sup></span>
+          </div>
+          <ol class="solution-steps">
+            <li>A entrada de sal é <span class="math">10&middot;0,1=1 kg/min</span>.</li>
+            <li>A saída é <span class="math">10(x/100)=0,1x</span>.</li>
+            <li>O modelo é <span class="math">x'=1-0,1x</span>.</li>
+            <li>O equilíbrio é <span class="math">x=10 kg</span>. Com <span class="math">x(0)=5</span>, a solução é <span class="math">x(t)=10-5e<sup>-0,1t</sup></span>.</li>
+            <li>Em <span class="math">t=5</span>, <span class="math">x(5)=10-5e<sup>-0,5</sup>=6,97 kg</span>.</li>
+          </ol>
+          <p class="result">Resposta: aproximadamente <span class="math">6,97 kg</span>. Alternativa b.</p>
+        </article>
+
+        <article class="exercise-card" id="av3-old-02-q7">
+          <div class="question-meta">Questão 7</div>
+          <h3>Dois tanques de <span class="math">72 L</span> estão interconectados. Entra água pura no tanque A a <span class="math">18 L/min</span>. A vazão de A para B é <span class="math">24 L/min</span>, a vazão de B para A é <span class="math">6 L/min</span> e a saída externa de B é <span class="math">18 L/min</span>. Inicialmente os tanques A e B contêm <span class="math">3,0 kg</span> e <span class="math">6,0 kg</span> de sal. Qual a massa em cada tanque no instante <span class="math">t=10 min</span>?</h3>
+          <p>Alternativas: a) <span class="math">2,54 kg</span> em A e <span class="math">1,13 kg</span> em B; b) <span class="math">2,54 kg</span> em A e <span class="math">5,08 kg</span> em B; c) <span class="math">0,57 kg</span> em A e <span class="math">5,08 kg</span> em B; d) <span class="math">0,57 kg</span> em A e <span class="math">1,13 kg</span> em B; e) <span class="math">0,57 kg</span> em ambos.</p>
+          <div class="formula-strip">
+            <span>x' = -24x/72 + 6y/72</span>
+            <span>y' = 24x/72 - 24y/72</span>
+          </div>
+          <ol class="solution-steps">
+            <li>No tanque A: <span class="math">x'=-x/3+y/12</span>.</li>
+            <li>No tanque B: <span class="math">y'=x/3-y/3</span>.</li>
+            <li>A matriz é a mesma da questão 4 da prova anterior.</li>
+            <li>O vetor inicial <span class="math">[3,6]<sup>T</sup></span> é igual a <span class="math">3[1,2]<sup>T</sup></span>, que é autovetor associado a <span class="math">&lambda;=-1/6</span>.</li>
+            <li>Então <span class="math">x(t)=3e<sup>-t/6</sup></span> e <span class="math">y(t)=6e<sup>-t/6</sup></span>.</li>
+            <li>Em <span class="math">t=10</span>: <span class="math">x(10)=0,57 kg</span> e <span class="math">y(10)=1,13 kg</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">0,57 kg</span> em A e <span class="math">1,13 kg</span> em B. Alternativa d.</p>
+        </article>
+
+        <article class="exercise-card" id="av3-old-02-q8">
+          <div class="question-meta">Questão 8</div>
+          <h3>Considere o sistema <span class="math">x'=x+2y</span> e <span class="math">y'=4x+3y</span>. Assinale a alternativa que contém as soluções do sistema.</h3>
+          <p>Alternativas: a) <span class="math">x=c₁e<sup>-t</sup>-(1/2)c₂e<sup>5t</sup>, y=5c₁e<sup>-t</sup>+2c₂e<sup>5t</sup></span>; b) <span class="math">x=-c₁e<sup>-t</sup>+(1/2)c₂e<sup>5t</sup>, y=c₁e<sup>-t</sup>+c₂e<sup>5t</sup></span>; c) <span class="math">x=c₁e<sup>-t</sup>+c₂e<sup>5t</sup>, y=(1/2)c₁e<sup>-t</sup>+c₂e<sup>5t</sup></span>; d) <span class="math">x=-c₁e<sup>-t</sup>-c₂e<sup>5t</sup>, y=2c₁e<sup>-t</sup>+5c₂e<sup>5t</sup></span>; e) <span class="math">x=-(1/2)c₁e<sup>-t</sup>+(1/2)c₂e<sup>5t</sup>, y=(1/2)c₁e<sup>-t</sup>+c₂e<sup>5t</sup></span>.</p>
+          <div class="formula-strip">
+            <span>autovalores: -1 e 5</span>
+            <span>autovetores geram a solução geral</span>
+          </div>
+          <ol class="solution-steps">
+            <li>A matriz é <span class="math">A=[[1,2],[4,3]]</span>.</li>
+            <li>A equação característica é <span class="math">&lambda;²-4&lambda;-5=0</span>, logo <span class="math">&lambda;=-1</span> e <span class="math">&lambda;=5</span>.</li>
+            <li>Para <span class="math">&lambda;=-1</span>, um autovetor é <span class="math">[-1,1]<sup>T</sup></span>.</li>
+            <li>Para <span class="math">&lambda;=5</span>, um autovetor é <span class="math">[1/2,1]<sup>T</sup></span>.</li>
+            <li>Assim, uma forma da solução é <span class="math">c₁[-1,1]<sup>T</sup>e<sup>-t</sup>+c₂[1/2,1]<sup>T</sup>e<sup>5t</sup></span>.</li>
+          </ol>
+          <p class="result">Resposta: a alternativa b representa diretamente essa solução. A alternativa e é equivalente se a constante do primeiro termo for reescalada, então a questão tem ambiguidade matemática entre b e e.</p>
+        </article>
+
+        <article class="exercise-card" id="av3-old-02-q9">
+          <div class="question-meta">Questão 9</div>
+          <h3>Dado o sistema <span class="math">(D-4)[x]+5y=0</span> e <span class="math">-3x+(D+1)[y]=0</span>, assinale a forma matricial correta.</h3>
+          <p>Alternativas: a) <span class="math">x'=[[4,5],[3,-1]]x</span>; b) <span class="math">x'=[[-4,5],[3,-1]]x</span>; c) <span class="math">x'=[[-4,5],[-3,1]]x</span>; d) <span class="math">x'=[[4,-5],[-3,-1]]x</span>; e) <span class="math">x'=[[4,-5],[3,-1]]x</span>.</p>
+          <div class="formula-strip">
+            <span>D[x]=x'</span>
+            <span>D[y]=y'</span>
+          </div>
+          <ol class="solution-steps">
+            <li>A primeira equação vira <span class="math">x'-4x+5y=0</span>, então <span class="math">x'=4x-5y</span>.</li>
+            <li>A segunda equação vira <span class="math">-3x+y'+y=0</span>, então <span class="math">y'=3x-y</span>.</li>
+            <li>A matriz fica com linhas <span class="math">[4,-5]</span> e <span class="math">[3,-1]</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">[x',y']<sup>T</sup>=[[4,-5],[3,-1]][x,y]<sup>T</sup></span>. Alternativa e.</p>
+        </article>
+
+        <article class="exercise-card" id="av3-old-02-q10">
+          <div class="question-meta">Questão 10</div>
+          <h3>Considere o sistema <span class="math">x'=Ax</span>, com <span class="math">A=[[0,1],[2,1]]</span>. Dadas as condições iniciais <span class="math">x(0)=-1</span> e <span class="math">y(0)=1</span>, qual alternativa fornece <span class="math">x(1)+y(1)</span>?</h3>
+          <p>Alternativas: a) <span class="math">e<sup>-1</sup></span>; b) <span class="math">e</span>; c) <span class="math">1</span>; d) <span class="math">2</span>; e) <span class="math">0</span>.</p>
+          <div class="formula-strip">
+            <span>verifique se o vetor inicial é autovetor</span>
+            <span>Av = &lambda;v</span>
+          </div>
+          <ol class="solution-steps">
+            <li>O vetor inicial é <span class="math">[-1,1]<sup>T</sup></span>.</li>
+            <li>Multiplicando: <span class="math">A[-1,1]<sup>T</sup>=[1,-1]<sup>T</sup></span>.</li>
+            <li>Como <span class="math">[1,-1]<sup>T</sup>=-[-1,1]<sup>T</sup></span>, o vetor inicial é autovetor de autovalor <span class="math">-1</span>.</li>
+            <li>A solução é <span class="math">[x(t),y(t)]<sup>T</sup>=[-1,1]<sup>T</sup>e<sup>-t</sup></span>.</li>
+            <li>Logo, <span class="math">x(t)=-e<sup>-t</sup></span> e <span class="math">y(t)=e<sup>-t</sup></span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">x(1)+y(1)=0</span>. Alternativa e.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="study-block" id="formulas-calculo">
+      <div class="section-heading">
+        <p class="eyebrow">Consulta rápida</p>
+        <h2>Fórmulas usadas nas resoluções</h2>
+      </div>
+
+      <div class="quick-formula-grid">
+        <article><h3>Autovalores</h3><p class="formula">det(A - &lambda;I) = 0</p></article>
+        <article><h3>Autovetor</h3><p class="formula">Av = &lambda;v</p></article>
+        <article><h3>Solução de sistema</h3><p class="formula">x(t)=c₁v₁e<sup>&lambda;₁t</sup>+c₂v₂e<sup>&lambda;₂t</sup></p></article>
+        <article><h3>Mistura</h3><p class="formula">x' = entrada - saída</p></article>
+        <article><h3>Concentração</h3><p class="formula">concentração = massa/volume</p></article>
+        <article><h3>Operador D</h3><p class="formula">D[ty] = y + tD[y]</p></article>
+        <article><h3>Linearidade</h3><p class="formula">T(0)=0; T(u+v)=T(u)+T(v)</p></article>
+        <article><h3>Atalho por variável</h3><p class="formula">z=x-y &rarr; z'=z</p></article>
+      </div>
+    </section>
+  </main>
+
+  <button class="back-to-top" type="button" aria-label="Voltar ao topo">&uarr;</button>
+
+  <footer class="site-footer">
+    <p>StudyHub - Exercícios Sugeridos de Cálculo 3 / MMF.</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

@@ -297,12 +297,28 @@ const searchData = [
     url: "materias/resumos/calculo3-resumo.html#checklist"
   },
   {
-    title: "Questoes de Calculo 3",
-    description: "Exercicios abertos com resolucoes comentadas sobre autovalores, sistemas, Euler e RK4.",
+    title: "Exercicios Sugeridos de Calculo 3",
+    description: "Pagina com duas provas antigas de AV3 resolvidas, com enunciado completo, alternativas e passo a passo.",
     category: "Calculo 3",
     type: "Questao",
-    keywords: ["questoes", "exercicios", "resolucao", "euler", "runge-kutta", "edo"],
-    url: "materias/calculo3.html#quiz"
+    keywords: ["questoes", "exercicios", "exercicios sugeridos", "resolucao", "calculo 3", "mmf", "av3", "prova antiga", "autovalores", "mistura"],
+    url: "materias/exercicios/calculo3-exercicios.html"
+  },
+  {
+    title: "AV3 antiga 01 de Calculo 3",
+    description: "Questoes resolvidas da prova 2378526.0 sobre mistura, autovalores, transformacoes lineares, operador D e sistemas.",
+    category: "Calculo 3",
+    type: "Questao",
+    keywords: ["av3 old 01", "prova antiga", "calculo 3", "mmf", "salmoura", "tanques", "autovalores", "operador d"],
+    url: "materias/exercicios/calculo3-exercicios.html#av3-old-01"
+  },
+  {
+    title: "AV3 antiga 02 de Calculo 3",
+    description: "Questoes resolvidas da prova 2378284.0 sobre linearidade, derivadas, autovalores, tanques e sistemas de EDOs.",
+    category: "Calculo 3",
+    type: "Questao",
+    keywords: ["av3 old 02", "prova antiga", "calculo 3", "mmf", "linearidade", "derivada", "tanques", "sistemas"],
+    url: "materias/exercicios/calculo3-exercicios.html#av3-old-02"
   }
 ];
 

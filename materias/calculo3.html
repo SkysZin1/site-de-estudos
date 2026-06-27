@@ -29,6 +29,7 @@
       </p>
       <div class="page-title-actions" id="resumo-facil">
         <a class="nav-button summary-top-button" href="resumos/calculo3-resumo.html">Acessar Resumo Fácil</a>
+        <a class="nav-button exercise-top-button" href="exercicios/calculo3-exercicios.html">Exercícios Sugeridos</a>
       </div>
     </section>
 
@@ -36,7 +37,6 @@
       <a href="#visao-geral">Visão geral</a>
       <a href="#trilha">Trilha</a>
       <a href="#assuntos">Assuntos</a>
-      <a href="#quiz">Questões</a>
     </nav>
 
     <section class="study-block" id="visao-geral">
@@ -569,185 +569,6 @@
       </article>
     </section>
 
-    <section class="study-block" id="quiz">
-      <div class="section-heading">
-        <p class="eyebrow">Questões abertas</p>
-        <h2>Resolva e confira a resolução</h2>
-      </div>
-
-      <div class="open-question-list">
-        <article class="open-question-card">
-          <div class="question-meta">Questão 1</div>
-          <h3>Calcule os autovalores de <span class="math">A=[[4,0],[0,-2]]</span>.</h3>
-          <p class="question-hint">Use <span class="math">det(A-&lambda;I)=0</span>.</p>
-          <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
-          <div class="solution-panel" hidden>
-            <h4>Resolução comentada</h4>
-            <p>Como a matriz é diagonal, os autovalores são as entradas da diagonal principal. Também pela equação característica: <span class="math">det([[4-&lambda;,0],[0,-2-&lambda;]])=(4-&lambda;)(-2-&lambda;)=0</span>. Logo, <span class="math">&lambda;=4</span> e <span class="math">&lambda;=-2</span>.</p>
-          </div>
-        </article>
-
-        <article class="open-question-card">
-          <div class="question-meta">Questão 2</div>
-          <h3>Escreva em forma matricial o sistema <span class="math">x'=2x-y</span> e <span class="math">y'=3x+4y</span>.</h3>
-          <p class="question-hint">Identifique a matriz dos coeficientes e o vetor das incógnitas.</p>
-          <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
-          <div class="solution-panel" hidden>
-            <h4>Resolução comentada</h4>
-            <p>O vetor das incógnitas é <span class="math">v=[x,y]<sup>T</sup></span>. A matriz dos coeficientes é <span class="math">A=[[2,-1],[3,4]]</span>. Assim, a forma compacta é <span class="math">v'=Av</span>.</p>
-          </div>
-        </article>
-
-        <article class="open-question-card">
-          <div class="question-meta">Questão 3</div>
-          <h3>Explique por que soluções da forma <span class="math">x(t)=ve<sup>&lambda;t</sup></span> aparecem em sistemas <span class="math">x'=Ax</span>.</h3>
-          <p class="question-hint">Substitua essa forma no sistema e observe o que sobra.</p>
-          <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
-          <div class="solution-panel" hidden>
-            <h4>Resolução comentada</h4>
-            <p>Se <span class="math">x(t)=ve<sup>&lambda;t</sup></span>, então <span class="math">x'(t)=&lambda;ve<sup>&lambda;t</sup></span>. Substituindo em <span class="math">x'=Ax</span>: <span class="math">&lambda;ve<sup>&lambda;t</sup>=Ave<sup>&lambda;t</sup></span>. Cancelando a exponencial, obtemos <span class="math">Av=&lambda;v</span>, que é o problema de autovalor.</p>
-          </div>
-        </article>
-
-        <article class="open-question-card">
-          <div class="question-meta">Questão 4</div>
-          <h3>Monte a EDO de um tanque com volume constante de <span class="math">80 L</span>, entrada de <span class="math">2 L/min</span> com concentração <span class="math">0,05 kg/L</span> e saída de <span class="math">2 L/min</span>.</h3>
-          <p class="question-hint">Use massa de sal <span class="math">x(t)</span>, não concentração, como incógnita.</p>
-          <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
-          <div class="solution-panel" hidden>
-            <h4>Resolução comentada</h4>
-            <p>A entrada de sal é <span class="math">2 &middot; 0,05 = 0,10 kg/min</span>. A concentração no tanque é <span class="math">x/80</span>, então a saída de sal é <span class="math">2(x/80)=x/40</span>. Logo, <span class="math">x'=0,10 - x/40</span>.</p>
-          </div>
-        </article>
-
-        <article class="open-question-card">
-          <div class="question-meta">Questão 5</div>
-          <h3>Aplique um passo de Euler em <span class="math">y'=x+y</span>, com <span class="math">y(0)=1</span> e <span class="math">h=0,1</span>.</h3>
-          <p class="question-hint">Calcule <span class="math">x<sub>1</sub></span> e <span class="math">y<sub>1</sub></span>.</p>
-          <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
-          <div class="solution-panel" hidden>
-            <h4>Resolução comentada</h4>
-            <p>Temos <span class="math">x<sub>0</sub>=0</span>, <span class="math">y<sub>0</sub>=1</span> e <span class="math">f(0,1)=1</span>. Então <span class="math">x<sub>1</sub>=0+0,1=0,1</span> e <span class="math">y<sub>1</sub>=1+0,1&middot;1=1,1</span>.</p>
-          </div>
-        </article>
-
-        <article class="open-question-card">
-          <div class="question-meta">Questão 6</div>
-          <h3>Transforme <span class="math">y''+4y'+3y=0</span> em um sistema de duas EDOs de 1ª ordem.</h3>
-          <p class="question-hint">Use <span class="math">u=y</span> e <span class="math">v=y'</span>.</p>
-          <button class="nav-button solution-toggle" type="button" data-solution-toggle aria-expanded="false">Mostrar resolução</button>
-          <div class="solution-panel" hidden>
-            <h4>Resolução comentada</h4>
-            <p>Defina <span class="math">u=y</span> e <span class="math">v=y'</span>. Então <span class="math">u'=v</span>. Da EDO, <span class="math">y''=-4y'-3y</span>, logo <span class="math">v'=-4v-3u</span>. O sistema é <span class="math">u'=v</span> e <span class="math">v'=-4v-3u</span>.</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="quiz-panel" data-quiz hidden aria-hidden="true">
-        <div class="quiz-toolbar">
-          <p data-quiz-score>Responda às questões para ver seu desempenho.</p>
-          <button class="nav-button" type="button" data-quiz-reset>Recomeçar</button>
-        </div>
-
-        <article class="quiz-card" data-correct="d">
-          <h3>1. Os autovalores de uma matriz <span class="math">A</span> são encontrados por:</h3>
-          <div class="quiz-options">
-            <button type="button" data-option="a">A + I = 0</button>
-            <button type="button" data-option="b">Ax = b</button>
-            <button type="button" data-option="c">A<sup>T</sup> = A</button>
-            <button type="button" data-option="d">det(A - &lambda;I) = 0</button>
-          </div>
-          <div class="quiz-feedback" hidden>
-            <p class="feedback-title" data-feedback-title></p>
-            <p><strong>Resolução:</strong> a equação característica é <span class="math">det(A - &lambda;I)=0</span>. Suas raízes são os autovalores.</p>
-          </div>
-        </article>
-
-        <article class="quiz-card" data-correct="b">
-          <h3>2. Para <span class="math">A = [[3,0],[0,5]]</span>, os autovalores são:</h3>
-          <div class="quiz-options">
-            <button type="button" data-option="a">0 e 1</button>
-            <button type="button" data-option="b">3 e 5</button>
-            <button type="button" data-option="c">8 e 15</button>
-            <button type="button" data-option="d">-3 e -5</button>
-          </div>
-          <div class="quiz-feedback" hidden>
-            <p class="feedback-title" data-feedback-title></p>
-            <p><strong>Resolução:</strong> em matriz diagonal, os autovalores são as entradas da diagonal principal. Logo, <span class="math">&lambda;=3</span> e <span class="math">&lambda;=5</span>.</p>
-          </div>
-        </article>
-
-        <article class="quiz-card" data-correct="c">
-          <h3>3. Um sistema linear homogêneo de 1ª ordem com coeficientes constantes pode ser escrito como:</h3>
-          <div class="quiz-options">
-            <button type="button" data-option="a">Ax = b</button>
-            <button type="button" data-option="b">y = mx + b</button>
-            <button type="button" data-option="c">x' = Ax</button>
-            <button type="button" data-option="d">x' = A(t)x + f(t), com f(t) diferente de zero</button>
-          </div>
-          <div class="quiz-feedback" hidden>
-            <p class="feedback-title" data-feedback-title></p>
-            <p><strong>Resolução:</strong> homogêneo significa sem termo externo. Com coeficientes constantes, a forma compacta é <span class="math">x' = Ax</span>.</p>
-          </div>
-        </article>
-
-        <article class="quiz-card" data-correct="a">
-          <h3>4. No método dos autovalores para <span class="math">x'=Ax</span>, uma solução não trivial tem a forma:</h3>
-          <div class="quiz-options">
-            <button type="button" data-option="a">x(t) = ve<sup>&lambda;t</sup></button>
-            <button type="button" data-option="b">x(t) = v + &lambda;t²</button>
-            <button type="button" data-option="c">x(t) = A + t</button>
-            <button type="button" data-option="d">x(t) = det(A)</button>
-          </div>
-          <div class="quiz-feedback" hidden>
-            <p class="feedback-title" data-feedback-title></p>
-            <p><strong>Resolução:</strong> substituindo <span class="math">x(t)=ve<sup>&lambda;t</sup></span> em <span class="math">x'=Ax</span>, chega-se a <span class="math">Av=&lambda;v</span>.</p>
-          </div>
-        </article>
-
-        <article class="quiz-card" data-correct="d">
-          <h3>5. Em um problema de mistura, se um tanque tem massa de sal <span class="math">x(t)</span> e volume <span class="math">V</span>, a concentração é:</h3>
-          <div class="quiz-options">
-            <button type="button" data-option="a">V/x(t)</button>
-            <button type="button" data-option="b">x'(t)V</button>
-            <button type="button" data-option="c">x(t) + V</button>
-            <button type="button" data-option="d">x(t)/V</button>
-          </div>
-          <div class="quiz-feedback" hidden>
-            <p class="feedback-title" data-feedback-title></p>
-            <p><strong>Resolução:</strong> concentração é quantidade por volume. Se <span class="math">x(t)</span> é massa e <span class="math">V</span> é volume, então concentração = <span class="math">x(t)/V</span>.</p>
-          </div>
-        </article>
-
-        <article class="quiz-card" data-correct="b">
-          <h3>6. No método de Euler para <span class="math">y'=f(x,y)</span>, a fórmula básica é:</h3>
-          <div class="quiz-options">
-            <button type="button" data-option="a">y<sub>n+1</sub> = y<sub>n</sub> - h/f(x<sub>n</sub>,y<sub>n</sub>)</button>
-            <button type="button" data-option="b">y<sub>n+1</sub> = y<sub>n</sub> + h f(x<sub>n</sub>,y<sub>n</sub>)</button>
-            <button type="button" data-option="c">y<sub>n+1</sub> = det(A - &lambda;I)</button>
-            <button type="button" data-option="d">y<sub>n+1</sub> = y<sub>n</sub><sup>2</sup></button>
-          </div>
-          <div class="quiz-feedback" hidden>
-            <p class="feedback-title" data-feedback-title></p>
-            <p><strong>Resolução:</strong> Euler avança usando a inclinação no ponto atual: <span class="math">y<sub>n+1</sub> = y<sub>n</sub> + h f(x<sub>n</sub>,y<sub>n</sub>)</span>.</p>
-          </div>
-        </article>
-
-        <article class="quiz-card" data-correct="c">
-          <h3>7. Sobre o RK4, a afirmação correta é:</h3>
-          <div class="quiz-options">
-            <button type="button" data-option="a">usa apenas a inclinação inicial, como Euler simples.</button>
-            <button type="button" data-option="b">não pode ser usado em engenharia.</button>
-            <button type="button" data-option="c">usa quatro estimativas de inclinação para atualizar a solução.</button>
-            <button type="button" data-option="d">só serve para matrizes sem autovalores.</button>
-          </div>
-          <div class="quiz-feedback" hidden>
-            <p class="feedback-title" data-feedback-title></p>
-            <p><strong>Resolução:</strong> o RK4 calcula <span class="math">k<sub>1</sub></span>, <span class="math">k<sub>2</sub></span>, <span class="math">k<sub>3</sub></span> e <span class="math">k<sub>4</sub></span>, combinando essas inclinações com pesos para obter maior precisão.</p>
-          </div>
-        </article>
-      </div>
-    </section>
   </main>
 
   <button class="back-to-top" type="button" aria-label="Voltar ao topo">&uarr;</button>
