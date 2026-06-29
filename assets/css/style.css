@@ -2388,6 +2388,141 @@ body {
   color: var(--navy);
 }
 
+.formula-drill-page .study-block {
+  scroll-margin-top: 96px;
+}
+
+.formula-sheet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.formula-sheet-card {
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 12px 28px rgba(23, 32, 51, 0.08);
+}
+
+.formula-sheet-card h3 {
+  margin: 0 0 12px;
+  color: var(--primary-dark);
+  font-size: 1rem;
+}
+
+.formula-sheet-card .formula {
+  margin: 7px 0;
+  overflow-wrap: anywhere;
+}
+
+.variable-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 12px;
+}
+
+.variable-grid article {
+  display: grid;
+  gap: 4px;
+  min-height: 108px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.variable-grid strong {
+  color: var(--primary-dark);
+  font-size: 1.08rem;
+}
+
+.variable-grid span {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.variable-grid small {
+  color: var(--muted);
+}
+
+.formula-quiz-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.formula-quiz-card {
+  padding: clamp(20px, 4vw, 28px);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.formula-quiz-card h3 {
+  margin: 0 0 16px;
+  color: var(--navy);
+  font-size: clamp(1.02rem, 2vw, 1.2rem);
+  line-height: 1.4;
+}
+
+.formula-drill-page .quiz-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+}
+
+.formula-drill-page .quiz-options button {
+  min-height: 46px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-soft);
+  color: var(--text);
+  font: inherit;
+  font-weight: 800;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.formula-drill-page .quiz-options button:hover,
+.formula-drill-page .quiz-options button:focus-visible {
+  border-color: var(--primary);
+  background: #e8f4f7;
+  transform: translateY(-1px);
+}
+
+.formula-drill-page .quiz-options button.is-correct {
+  border-color: #2f9e7e;
+  background: #dcfce7;
+  color: #14532d;
+}
+
+.formula-drill-page .quiz-options button.is-wrong {
+  border-color: #dc2626;
+  background: #fee2e2;
+  color: #7f1d1d;
+}
+
+.formula-drill-page .quiz-feedback {
+  margin-top: 14px;
+  padding: 14px;
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+  background: var(--surface-soft);
+  color: var(--muted);
+}
+
+.formula-drill-page .quiz-feedback p {
+  margin: 0;
+}
+
+.formula-drill-page .quiz-feedback p + p {
+  margin-top: 6px;
+}
+
 .solution-steps {
   display: grid;
   gap: 10px;

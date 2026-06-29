@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fórmulas e Variáveis FOE | StudyHub</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navegação principal">
+      <a class="brand" href="../../index.html">StudyHub</a>
+      <div class="nav-links">
+        <a href="../foe.html" aria-current="page">FOE</a>
+        <a href="../ft.html">FT</a>
+        <a href="../calculo3.html">Cálculo 3</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="study-page exercise-page formula-drill-page">
+    <section class="page-title">
+      <a class="nav-button" href="../foe.html">&larr; Voltar para FOE</a>
+      <p class="eyebrow">FOE</p>
+      <h1>Fórmulas e Variáveis</h1>
+      <p>
+        Treino rápido para decorar símbolos, unidades e aplicações diretas das fórmulas do formulário da AV3.
+      </p>
+      <div class="page-title-actions">
+        <a class="nav-button" href="foe-exercicios.html">Exercícios Sugeridos</a>
+      </div>
+    </section>
+
+    <nav class="jump-nav" aria-label="Navegação da página">
+      <a href="#formulario-base">Formulário</a>
+      <a href="#variaveis">Variáveis</a>
+      <a href="#treino-formulas">Treino</a>
+    </nav>
+
+    <section class="study-block" id="formulario-base">
+      <div class="section-heading">
+        <p class="eyebrow">Base da professora</p>
+        <h2>Formulário AV3 FOE em blocos</h2>
+        <p>
+          Esta seção reorganiza o formulário em grupos para ficar mais fácil escolher a fórmula antes de resolver.
+        </p>
+      </div>
+
+      <div class="formula-sheet-grid">
+        <article class="formula-sheet-card">
+          <h3>Constantes</h3>
+          <p class="formula">&epsilon;<sub>0</sub> = 8,85&times;10<sup>-12</sup> C²/(N.m²)</p>
+          <p class="formula">&mu;<sub>0</sub> = 4&pi;&times;10<sup>-7</sup> T.m/A</p>
+        </article>
+
+        <article class="formula-sheet-card">
+          <h3>Fluxo e indução</h3>
+          <p class="formula">&Phi;<sub>B</sub> = &int; B &middot; dA</p>
+          <p class="formula">&Phi;<sub>B</sub> = BAcos&theta;</p>
+          <p class="formula">&epsilon; = -d&Phi;<sub>B</sub>/dt</p>
+          <p class="formula">&epsilon;<sub>N</sub> = -N d&Phi;<sub>B</sub>/dt</p>
+          <p class="formula">&epsilon; = BLv</p>
+        </article>
+
+        <article class="formula-sheet-card">
+          <h3>Indutor e RL</h3>
+          <p class="formula">L = N&Phi;<sub>B</sub>/i</p>
+          <p class="formula">L = &mu;<sub>0</sub>N²A/l</p>
+          <p class="formula">&epsilon; = -L di/dt</p>
+          <p class="formula">U = (1/2)LI²</p>
+          <p class="formula">&tau; = L/R</p>
+          <p class="formula">i(t) = (V/R)(1 - e<sup>-t/&tau;</sup>)</p>
+          <p class="formula">i(t) = (V/R)e<sup>-t/&tau;</sup></p>
+        </article>
+
+        <article class="formula-sheet-card">
+          <h3>Oscilações LC/RLC</h3>
+          <p class="formula">d²q/dt² + (R/L)dq/dt + q/(LC) = 0</p>
+          <p class="formula">&gamma; = R/(2L)</p>
+          <p class="formula">&omega;<sub>0</sub> = 1/&radic;(LC)</p>
+          <p class="formula">U<sub>E</sub> = q²/(2C)</p>
+          <p class="formula">U<sub>B</sub> = (1/2)Li²</p>
+          <p class="formula">E = Q²/(2C) = L&omega;<sub>0</sub>²Q²/2</p>
+        </article>
+
+        <article class="formula-sheet-card">
+          <h3>Corrente alternada</h3>
+          <p class="formula">i(t) = Icos(&omega;t)</p>
+          <p class="formula">I<sub>rms</sub> = I/&radic;2</p>
+          <p class="formula">V<sub>rms</sub> = V/&radic;2</p>
+          <p class="formula">v<sub>R</sub>(t) = V<sub>R</sub>cos(&omega;t)</p>
+          <p class="formula">P&#772; = (1/2)V<sub>R</sub>I</p>
+        </article>
+
+        <article class="formula-sheet-card">
+          <h3>L e C em CA</h3>
+          <p class="formula">v<sub>L</sub>(t) = V<sub>L</sub>cos(&omega;t + &pi;/2)</p>
+          <p class="formula">X<sub>L</sub> = &omega;L</p>
+          <p class="formula">V<sub>L</sub> = IX<sub>L</sub></p>
+          <p class="formula">v<sub>C</sub>(t) = V<sub>C</sub>cos(&omega;t - &pi;/2)</p>
+          <p class="formula">X<sub>C</sub> = 1/(&omega;C)</p>
+          <p class="formula">V<sub>C</sub> = IX<sub>C</sub></p>
+        </article>
+
+        <article class="formula-sheet-card">
+          <h3>RLC em série</h3>
+          <p class="formula">V = &radic;[V<sub>R</sub>² + (V<sub>L</sub> - V<sub>C</sub>)²]</p>
+          <p class="formula">Z = &radic;[R² + (X<sub>L</sub> - X<sub>C</sub>)²]</p>
+          <p class="formula">V = IZ</p>
+          <p class="formula">tan&phi; = (X<sub>L</sub> - X<sub>C</sub>)/R</p>
+          <p class="formula">P&#772; = (1/2)VIcos&phi; = V<sub>rms</sub>I<sub>rms</sub>cos&phi;</p>
+          <p class="formula">V<sub>rms</sub> = ZI<sub>rms</sub></p>
+        </article>
+
+        <article class="formula-sheet-card">
+          <h3>Transformadores</h3>
+          <p class="formula">V<sub>p</sub>/N<sub>p</sub> = V<sub>s</sub>/N<sub>s</sub></p>
+          <p class="formula">I<sub>p</sub>V<sub>p</sub> = I<sub>s</sub>V<sub>s</sub></p>
+        </article>
+
+        <article class="formula-sheet-card">
+          <h3>Maxwell</h3>
+          <p class="formula">I<sub>d</sub> = &epsilon;<sub>0</sub>d&Phi;<sub>E</sub>/dt</p>
+          <p class="formula">&oint; E &middot; dA = Q<sub>int</sub>/&epsilon;<sub>0</sub></p>
+          <p class="formula">&oint; B &middot; dA = 0</p>
+          <p class="formula">&oint; E &middot; ds = -d/dt &int; B &middot; dA</p>
+          <p class="formula">&oint; B &middot; ds = &mu;<sub>0</sub>I + &mu;<sub>0</sub>&epsilon;<sub>0</sub>d&Phi;<sub>E</sub>/dt</p>
+          <p class="formula">F = qE + qv &times; B</p>
+        </article>
+
+        <article class="formula-sheet-card">
+          <h3>Ondas eletromagnéticas</h3>
+          <p class="formula">c = 1/&radic;(&mu;<sub>0</sub>&epsilon;<sub>0</sub>)</p>
+          <p class="formula">c = &omega;/k = E<sub>0</sub>/B<sub>0</sub></p>
+          <p class="formula">E<sub>y</sub>(x,t) = E<sub>0</sub>cos(kx - &omega;t)</p>
+          <p class="formula">B<sub>z</sub>(x,t) = B<sub>0</sub>cos(kx - &omega;t)</p>
+          <p class="formula">S = (1/&mu;<sub>0</sub>)(E &times; B)</p>
+          <p class="formula">I<sub>em</sub> = (1/2)E<sub>0</sub>B<sub>0</sub>/&mu;<sub>0</sub></p>
+          <p class="formula">&eta;<sub>em</sub> = (1/2)&epsilon;<sub>0</sub>E<sub>0</sub>²</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="study-block" id="variaveis">
+      <div class="section-heading">
+        <p class="eyebrow">Memorização</p>
+        <h2>Variáveis que mais aparecem</h2>
+      </div>
+
+      <div class="variable-grid">
+        <article><strong>&Phi;<sub>B</sub></strong><span>fluxo magnético</span><small>Wb</small></article>
+        <article><strong>&Phi;<sub>E</sub></strong><span>fluxo elétrico</span><small>N.m²/C</small></article>
+        <article><strong>&epsilon;</strong><span>fem induzida</span><small>V</small></article>
+        <article><strong>B</strong><span>campo magnético</span><small>T</small></article>
+        <article><strong>E</strong><span>campo elétrico</span><small>V/m</small></article>
+        <article><strong>L</strong><span>indutância</span><small>H</small></article>
+        <article><strong>C</strong><span>capacitância</span><small>F</small></article>
+        <article><strong>R</strong><span>resistência</span><small>&Omega;</small></article>
+        <article><strong>&tau;</strong><span>constante de tempo RL</span><small>s</small></article>
+        <article><strong>&omega;</strong><span>frequência angular</span><small>rad/s</small></article>
+        <article><strong>X<sub>L</sub></strong><span>reatância indutiva</span><small>&Omega;</small></article>
+        <article><strong>X<sub>C</sub></strong><span>reatância capacitiva</span><small>&Omega;</small></article>
+        <article><strong>Z</strong><span>impedância</span><small>&Omega;</small></article>
+        <article><strong>&phi;</strong><span>ângulo de fase</span><small>graus/rad</small></article>
+        <article><strong>c</strong><span>velocidade da luz</span><small>m/s</small></article>
+        <article><strong>I<sub>em</sub></strong><span>intensidade média</span><small>W/m²</small></article>
+      </div>
+    </section>
+
+    <section class="study-block" id="treino-formulas">
+      <div class="section-heading">
+        <p class="eyebrow">Treino ativo</p>
+        <h2>Questões rápidas de aplicação direta</h2>
+        <p>
+          Cada questão dá quase todos os dados. Depois da escolha, aparece a fórmula usada e a conta.
+        </p>
+      </div>
+
+      <div class="formula-quiz-grid">
+        <article class="formula-quiz-card" data-correct="A">
+          <div class="question-meta">Questão 01</div>
+          <h3>Uma espira tem <span class="math">A=0,20 m²</span>, <span class="math">B=0,50 T</span> e <span class="math">&theta;=60°</span>. Qual é <span class="math">&Phi;<sub>B</sub></span>?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="A">A) 0,050 Wb</button>
+            <button type="button" data-option="B">B) 0,10 Wb</button>
+            <button type="button" data-option="C">C) 0,20 Wb</button>
+            <button type="button" data-option="D">D) 0,50 Wb</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p><strong>Resposta correta: A.</strong></p>
+            <p>Use <span class="math">&Phi;<sub>B</sub>=BAcos&theta;</span>. Então <span class="math">&Phi;<sub>B</sub>=0,50&middot;0,20&middot;cos60°=0,050 Wb</span>.</p>
+          </div>
+        </article>
+
+        <article class="formula-quiz-card" data-correct="B">
+          <div class="question-meta">Questão 02</div>
+          <h3>Uma bobina com <span class="math">40</span> espiras sofre variação de fluxo de <span class="math">0,015 Wb</span> em <span class="math">0,30 s</span>. Qual é o módulo da fem média?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="A">A) 0,50 V</button>
+            <button type="button" data-option="B">B) 2,0 V</button>
+            <button type="button" data-option="C">C) 4,5 V</button>
+            <button type="button" data-option="D">D) 18 V</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p><strong>Resposta correta: B.</strong></p>
+            <p>Use <span class="math">|&epsilon;|=N|&Delta;&Phi;<sub>B</sub>|/&Delta;t</span>. Então <span class="math">|&epsilon;|=40&middot;0,015/0,30=2,0 V</span>.</p>
+          </div>
+        </article>
+
+        <article class="formula-quiz-card" data-correct="C">
+          <div class="question-meta">Questão 03</div>
+          <h3>Uma barra de <span class="math">0,80 m</span> move-se a <span class="math">3,0 m/s</span> em um campo de <span class="math">0,25 T</span>. Qual fem é induzida?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="A">A) 0,20 V</button>
+            <button type="button" data-option="B">B) 0,40 V</button>
+            <button type="button" data-option="C">C) 0,60 V</button>
+            <button type="button" data-option="D">D) 9,6 V</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p><strong>Resposta correta: C.</strong></p>
+            <p>Use <span class="math">&epsilon;=BLv</span>. Então <span class="math">&epsilon;=0,25&middot;0,80&middot;3,0=0,60 V</span>.</p>
+          </div>
+        </article>
+
+        <article class="formula-quiz-card" data-correct="D">
+          <div class="question-meta">Questão 04</div>
+          <h3>Um solenoide tem <span class="math">N=500</span>, <span class="math">A=4,0&times;10<sup>-4</sup> m²</span> e <span class="math">l=0,20 m</span>. Aproxime <span class="math">L</span>.</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="A">A) 6,28&times;10<sup>-7</sup> H</button>
+            <button type="button" data-option="B">B) 1,26&times;10<sup>-4</sup> H</button>
+            <button type="button" data-option="C">C) 3,14&times;10<sup>-4</sup> H</button>
+            <button type="button" data-option="D">D) 6,28&times;10<sup>-4</sup> H</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p><strong>Resposta correta: D.</strong></p>
+            <p>Use <span class="math">L=&mu;<sub>0</sub>N²A/l</span>. Então <span class="math">L=(4&pi;&times;10<sup>-7</sup>)(500²)(4,0&times;10<sup>-4</sup>)/0,20=6,28&times;10<sup>-4</sup> H</span>.</p>
+          </div>
+        </article>
+
+        <article class="formula-quiz-card" data-correct="A">
+          <div class="question-meta">Questão 05</div>
+          <h3>Um indutor de <span class="math">0,40 H</span> tem corrente variando a <span class="math">5,0 A/s</span>. Qual é o módulo da fem autoinduzida?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="A">A) 2,0 V</button>
+            <button type="button" data-option="B">B) 5,4 V</button>
+            <button type="button" data-option="C">C) 12,5 V</button>
+            <button type="button" data-option="D">D) 0,080 V</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p><strong>Resposta correta: A.</strong></p>
+            <p>Use <span class="math">|\epsilon;|=L|di/dt|</span>. Então <span class="math">|\epsilon;|=0,40&middot;5,0=2,0 V</span>.</p>
+          </div>
+        </article>
+
+        <article class="formula-quiz-card" data-correct="C">
+          <div class="question-meta">Questão 06</div>
+          <h3>Um indutor de <span class="math">0,30 H</span> conduz corrente de <span class="math">4,0 A</span>. Qual energia está armazenada?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="A">A) 0,60 J</button>
+            <button type="button" data-option="B">B) 1,2 J</button>
+            <button type="button" data-option="C">C) 2,4 J</button>
+            <button type="button" data-option="D">D) 4,8 J</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p><strong>Resposta correta: C.</strong></p>
+            <p>Use <span class="math">U=(1/2)LI²</span>. Então <span class="math">U=(1/2)(0,30)(4,0)²=2,4 J</span>.</p>
+          </div>
+        </article>
+
+        <article class="formula-quiz-card" data-correct="B">
+          <div class="question-meta">Questão 07</div>
+          <h3>Em um circuito RL, <span class="math">L=2,0 H</span> e <span class="math">R=8,0 &Omega;</span>. Quanto vale <span class="math">&tau;</span>?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="A">A) 0,10 s</button>
+            <button type="button" data-option="B">B) 0,25 s</button>
+            <button type="button" data-option="C">C) 4,0 s</button>
+            <button type="button" data-option="D">D) 16 s</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p><strong>Resposta correta: B.</strong></p>
+            <p>Use <span class="math">&tau;=L/R</span>. Então <span class="math">&tau;=2,0/8,0=0,25 s</span>.</p>
+          </div>
+        </article>
+
+        <article class="formula-quiz-card" data-correct="D">
+          <div class="question-meta">Questão 08</div>
+          <h3>Um circuito RL tem <span class="math">V=12 V</span>, <span class="math">R=6,0 &Omega;</span> e está em <span class="math">t=&tau;</span>. Qual é a corrente?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="A">A) 0,74 A</button>
+            <button type="button" data-option="B">B) 1,00 A</button>
+            <button type="button" data-option="C">C) 2,00 A</button>
+            <button type="button" data-option="D">D) 1,26 A</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p><strong>Resposta correta: D.</strong></p>
+            <p>Use <span class="math">i(t)=(V/R)(1-e<sup>-t/&tau;</sup>)</span>. Em <span class="math">t=&tau;</span>, <span class="math">i=2,0(1-e<sup>-1</sup>)=1,26 A</span>.</p>
+          </div>
+        </article>
+
+        <article class="formula-quiz-card" data-correct="A">
+          <div class="question-meta">Questão 09</div>
+          <h3>Após desligar a fonte, uma corrente inicial de <span class="math">3,0 A</span> decai por <span class="math">2&tau;</span>. Qual é a corrente?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="A">A) 0,406 A</button>
+            <button type="button" data-option="B">B) 1,10 A</button>
+            <button type="button" data-option="C">C) 1,50 A</button>
+            <button type="button" data-option="D">D) 2,59 A</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p><strong>Resposta correta: A.</strong></p>
+            <p>Use <span class="math">i(t)=I<sub>0</sub>e<sup>-t/&tau;</sup></span>. Então <span class="math">i=3,0e<sup>-2</sup>=0,406 A</span>.</p>
+          </div>
+        </article>
+
+        <article class="formula-quiz-card" data-correct="B">
+          <div class="question-meta">Questão 10</div>
+          <h3>Uma tensão senoidal tem pico de <span class="math">170 V</span>. Qual é o valor eficaz aproximado?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="A">A) 85 V</button>
+            <button type="button" data-option="B">B) 120 V</button>
+            <button type="button" data-option="C">C) 170 V</button>
+            <button type="button" data-option="D">D) 240 V</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p><strong>Resposta correta: B.</strong></p>
+            <p>Use <span class="math">V<sub>rms</sub>=V/&radic;2</span>. Então <span class="math">V<sub>rms</sub>=170/1,414&asymp;120 V</span>.</p>
+          </div>
+        </article>
+
+        <article class="formula-quiz-card" data-correct="C">
+          <div class="question-meta">Questão 11</div>
+          <h3>Um indutor de <span class="math">0,10 H</span> está em <span class="math">60 Hz</span>. Qual é <span class="math">X<sub>L</sub></span>?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="A">A) 6,0 &Omega;</button>
+            <button type="button" data-option="B">B) 18,8 &Omega;</button>
+            <button type="button" data-option="C">C) 37,7 &Omega;</button>
+            <button type="button" data-option="D">D) 60,0 &Omega;</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p><strong>Resposta correta: C.</strong></p>
+            <p>Use <span class="math">&omega;=2&pi;f</span> e <span class="math">X<sub>L</sub>=&omega;L</span>. Então <span class="math">&omega;=377 rad/s</span> e <span class="math">X<sub>L</sub>=377&middot;0,10=37,7 &Omega;</span>.</p>
+          </div>
+        </article>
+
+        <article class="formula-quiz-card" data-correct="D">
+          <div class="question-meta">Questão 12</div>
+          <h3>Um capacitor de <span class="math">100 &mu;F</span> está em <span class="math">50 Hz</span>. Qual é <span class="math">X<sub>C</sub></span>?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="A">A) 0,0318 &Omega;</button>
+            <button type="button" data-option="B">B) 3,18 &Omega;</button>
+            <button type="button" data-option="C">C) 15,9 &Omega;</button>
+            <button type="button" data-option="D">D) 31,8 &Omega;</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p><strong>Resposta correta: D.</strong></p>
+            <p>Use <span class="math">X<sub>C</sub>=1/(&omega;C)</span>. Com <span class="math">&omega;=2&pi;50=314 rad/s</span>, <span class="math">X<sub>C</sub>=1/(314&middot;100&times;10<sup>-6</sup>)=31,8 &Omega;</span>.</p>
+          </div>
+        </article>
+
+        <article class="formula-quiz-card" data-correct="B">
+          <div class="question-meta">Questão 13</div>
+          <h3>Em um RLC série, <span class="math">R=30 &Omega;</span>, <span class="math">X<sub>L</sub>=50 &Omega;</span> e <span class="math">X<sub>C</sub>=10 &Omega;</span>. Qual é <span class="math">Z</span>?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="A">A) 40 &Omega;</button>
+            <button type="button" data-option="B">B) 50 &Omega;</button>
+            <button type="button" data-option="C">C) 70 &Omega;</button>
+            <button type="button" data-option="D">D) 90 &Omega;</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p><strong>Resposta correta: B.</strong></p>
+            <p>Use <span class="math">Z=&radic;[R²+(X<sub>L</sub>-X<sub>C</sub>)²]</span>. Então <span class="math">Z=&radic;[30²+(50-10)²]=&radic;2500=50 &Omega;</span>.</p>
+          </div>
+        </article>
+
+        <article class="formula-quiz-card" data-correct="A">
+          <div class="question-meta">Questão 14</div>
+          <h3>Um circuito tem <span class="math">V=100 V</span> e <span class="math">Z=50 &Omega;</span>. Qual corrente passa?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="A">A) 2,0 A</button>
+            <button type="button" data-option="B">B) 5,0 A</button>
+            <button type="button" data-option="C">C) 50 A</button>
+            <button type="button" data-option="D">D) 5000 A</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p><strong>Resposta correta: A.</strong></p>
+            <p>Use <span class="math">V=IZ</span>. Então <span class="math">I=V/Z=100/50=2,0 A</span>.</p>
+          </div>
+        </article>
+
+        <article class="formula-quiz-card" data-correct="C">
+          <div class="question-meta">Questão 15</div>
+          <h3>Em um RLC, <span class="math">X<sub>L</sub>=80 &Omega;</span>, <span class="math">X<sub>C</sub>=40 &Omega;</span> e <span class="math">R=40 &Omega;</span>. Qual é <span class="math">&phi;</span>?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="A">A) 0°</button>
+            <button type="button" data-option="B">B) 30°</button>
+            <button type="button" data-option="C">C) 45°</button>
+            <button type="button" data-option="D">D) 90°</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p><strong>Resposta correta: C.</strong></p>
+            <p>Use <span class="math">tan&phi;=(X<sub>L</sub>-X<sub>C</sub>)/R</span>. Então <span class="math">tan&phi;=(80-40)/40=1</span>, logo <span class="math">&phi;=45°</span>.</p>
+          </div>
+        </article>
+
+        <article class="formula-quiz-card" data-correct="D">
+          <div class="question-meta">Questão 16</div>
+          <h3>Um circuito tem <span class="math">V<sub>rms</sub>=120 V</span>, <span class="math">I<sub>rms</sub>=2,0 A</span> e <span class="math">cos&phi;=0,80</span>. Qual é a potência média?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="A">A) 96 W</button>
+            <button type="button" data-option="B">B) 120 W</button>
+            <button type="button" data-option="C">C) 150 W</button>
+            <button type="button" data-option="D">D) 192 W</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p><strong>Resposta correta: D.</strong></p>
+            <p>Use <span class="math">P&#772;=V<sub>rms</sub>I<sub>rms</sub>cos&phi;</span>. Então <span class="math">P&#772;=120&middot;2,0&middot;0,80=192 W</span>.</p>
+          </div>
+        </article>
+
+        <article class="formula-quiz-card" data-correct="B">
+          <div class="question-meta">Questão 17</div>
+          <h3>Um transformador tem <span class="math">N<sub>p</sub>=200</span>, <span class="math">N<sub>s</sub>=600</span> e <span class="math">V<sub>p</sub>=120 V</span>. Qual é <span class="math">V<sub>s</sub></span>?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="A">A) 40 V</button>
+            <button type="button" data-option="B">B) 360 V</button>
+            <button type="button" data-option="C">C) 600 V</button>
+            <button type="button" data-option="D">D) 720 V</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p><strong>Resposta correta: B.</strong></p>
+            <p>Use <span class="math">V<sub>p</sub>/N<sub>p</sub>=V<sub>s</sub>/N<sub>s</sub></span>. Então <span class="math">V<sub>s</sub>=120(600/200)=360 V</span>.</p>
+          </div>
+        </article>
+
+        <article class="formula-quiz-card" data-correct="A">
+          <div class="question-meta">Questão 18</div>
+          <h3>Em um transformador ideal, <span class="math">V<sub>p</sub>=220 V</span>, <span class="math">V<sub>s</sub>=55 V</span> e <span class="math">I<sub>s</sub>=4,0 A</span>. Qual é <span class="math">I<sub>p</sub></span>?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="A">A) 1,0 A</button>
+            <button type="button" data-option="B">B) 2,0 A</button>
+            <button type="button" data-option="C">C) 4,0 A</button>
+            <button type="button" data-option="D">D) 16 A</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p><strong>Resposta correta: A.</strong></p>
+            <p>Use <span class="math">I<sub>p</sub>V<sub>p</sub>=I<sub>s</sub>V<sub>s</sub></span>. Então <span class="math">I<sub>p</sub>=(4,0&middot;55)/220=1,0 A</span>.</p>
+          </div>
+        </article>
+
+        <article class="formula-quiz-card" data-correct="C">
+          <div class="question-meta">Questão 19</div>
+          <h3>Se <span class="math">d&Phi;<sub>E</sub>/dt=2,0&times;10<sup>6</sup></span>, qual é <span class="math">I<sub>d</sub></span>?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="A">A) 4,43&times;10<sup>-6</sup> A</button>
+            <button type="button" data-option="B">B) 8,85&times;10<sup>-6</sup> A</button>
+            <button type="button" data-option="C">C) 1,77&times;10<sup>-5</sup> A</button>
+            <button type="button" data-option="D">D) 2,00&times;10<sup>6</sup> A</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p><strong>Resposta correta: C.</strong></p>
+            <p>Use <span class="math">I<sub>d</sub>=&epsilon;<sub>0</sub>d&Phi;<sub>E</sub>/dt</span>. Então <span class="math">I<sub>d</sub>=(8,85&times;10<sup>-12</sup>)(2,0&times;10<sup>6</sup>)=1,77&times;10<sup>-5</sup> A</span>.</p>
+          </div>
+        </article>
+
+        <article class="formula-quiz-card" data-correct="D">
+          <div class="question-meta">Questão 20</div>
+          <h3>Uma superfície fechada tem fluxo elétrico <span class="math">3,0&times;10<sup>5</sup> N.m²/C</span>. Qual carga interna?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="A">A) 8,85&times;10<sup>-12</sup> C</button>
+            <button type="button" data-option="B">B) 3,39&times;10<sup>16</sup> C</button>
+            <button type="button" data-option="C">C) 1,13&times;10<sup>-6</sup> C</button>
+            <button type="button" data-option="D">D) 2,66&times;10<sup>-6</sup> C</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p><strong>Resposta correta: D.</strong></p>
+            <p>Use <span class="math">&oint;E&middot;dA=Q<sub>int</sub>/&epsilon;<sub>0</sub></span>. Logo <span class="math">Q<sub>int</sub>=&epsilon;<sub>0</sub>&Phi;<sub>E</sub>=(8,85&times;10<sup>-12</sup>)(3,0&times;10<sup>5</sup>)=2,66&times;10<sup>-6</sup> C</span>.</p>
+          </div>
+        </article>
+
+        <article class="formula-quiz-card" data-correct="B">
+          <div class="question-meta">Questão 21</div>
+          <h3>Uma onda tem <span class="math">E<sub>0</sub>=300 V/m</span> e <span class="math">B<sub>0</sub>=1,0&times;10<sup>-6</sup> T</span>. Qual é a velocidade?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="A">A) 3,0&times;10<sup>6</sup> m/s</button>
+            <button type="button" data-option="B">B) 3,0&times;10<sup>8</sup> m/s</button>
+            <button type="button" data-option="C">C) 3,0&times;10<sup>10</sup> m/s</button>
+            <button type="button" data-option="D">D) 1,0&times;10<sup>-6</sup> m/s</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p><strong>Resposta correta: B.</strong></p>
+            <p>Use <span class="math">c=E<sub>0</sub>/B<sub>0</sub></span>. Então <span class="math">c=300/(1,0&times;10<sup>-6</sup>)=3,0&times;10<sup>8</sup> m/s</span>.</p>
+          </div>
+        </article>
+
+        <article class="formula-quiz-card" data-correct="A">
+          <div class="question-meta">Questão 22</div>
+          <h3>Uma onda eletromagnética tem frequência <span class="math">75 MHz</span>. Qual é o comprimento de onda?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="A">A) 4,0 m</button>
+            <button type="button" data-option="B">B) 7,5 m</button>
+            <button type="button" data-option="C">C) 40 m</button>
+            <button type="button" data-option="D">D) 225 m</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p><strong>Resposta correta: A.</strong></p>
+            <p>Use <span class="math">c=&lambda;f</span>. Então <span class="math">&lambda;=c/f=(3,0&times;10<sup>8</sup>)/(75&times;10<sup>6</sup>)=4,0 m</span>.</p>
+          </div>
+        </article>
+
+        <article class="formula-quiz-card" data-correct="C">
+          <div class="question-meta">Questão 23</div>
+          <h3>Uma onda no vácuo tem <span class="math">E<sub>0</sub>=90 V/m</span>. Qual é <span class="math">B<sub>0</sub></span>?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="A">A) 9,0&times;10<sup>-8</sup> T</button>
+            <button type="button" data-option="B">B) 1,5&times;10<sup>-7</sup> T</button>
+            <button type="button" data-option="C">C) 3,0&times;10<sup>-7</sup> T</button>
+            <button type="button" data-option="D">D) 2,7&times;10<sup>10</sup> T</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p><strong>Resposta correta: C.</strong></p>
+            <p>Use <span class="math">c=E<sub>0</sub>/B<sub>0</sub></span>, então <span class="math">B<sub>0</sub>=E<sub>0</sub>/c=90/(3,0&times;10<sup>8</sup>)=3,0&times;10<sup>-7</sup> T</span>.</p>
+          </div>
+        </article>
+
+        <article class="formula-quiz-card" data-correct="D">
+          <div class="question-meta">Questão 24</div>
+          <h3>Uma onda tem <span class="math">E<sub>0</sub>=120 V/m</span> e <span class="math">B<sub>0</sub>=4,0&times;10<sup>-7</sup> T</span>. Qual é <span class="math">I<sub>em</sub></span>?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="A">A) 4,8&times;10<sup>-5</sup> W/m²</button>
+            <button type="button" data-option="B">B) 9,55 W/m²</button>
+            <button type="button" data-option="C">C) 12,0 W/m²</button>
+            <button type="button" data-option="D">D) 19,1 W/m²</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p><strong>Resposta correta: D.</strong></p>
+            <p>Use <span class="math">I<sub>em</sub>=(1/2)E<sub>0</sub>B<sub>0</sub>/&mu;<sub>0</sub></span>. Então <span class="math">I<sub>em</sub>=[(1/2)(120)(4,0&times;10<sup>-7</sup>)]/(4&pi;&times;10<sup>-7</sup>)=19,1 W/m²</span>.</p>
+          </div>
+        </article>
+
+        <article class="formula-quiz-card" data-correct="A">
+          <div class="question-meta">Questão 25</div>
+          <h3>Uma onda tem <span class="math">E<sub>0</sub>=100 V/m</span>. Qual é a densidade média de energia elétrica?</h3>
+          <div class="quiz-options">
+            <button type="button" data-option="A">A) 4,43&times;10<sup>-8</sup> J/m³</button>
+            <button type="button" data-option="B">B) 8,85&times;10<sup>-8</sup> J/m³</button>
+            <button type="button" data-option="C">C) 5,00&times;10<sup>3</sup> J/m³</button>
+            <button type="button" data-option="D">D) 1,77&times;10<sup>-12</sup> J/m³</button>
+          </div>
+          <div class="quiz-feedback" hidden>
+            <p><strong>Resposta correta: A.</strong></p>
+            <p>Use <span class="math">&eta;<sub>em</sub>=(1/2)&epsilon;<sub>0</sub>E<sub>0</sub>²</span>. Então <span class="math">&eta;<sub>em</sub>=(1/2)(8,85&times;10<sup>-12</sup>)(100)²=4,43&times;10<sup>-8</sup> J/m³</span>.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <button class="back-to-top" type="button" aria-label="Voltar ao topo">&uarr;</button>
+
+  <footer class="site-footer">
+    <p>StudyHub - Fórmulas e Variáveis de FOE.</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script>
+    document.querySelectorAll(".formula-quiz-card").forEach((card) => {
+      const correct = card.dataset.correct;
+      const feedback = card.querySelector(".quiz-feedback");
+      card.querySelectorAll(".quiz-options button").forEach((button) => {
+        button.addEventListener("click", () => {
+          card.querySelectorAll(".quiz-options button").forEach((item) => {
+            item.classList.remove("is-selected", "is-correct", "is-wrong");
+            if (item.dataset.option === correct) {
+              item.classList.add("is-correct");
+            }
+          });
+
+          button.classList.add("is-selected");
+          if (button.dataset.option !== correct) {
+            button.classList.add("is-wrong");
+          }
+
+          feedback.hidden = false;
+        });
+      });
+    });
+  </script>
+</body>
+</html>

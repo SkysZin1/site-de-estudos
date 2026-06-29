@@ -41,6 +41,14 @@ const searchData = [
     url: "materias/resumos/foe-resumo.html#formulas"
   },
   {
+    title: "Fórmulas e Variáveis de FOE",
+    description: "Pagina interativa com formulario da AV3, variaveis principais e questoes curtas de aplicacao direta das formulas.",
+    category: "FOE",
+    type: "Treino",
+    keywords: ["formulas foe", "formulario foe", "formulario av3", "decorar formula", "decorar variaveis", "variaveis foe", "questoes pequenas", "alternativas", "inducao", "rl", "rlc", "transformador", "maxwell", "ondas eletromagneticas"],
+    url: "materias/exercicios/foe-formulas-treino.html"
+  },
+  {
     title: "Fluxo magnetico",
     description: "Relacao entre campo magnetico, area, angulo e fluxo atraves de uma superficie.",
     category: "FOE",
