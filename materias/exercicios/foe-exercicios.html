@@ -33,6 +33,7 @@
       <a href="#inducao">Indução</a>
       <a href="#circuitos">Circuitos</a>
       <a href="#ondas">Ondas EM</a>
+      <a href="#treino-extra">Treino extra</a>
       <a href="#formulario">Fórmulas</a>
     </nav>
 
@@ -311,6 +312,255 @@
       </div>
     </section>
 
+    <section class="study-block" id="treino-extra">
+      <div class="section-heading">
+        <p class="eyebrow">Bloco 4</p>
+        <h2>Treino extra por assunto</h2>
+        <p>
+          Questões novas para revisar os pontos mais prováveis: variações de indução eletromagnética,
+          circuitos RL e RLC, transformadores e ondas eletromagnéticas, sempre com o raciocínio antes da conta.
+        </p>
+      </div>
+
+      <div class="exercise-list">
+        <article class="exercise-card" id="foe-extra-inducao-1">
+          <div class="question-meta">Extra 1 - Indução eletromagnética</div>
+          <h3>Uma bobina com <span class="math">50</span> espiras e área <span class="math">0,020 m²</span> está em um campo magnético perpendicular ao plano da bobina. O campo diminui uniformemente de <span class="math">0,80 T</span> para <span class="math">0,20 T</span> em <span class="math">0,030 s</span>. Determine a fem induzida média e a corrente se a resistência da bobina é <span class="math">6,0 &Omega;</span>.</h3>
+          <div class="formula-strip">
+            <span>&Phi;<sub>B</sub> = BA</span>
+            <span>|&epsilon;<sub>méd</sub>| = N|&Delta;&Phi;<sub>B</sub>|/&Delta;t</span>
+            <span>I = |&epsilon;|/R</span>
+          </div>
+          <p class="solution-idea"><strong>Como pensar:</strong> primeiro descubra o que está mudando no fluxo magnético. Aqui a área e o ângulo não mudam; só o campo magnético diminui. Como o campo é perpendicular à bobina, não precisa usar cosseno: o fluxo por espira fica simplesmente <span class="math">BA</span>.</p>
+          <ol class="solution-steps">
+            <li>Como o campo é perpendicular, o fluxo por espira é <span class="math">&Phi;<sub>B</sub> = BA</span>.</li>
+            <li>A variação do campo é <span class="math">|&Delta;B| = |0,20 - 0,80| = 0,60 T</span>.</li>
+            <li>A variação de fluxo por espira é <span class="math">A|&Delta;B| = 0,020 &middot; 0,60 = 0,012 Wb</span>.</li>
+            <li>Com <span class="math">50</span> espiras, <span class="math">|&epsilon;<sub>méd</sub>| = 50(0,012)/0,030 = 20 V</span>.</li>
+            <li>A corrente induzida é <span class="math">I = 20/6,0 = 3,33 A</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">|&epsilon;<sub>méd</sub>| = 20 V</span> e <span class="math">I = 3,33 A</span>. Pela Lei de Lenz, o sentido da corrente tenta manter o campo original.</p>
+        </article>
+
+        <article class="exercise-card" id="foe-extra-inducao-2">
+          <div class="question-meta">Extra 2 - Indução eletromagnética</div>
+          <h3>Uma barra condutora de comprimento <span class="math">0,50 m</span> desliza com velocidade <span class="math">4,0 m/s</span> sobre trilhos, dentro de um campo magnético uniforme de <span class="math">0,30 T</span>, perpendicular ao plano do circuito. A resistência total do circuito é <span class="math">0,20 &Omega;</span>. Calcule a fem de movimento, a corrente e a força magnética que se opõe ao movimento.</h3>
+          <div class="formula-strip">
+            <span>&epsilon; = BLv</span>
+            <span>I = &epsilon;/R</span>
+            <span>F = ILB</span>
+          </div>
+          <p class="solution-idea"><strong>Como pensar:</strong> quando uma barra desliza em um campo magnético, ela aumenta ou diminui a área do circuito. Isso muda o fluxo e gera fem. A fórmula <span class="math">&epsilon;=BLv</span> é o atalho desse caso específico: campo uniforme, barra de comprimento <span class="math">L</span> e velocidade perpendicular.</p>
+          <ol class="solution-steps">
+            <li>A fem de movimento aparece porque a barra corta linhas de campo magnético.</li>
+            <li><span class="math">&epsilon; = BLv = 0,30 &middot; 0,50 &middot; 4,0 = 0,60 V</span>.</li>
+            <li>A corrente no circuito é <span class="math">I = 0,60/0,20 = 3,0 A</span>.</li>
+            <li>A força magnética sobre a barra é <span class="math">F = ILB = 3,0 &middot; 0,50 &middot; 0,30 = 0,45 N</span>.</li>
+            <li>O sentido dessa força é contrário ao movimento, porque a corrente induzida se opõe à variação de fluxo.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">&epsilon; = 0,60 V</span>, <span class="math">I = 3,0 A</span> e <span class="math">F = 0,45 N</span>, contrária ao movimento.</p>
+        </article>
+
+        <article class="exercise-card" id="foe-extra-rl">
+          <div class="question-meta">Extra 3 - Circuito RL</div>
+          <h3>Um circuito RL série tem bateria de <span class="math">24 V</span>, resistor de <span class="math">12 &Omega;</span> e indutor de <span class="math">3,0 H</span>. Determine a constante de tempo, a corrente final, a corrente em <span class="math">0,50 s</span> após ligar a chave e o tempo para atingir <span class="math">90%</span> da corrente final.</h3>
+          <div class="formula-strip">
+            <span>&tau; = L/R</span>
+            <span>I<sub>final</sub> = V/R</span>
+            <span>i(t) = I<sub>final</sub>(1 - e<sup>-t/&tau;</sup>)</span>
+          </div>
+          <p class="solution-idea"><strong>Como pensar:</strong> em circuito RL ligado à bateria, o indutor atrasa o crescimento da corrente. Por isso a corrente começa em zero e vai se aproximando de <span class="math">V/R</span>. A constante <span class="math">&tau;</span> indica a escala de tempo dessa aproximação.</p>
+          <ol class="solution-steps">
+            <li>A constante de tempo é <span class="math">&tau; = L/R = 3,0/12 = 0,25 s</span>.</li>
+            <li>A corrente final é <span class="math">I<sub>final</sub> = V/R = 24/12 = 2,0 A</span>.</li>
+            <li>Em <span class="math">t=0,50 s</span>, temos <span class="math">t/&tau; = 0,50/0,25 = 2</span>.</li>
+            <li><span class="math">i(0,50) = 2,0(1-e<sup>-2</sup>) = 1,73 A</span>.</li>
+            <li>Para <span class="math">90%</span>, resolva <span class="math">0,90I = I(1-e<sup>-t/&tau;</sup>)</span>, então <span class="math">e<sup>-t/&tau;</sup>=0,10</span>.</li>
+            <li><span class="math">t = -&tau;ln(0,10) = 0,25(2,303) = 0,576 s</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">&tau; = 0,25 s</span>, <span class="math">I<sub>final</sub>=2,0 A</span>, <span class="math">i(0,50s)=1,73 A</span> e <span class="math">t<sub>90%</sub>=0,576 s</span>.</p>
+        </article>
+
+        <article class="exercise-card" id="foe-extra-rlc">
+          <div class="question-meta">Extra 4 - Circuito RLC</div>
+          <h3>Um circuito RLC série tem <span class="math">R=40 &Omega;</span>, <span class="math">L=0,20 H</span>, <span class="math">C=50 &mu;F</span> e está ligado a uma fonte de <span class="math">120 V</span> eficazes em <span class="math">60 Hz</span>. Calcule <span class="math">X<sub>L</sub></span>, <span class="math">X<sub>C</sub></span>, a impedância, a corrente eficaz e diga se o circuito é indutivo ou capacitivo.</h3>
+          <div class="formula-strip">
+            <span>&omega; = 2&pi;f</span>
+            <span>X<sub>L</sub> = &omega;L</span>
+            <span>X<sub>C</sub> = 1/(&omega;C)</span>
+            <span>Z = &radic;[R² + (X<sub>L</sub>-X<sub>C</sub>)²]</span>
+          </div>
+          <p class="solution-idea"><strong>Como pensar:</strong> em RLC série com corrente alternada, o resistor entra como resistência real e o indutor/capacitor entram como reatâncias. Primeiro transforme a frequência em <span class="math">&omega;</span>, depois compare <span class="math">X<sub>L</sub></span> e <span class="math">X<sub>C</sub></span>. A diferença entre elas diz se sobra comportamento indutivo ou capacitivo.</p>
+          <ol class="solution-steps">
+            <li>A frequência angular é <span class="math">&omega; = 2&pi;60 = 377 rad/s</span>.</li>
+            <li><span class="math">X<sub>L</sub> = 377 &middot; 0,20 = 75,4 &Omega;</span>.</li>
+            <li><span class="math">X<sub>C</sub> = 1/(377 &middot; 50&times;10<sup>-6</sup>) = 53,1 &Omega;</span>.</li>
+            <li>A diferença reativa é <span class="math">X<sub>L</sub>-X<sub>C</sub> = 22,3 &Omega;</span>.</li>
+            <li><span class="math">Z = &radic;[40² + 22,3²] = 45,8 &Omega;</span>.</li>
+            <li>A corrente eficaz é <span class="math">I = V/Z = 120/45,8 = 2,62 A</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">X<sub>L</sub>=75,4 &Omega;</span>, <span class="math">X<sub>C</sub>=53,1 &Omega;</span>, <span class="math">Z=45,8 &Omega;</span> e <span class="math">I=2,62 A</span>. Como <span class="math">X<sub>L</sub> &gt; X<sub>C</sub></span>, o circuito é indutivo.</p>
+        </article>
+
+        <article class="exercise-card" id="foe-extra-transformador">
+          <div class="question-meta">Extra 5 - Transformador</div>
+          <h3>Um transformador ideal tem <span class="math">600</span> espiras no primário e <span class="math">150</span> espiras no secundário. O primário é ligado a <span class="math">220 V</span> eficazes e o secundário alimenta uma carga de <span class="math">12 &Omega;</span>. Determine a tensão no secundário, a corrente no secundário, a potência entregue à carga e a corrente no primário.</h3>
+          <div class="formula-strip">
+            <span>V<sub>s</sub>/V<sub>p</sub> = N<sub>s</sub>/N<sub>p</sub></span>
+            <span>I<sub>s</sub> = V<sub>s</sub>/R</span>
+            <span>V<sub>p</sub>I<sub>p</sub> = V<sub>s</sub>I<sub>s</sub></span>
+          </div>
+          <p class="solution-idea"><strong>Como pensar:</strong> em transformador ideal, a tensão acompanha a razão de espiras. Depois que você acha a tensão do secundário, a carga funciona como um resistor comum. Para ligar primário e secundário, use conservação de potência.</p>
+          <ol class="solution-steps">
+            <li>A razão de espiras é <span class="math">N<sub>s</sub>/N<sub>p</sub> = 150/600 = 0,25</span>.</li>
+            <li>A tensão no secundário é <span class="math">V<sub>s</sub> = 220(0,25) = 55 V</span>.</li>
+            <li>A corrente no secundário é <span class="math">I<sub>s</sub> = 55/12 = 4,58 A</span>.</li>
+            <li>A potência na carga é <span class="math">P = V<sub>s</sub>I<sub>s</sub> = 55 &middot; 4,58 = 252 W</span>.</li>
+            <li>Como o transformador é ideal, <span class="math">V<sub>p</sub>I<sub>p</sub> = P</span>.</li>
+            <li><span class="math">I<sub>p</sub> = 252/220 = 1,14 A</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">V<sub>s</sub>=55 V</span>, <span class="math">I<sub>s</sub>=4,58 A</span>, <span class="math">P=252 W</span> e <span class="math">I<sub>p</sub>=1,14 A</span>.</p>
+        </article>
+
+        <article class="exercise-card" id="foe-extra-onda">
+          <div class="question-meta">Extra 6 - Onda eletromagnética</div>
+          <h3>Uma onda eletromagnética no vácuo tem campo elétrico máximo <span class="math">E<sub>0</sub>=150 V/m</span> e frequência <span class="math">100 MHz</span>. Calcule o campo magnético máximo, o comprimento de onda e a intensidade média da onda.</h3>
+          <div class="formula-strip">
+            <span>B<sub>0</sub> = E<sub>0</sub>/c</span>
+            <span>&lambda; = c/f</span>
+            <span>I = (1/2)c&epsilon;<sub>0</sub>E<sub>0</sub>²</span>
+          </div>
+          <p class="solution-idea"><strong>Como pensar:</strong> em onda eletromagnética no vácuo, campo elétrico, campo magnético e velocidade da luz aparecem juntos. Se o enunciado dá <span class="math">E<sub>0</sub></span>, você encontra <span class="math">B<sub>0</sub></span> dividindo por <span class="math">c</span>. Se dá frequência, você encontra o comprimento de onda por <span class="math">c=&lambda;f</span>.</p>
+          <ol class="solution-steps">
+            <li>Use <span class="math">c = 3,0&times;10<sup>8</sup> m/s</span> e <span class="math">f = 100 MHz = 1,0&times;10<sup>8</sup> Hz</span>.</li>
+            <li><span class="math">B<sub>0</sub> = 150/(3,0&times;10<sup>8</sup>) = 5,0&times;10<sup>-7</sup> T</span>.</li>
+            <li><span class="math">&lambda; = 3,0&times;10<sup>8</sup> / 1,0&times;10<sup>8</sup> = 3,0 m</span>.</li>
+            <li>Para a intensidade média, use <span class="math">&epsilon;<sub>0</sub>=8,85&times;10<sup>-12</sup></span>.</li>
+            <li><span class="math">I = (1/2)(3,0&times;10<sup>8</sup>)(8,85&times;10<sup>-12</sup>)(150)² = 29,9 W/m²</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">B<sub>0</sub>=5,0&times;10<sup>-7</sup> T</span>, <span class="math">&lambda;=3,0 m</span> e <span class="math">I &asymp; 30 W/m²</span>.</p>
+        </article>
+
+        <article class="exercise-card" id="foe-extra-inducao-3">
+          <div class="question-meta">Extra 7 - Indução eletromagnética</div>
+          <h3>Uma espira circular de raio <span class="math">0,10 m</span> está em um campo magnético uniforme entrando na página. O campo diminui de <span class="math">0,40 T</span> para zero em <span class="math">0,20 s</span>. A resistência da espira é <span class="math">2,0 &Omega;</span>. Determine a fem induzida média, a corrente e o sentido da corrente.</h3>
+          <div class="formula-strip">
+            <span>A = &pi;r²</span>
+            <span>|&epsilon;<sub>méd</sub>| = |&Delta;&Phi;<sub>B</sub>|/&Delta;t</span>
+            <span>I = |&epsilon;|/R</span>
+          </div>
+          <p class="solution-idea"><strong>Como pensar:</strong> aqui não há várias espiras nem barra em movimento. O caminho é direto pela Lei de Faraday: calcule a área circular, veja quanto o fluxo diminuiu e divida pelo tempo. Para o sentido, use Lenz: a corrente tenta compensar a diminuição do campo que entrava na página.</p>
+          <ol class="solution-steps">
+            <li>A área da espira é <span class="math">A = &pi;(0,10)² = 0,0314 m²</span>.</li>
+            <li>Como o campo vai de <span class="math">0,40 T</span> para zero, <span class="math">|&Delta;B| = 0,40 T</span>.</li>
+            <li>A variação do fluxo é <span class="math">|&Delta;&Phi;<sub>B</sub>| = A|&Delta;B| = 0,0314 &middot; 0,40 = 0,0126 Wb</span>.</li>
+            <li>A fem média é <span class="math">|&epsilon;<sub>méd</sub>| = 0,0126/0,20 = 0,0628 V</span>.</li>
+            <li>A corrente é <span class="math">I = 0,0628/2,0 = 0,0314 A = 31,4 mA</span>.</li>
+            <li>Como o campo para dentro da página está diminuindo, a corrente induzida cria campo para dentro da página; pela regra da mão direita, o sentido é horário.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">|&epsilon;<sub>méd</sub>|=0,0628 V</span>, <span class="math">I=31,4 mA</span> e sentido horário.</p>
+        </article>
+
+        <article class="exercise-card" id="foe-extra-inducao-4">
+          <div class="question-meta">Extra 8 - Indução por rotação</div>
+          <h3>Uma bobina quadrada com <span class="math">25</span> espiras e lado <span class="math">0,20 m</span> está em um campo uniforme de <span class="math">0,50 T</span>. A normal da bobina gira de <span class="math">0°</span> para <span class="math">60°</span> em relação ao campo em <span class="math">0,10 s</span>. Calcule a fem média induzida.</h3>
+          <div class="formula-strip">
+            <span>&Phi;<sub>B</sub> = BAcos&theta;</span>
+            <span>|&epsilon;<sub>méd</sub>| = N|&Delta;&Phi;<sub>B</sub>|/&Delta;t</span>
+            <span>A = lado²</span>
+          </div>
+          <p class="solution-idea"><strong>Como pensar:</strong> quando o enunciado fala em rotação, o que muda no fluxo é o ângulo. Por isso aparece o <span class="math">cos&theta;</span>. O ângulo usado é entre o campo magnético e a normal da superfície, não entre o campo e o plano da bobina.</p>
+          <ol class="solution-steps">
+            <li>A área de cada espira é <span class="math">A = 0,20² = 0,040 m²</span>.</li>
+            <li>No início, <span class="math">&theta;=0°</span>, então <span class="math">&Phi;<sub>i</sub> = 0,50 &middot; 0,040 &middot; cos0° = 0,020 Wb</span>.</li>
+            <li>No final, <span class="math">&theta;=60°</span>, então <span class="math">&Phi;<sub>f</sub> = 0,50 &middot; 0,040 &middot; cos60° = 0,010 Wb</span>.</li>
+            <li>A variação de fluxo por espira é <span class="math">|&Delta;&Phi;<sub>B</sub>| = |0,010 - 0,020| = 0,010 Wb</span>.</li>
+            <li>Com <span class="math">25</span> espiras, <span class="math">|&epsilon;<sub>méd</sub>| = 25(0,010)/0,10 = 2,5 V</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">|&epsilon;<sub>méd</sub>|=2,5 V</span>.</p>
+        </article>
+
+        <article class="exercise-card" id="foe-extra-rl-descarga">
+          <div class="question-meta">Extra 9 - Circuito RL em descarga</div>
+          <h3>Um indutor de <span class="math">2,0 H</span> está em série com um resistor de <span class="math">8,0 &Omega;</span>. Antes de desligar a fonte, a corrente era <span class="math">5,0 A</span>. Depois que a fonte é removida, determine a constante de tempo, a corrente após <span class="math">0,50 s</span> e a energia que ainda resta no indutor nesse instante.</h3>
+          <div class="formula-strip">
+            <span>&tau; = L/R</span>
+            <span>i(t)=I<sub>0</sub>e<sup>-t/&tau;</sup></span>
+            <span>U = (1/2)Li²</span>
+          </div>
+          <p class="solution-idea"><strong>Como pensar:</strong> na descarga RL, a corrente não cresce: ela começa em <span class="math">I<sub>0</sub></span> e cai exponencialmente. O indutor tenta manter a corrente que já existia, mas a energia vai sendo dissipada no resistor.</p>
+          <ol class="solution-steps">
+            <li>A constante de tempo é <span class="math">&tau; = L/R = 2,0/8,0 = 0,25 s</span>.</li>
+            <li>Para <span class="math">t=0,50 s</span>, temos <span class="math">t/&tau; = 0,50/0,25 = 2</span>.</li>
+            <li>A corrente vale <span class="math">i(0,50)=5,0e<sup>-2</sup> = 0,677 A</span>.</li>
+            <li>A energia inicial era <span class="math">U<sub>0</sub>=(1/2)(2,0)(5,0)² = 25 J</span>.</li>
+            <li>A energia restante é <span class="math">U=(1/2)(2,0)(0,677)² = 0,458 J</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">&tau;=0,25 s</span>, <span class="math">i=0,677 A</span> e <span class="math">U=0,458 J</span>.</p>
+        </article>
+
+        <article class="exercise-card" id="foe-extra-rlc-ressonancia">
+          <div class="question-meta">Extra 10 - RLC em ressonância</div>
+          <h3>Um circuito RLC série tem <span class="math">R=30 &Omega;</span>, <span class="math">L=0,50 H</span>, <span class="math">C=20 &mu;F</span> e fonte de <span class="math">90 V</span> eficazes. Calcule a frequência de ressonância, a corrente eficaz na ressonância e a tensão eficaz no indutor nesse caso.</h3>
+          <div class="formula-strip">
+            <span>&omega;<sub>0</sub> = 1/&radic;(LC)</span>
+            <span>f<sub>0</sub> = &omega;<sub>0</sub>/(2&pi;)</span>
+            <span>I = V/R</span>
+          </div>
+          <p class="solution-idea"><strong>Como pensar:</strong> na ressonância de um RLC série, <span class="math">X<sub>L</sub></span> e <span class="math">X<sub>C</sub></span> se cancelam. Então a impedância total vira apenas <span class="math">R</span>. Isso deixa a corrente máxima, mas as tensões no indutor e no capacitor podem ser maiores que a tensão da fonte.</p>
+          <ol class="solution-steps">
+            <li>Calcule <span class="math">LC = 0,50 &middot; 20&times;10<sup>-6</sup> = 1,0&times;10<sup>-5</sup></span>.</li>
+            <li><span class="math">&omega;<sub>0</sub> = 1/&radic;(1,0&times;10<sup>-5</sup>) = 316 rad/s</span>.</li>
+            <li><span class="math">f<sub>0</sub> = 316/(2&pi;) = 50,3 Hz</span>.</li>
+            <li>Na ressonância, <span class="math">Z=R=30 &Omega;</span>, então <span class="math">I=90/30=3,0 A</span>.</li>
+            <li>A reatância indutiva é <span class="math">X<sub>L</sub>=&omega;<sub>0</sub>L=316 &middot; 0,50 = 158 &Omega;</span>.</li>
+            <li>A tensão no indutor é <span class="math">V<sub>L</sub>=IX<sub>L</sub>=3,0 &middot; 158 = 474 V</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">f<sub>0</sub>=50,3 Hz</span>, <span class="math">I=3,0 A</span> e <span class="math">V<sub>L</sub>=474 V</span>.</p>
+        </article>
+
+        <article class="exercise-card" id="foe-extra-transformador-2">
+          <div class="question-meta">Extra 11 - Transformador elevador</div>
+          <h3>Um transformador ideal tem <span class="math">200</span> espiras no primário e <span class="math">800</span> no secundário. O primário recebe <span class="math">110 V</span> eficazes e o secundário está ligado a uma resistência de <span class="math">400 &Omega;</span>. Determine a tensão no secundário, a corrente no secundário, a potência na carga e a corrente no primário.</h3>
+          <div class="formula-strip">
+            <span>V<sub>s</sub>/V<sub>p</sub> = N<sub>s</sub>/N<sub>p</sub></span>
+            <span>I<sub>s</sub> = V<sub>s</sub>/R</span>
+            <span>P<sub>p</sub> = P<sub>s</sub></span>
+          </div>
+          <p class="solution-idea"><strong>Como pensar:</strong> como o secundário tem mais espiras que o primário, este é um transformador elevador: aumenta a tensão. Mas, em um transformador ideal, aumentar a tensão no secundário significa que a corrente do secundário fica menor que a corrente exigida no primário para a mesma potência.</p>
+          <ol class="solution-steps">
+            <li>A razão de espiras é <span class="math">N<sub>s</sub>/N<sub>p</sub> = 800/200 = 4</span>.</li>
+            <li>A tensão no secundário é <span class="math">V<sub>s</sub> = 110 &middot; 4 = 440 V</span>.</li>
+            <li>A corrente na carga é <span class="math">I<sub>s</sub> = 440/400 = 1,10 A</span>.</li>
+            <li>A potência entregue à carga é <span class="math">P = V<sub>s</sub>I<sub>s</sub> = 440 &middot; 1,10 = 484 W</span>.</li>
+            <li>No ideal, a potência de entrada é igual à de saída: <span class="math">V<sub>p</sub>I<sub>p</sub>=484</span>.</li>
+            <li>Logo, <span class="math">I<sub>p</sub> = 484/110 = 4,40 A</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">V<sub>s</sub>=440 V</span>, <span class="math">I<sub>s</sub>=1,10 A</span>, <span class="math">P=484 W</span> e <span class="math">I<sub>p</sub>=4,40 A</span>.</p>
+        </article>
+
+        <article class="exercise-card" id="foe-extra-onda-2">
+          <div class="question-meta">Extra 12 - Onda eletromagnética</div>
+          <h3>Uma onda eletromagnética se propaga no sentido <span class="math">+x</span>. O campo elétrico máximo aponta no sentido <span class="math">+y</span> e vale <span class="math">240 V/m</span>. A frequência é <span class="math">60 MHz</span>. Determine a direção do campo magnético, o valor de <span class="math">B<sub>0</sub></span>, o comprimento de onda e a intensidade média.</h3>
+          <div class="formula-strip">
+            <span>&vec;S &parallel; &vec;E &times; &vec;B</span>
+            <span>B<sub>0</sub> = E<sub>0</sub>/c</span>
+            <span>&lambda; = c/f</span>
+          </div>
+          <p class="solution-idea"><strong>Como pensar:</strong> a direção de propagação da onda é dada por <span class="math">&vec;E &times; &vec;B</span>. Como a onda vai para <span class="math">+x</span> e <span class="math">&vec;E</span> está em <span class="math">+y</span>, precisamos de um <span class="math">&vec;B</span> em <span class="math">+z</span>, pois <span class="math">+y &times; +z = +x</span>.</p>
+          <ol class="solution-steps">
+            <li>A direção do campo magnético é <span class="math">+z</span>, para que <span class="math">&vec;E &times; &vec;B</span> aponte em <span class="math">+x</span>.</li>
+            <li>O campo magnético máximo é <span class="math">B<sub>0</sub> = 240/(3,0&times;10<sup>8</sup>) = 8,0&times;10<sup>-7</sup> T</span>.</li>
+            <li>Converta a frequência: <span class="math">60 MHz = 6,0&times;10<sup>7</sup> Hz</span>.</li>
+            <li>O comprimento de onda é <span class="math">&lambda; = 3,0&times;10<sup>8</sup>/(6,0&times;10<sup>7</sup>) = 5,0 m</span>.</li>
+            <li>A intensidade média é <span class="math">I=(1/2)c&epsilon;<sub>0</sub>E<sub>0</sub>²</span>.</li>
+            <li><span class="math">I=(1/2)(3,0&times;10<sup>8</sup>)(8,85&times;10<sup>-12</sup>)(240)² = 76,5 W/m²</span>.</li>
+          </ol>
+          <p class="result">Resposta: <span class="math">&vec;B</span> aponta em <span class="math">+z</span>, <span class="math">B<sub>0</sub>=8,0&times;10<sup>-7</sup> T</span>, <span class="math">&lambda;=5,0 m</span> e <span class="math">I=76,5 W/m²</span>.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="study-block" id="formulario">
       <div class="section-heading">
         <p class="eyebrow">Conferência</p>
@@ -322,7 +572,9 @@
         <article><h3>RL</h3><p class="formula">&tau; = L/R; i(t)=V/R(1-e^{-t/&tau;})</p></article>
         <article><h3>CA</h3><p class="formula">X<sub>L</sub>=&omega;L; X<sub>C</sub>=1/(&omega;C)</p></article>
         <article><h3>RLC</h3><p class="formula">Z=&radic;[R²+(X<sub>L</sub>-X<sub>C</sub>)²]</p></article>
+        <article><h3>Transformador</h3><p class="formula">V<sub>s</sub>/V<sub>p</sub>=N<sub>s</sub>/N<sub>p</sub></p></article>
         <article><h3>Ondas EM</h3><p class="formula">c=1/&radic;(&mu;<sub>0</sub>&epsilon;<sub>0</sub>)=E<sub>0</sub>/B<sub>0</sub></p></article>
+        <article><h3>Intensidade EM</h3><p class="formula">I=(1/2)c&epsilon;<sub>0</sub>E<sub>0</sub>²</p></article>
       </div>
     </section>
   </main>

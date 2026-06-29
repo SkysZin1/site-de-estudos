@@ -114,11 +114,19 @@ const searchData = [
   },
   {
     title: "Exercicios Sugeridos de FOE",
-    description: "Pagina com exercicios sugeridos e resolucoes comentadas de inducao, RL, CA, RLC, transformadores e ondas eletromagneticas.",
+    description: "Pagina com exercicios sugeridos, resolucoes comentadas e treino extra detalhado de inducao eletromagnetica, RL, RLC, transformadores e ondas eletromagneticas.",
     category: "FOE",
     type: "Questao",
-    keywords: ["questoes", "exercicios sugeridos", "exercicios foe", "resolucao", "foe", "inducao", "rlc", "ondas eletromagneticas"],
+    keywords: ["questoes", "exercicios sugeridos", "exercicios foe", "resolucao", "foe", "inducao", "inducao eletromagnetica", "lei de faraday", "lei de lenz", "circuito rl", "descarga rl", "rl", "rlc", "ressonancia", "transformador", "transformadores", "onda eletromagnetica", "ondas eletromagneticas"],
     url: "materias/exercicios/foe-exercicios.html"
+  },
+  {
+    title: "Treino extra de FOE",
+    description: "Bloco com doze questoes extras e raciocinio detalhado sobre inducao eletromagnetica, transformadores, RL, RLC e ondas eletromagneticas.",
+    category: "FOE",
+    type: "Questao",
+    keywords: ["treino extra", "questoes extras", "foe", "inducao eletromagnetica", "lei de faraday", "lei de lenz", "fem induzida", "transformador", "transformador elevador", "rlc", "ressonancia rlc", "circuito rl", "descarga rl", "onda eletromagnetica", "intensidade media"],
+    url: "materias/exercicios/foe-exercicios.html#treino-extra"
   },
   {
     title: "FT - Fenomenos de Transporte",

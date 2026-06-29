@@ -2374,6 +2374,20 @@ body {
   font-weight: 800;
 }
 
+.solution-idea {
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  border-left: 4px solid var(--accent);
+  border-radius: 12px;
+  background: var(--soft);
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.solution-idea strong {
+  color: var(--navy);
+}
+
 .solution-steps {
   display: grid;
   gap: 10px;
